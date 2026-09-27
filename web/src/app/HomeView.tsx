@@ -155,7 +155,7 @@ export function HomeView() {
               {copy.fullRegistry}
             </Link>
           </div>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
             <table className="w-full text-left text-sm">
               <thead className="border-b border-border bg-primary-soft/40 text-xs uppercase tracking-wide text-muted">
                 <tr>

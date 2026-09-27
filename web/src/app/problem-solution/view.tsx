@@ -28,7 +28,7 @@ export function ProblemSolutionView() {
             </h2>
             <p className="mt-4 text-muted">{copy.problemLead}</p>
           </div>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
             <table className="w-full text-left text-sm">
               <thead className="bg-primary-soft/60 text-xs uppercase tracking-wide text-muted">
                 <tr>

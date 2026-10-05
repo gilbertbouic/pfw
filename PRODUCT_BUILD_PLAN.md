@@ -1,3 +1,5 @@
+> **Public site (2026-10):** This repository publishes **Public Funds Watch** at https://pfw.mkweli.tech. The sections below are the earlier Climate Fund Watch product plan. They are not a description of the live site.
+
 # Climate Fund Watch — Full Product Build Plan
 
 **Product name (global):** Climate Fund Watch (CFW)  

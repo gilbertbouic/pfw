@@ -2,7 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAllProjects } from "@/data/projects";
 import { LEDGER_REVIEWED } from "@/data/types";
 
-const BASE = "https://cfw.mkweli.tech";
+export const dynamic = "force-static";
+
+const BASE = "https://pfw.mkweli.tech";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(LEDGER_REVIEWED);

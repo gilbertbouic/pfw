@@ -5,7 +5,7 @@ import { BudgetBar } from "@/components/BudgetBar";
 import { Container } from "@/components/Container";
 import { SourceBanner } from "@/components/SourceBanner";
 import { StatusBadge } from "@/components/StatusBadge";
-import type { Project, SpendPlace } from "@/data/types";
+import { annualReportIsStale, type Project, type SpendPlace } from "@/data/types";
 import type { DonorReport } from "@/data/reports";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -35,8 +35,16 @@ export function ProjectDetailView({
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <StatusBadge status={project.status} />
             <span className="rounded-full bg-card px-2.5 py-0.5 text-xs font-medium text-muted shadow-sm">
-              {dict.labels.objective[project.climateObjective]}
+              {dict.labels.sector[project.sector]}
             </span>
+            <span className="rounded-full bg-card px-2.5 py-0.5 text-xs font-medium text-muted shadow-sm">
+              {dict.labels.recordInstrument[project.instrument]}
+            </span>
+            {project.climateObjective && (
+              <span className="rounded-full bg-card px-2.5 py-0.5 text-xs font-medium text-muted shadow-sm">
+                {dict.labels.objective[project.climateObjective]}
+              </span>
+            )}
             <span className="rounded-full bg-card px-2.5 py-0.5 text-xs font-medium text-muted shadow-sm">
               {dict.labels.kind[project.kind]}
             </span>
@@ -94,17 +102,70 @@ export function ProjectDetailView({
                       note: project.mauritiusShareNote,
                       color: "bg-primary-dark",
                     },
+                    {
+                      label: copy.declaredExpenditure,
+                      value: project.declaredExpenditure,
+                      note: project.declaredExpenditureNote,
+                      color: "bg-foreground",
+                    },
                   ]}
                 />
               </div>
+              {project.usd && (
+                <p className="mt-4 text-sm text-foreground">
+                  <span className="font-semibold">{copy.usdEquivalent} </span>
+                  {formatMoney(project.usd.amount, "USD")}
+                  <span className="mt-1 block text-xs text-muted">
+                    {project.usd.note}
+                    {project.usd.rateUrl && (
+                      <>
+                        {" "}
+                        <a
+                          href={project.usd.rateUrl}
+                          className="font-semibold text-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {copy.rateSource}
+                        </a>
+                      </>
+                    )}
+                  </span>
+                </p>
+              )}
+              <dl className="mt-6 grid gap-4 text-sm sm:grid-cols-2">
+                <div>
+                  <dt className="text-xs font-semibold uppercase text-muted">
+                    {copy.perDiems}
+                  </dt>
+                  <dd className="mt-1 font-semibold text-foreground">
+                    {formatMoney(project.perDiems.amount, project.perDiems.currency)}
+                  </dd>
+                  <p className="mt-1 text-xs text-muted">{project.perDiems.note}</p>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase text-muted">
+                    {copy.overheads}
+                  </dt>
+                  <dd className="mt-1 font-semibold text-foreground">
+                    {formatMoney(project.overheads.amount, project.overheads.currency)}
+                  </dd>
+                  <p className="mt-1 text-xs text-muted">{project.overheads.note}</p>
+                </div>
+              </dl>
               <dl className="mt-6 grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <dt className="text-xs font-semibold uppercase text-muted">
                     {copy.start}
                   </dt>
                   <dd className="mt-1 font-semibold text-foreground">
-                    {project.startYear ?? dict.common.notPublished}
+                    {project.startDate ??
+                      project.startYear ??
+                      dict.common.notPublished}
                   </dd>
+                  {project.ageNote === "start_unpublished" && (
+                    <p className="mt-1 text-xs text-muted">{copy.startUnpublished}</p>
+                  )}
                 </div>
                 <div>
                   <dt className="text-xs font-semibold uppercase text-muted">
@@ -115,6 +176,63 @@ export function ProjectDetailView({
                   </dd>
                 </div>
               </dl>
+              {(project.sharedExpenditure.length > 0 ||
+                project.outsideAgreed.length > 0 ||
+                project.discrepancies.length > 0) && (
+                <div className="mt-6 space-y-3 border-t border-border pt-4 text-sm">
+                  {project.sharedExpenditure.map((item) => (
+                    <p key={`${item.otherProjectId}-${item.what}`}>
+                      <span className="font-semibold">{copy.sharedExpenditure} </span>
+                      {item.what}{" "}
+                      <a
+                        href={item.sourceUrl}
+                        className="font-semibold text-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {dict.common.source}
+                      </a>
+                    </p>
+                  ))}
+                  {project.outsideAgreed.map((item) => (
+                    <p key={item.sourceUrl}>
+                      <span className="font-semibold">{copy.outsideAgreed} </span>
+                      {item.statement}{" "}
+                      <a
+                        href={item.sourceUrl}
+                        className="font-semibold text-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.sourceTitle}
+                      </a>
+                    </p>
+                  ))}
+                  {project.discrepancies.map((item) => (
+                    <p key={item.statement}>
+                      <span className="font-semibold">{copy.discrepancy} </span>
+                      {item.statement}
+                    </p>
+                  ))}
+                </div>
+              )}
+              <div className="mt-6 border-t border-border pt-4 text-sm">
+                <p className="font-semibold text-foreground">{copy.reportingProfile}</p>
+                <p className="mt-1 text-muted">
+                  {project.reporting.reportName} · {project.reporting.identifier}
+                </p>
+                <a
+                  href={project.reporting.sourceUrl}
+                  className="mt-1 inline-flex text-sm font-semibold text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {dict.common.source} →
+                </a>
+                {annualReportIsStale(project) && (
+                  <p className="mt-2 text-sm text-foreground">{copy.staleAnnual}</p>
+                )}
+              </div>
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">

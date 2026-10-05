@@ -1,4 +1,6 @@
-# Climate Fund Watch — Build roadmap (thin slice)
+# Public Funds Watch — Build roadmap (thin slice)
+
+> **Live site (2026-10):** https://pfw.mkweli.tech on GitHub Pages. The phases below record the earlier Climate Fund Watch build. The live registry is external public funding for Mauritius, with climate as one sector.
 
 This roadmap adapts [`PRODUCT_BUILD_PLAN.md`](../PRODUCT_BUILD_PLAN.md) for practical sequential delivery. The full plan remains the north star (modules, two-zone security, multi-tenant country packs).
 

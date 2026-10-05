@@ -2,31 +2,60 @@
 
 import Link from "next/link";
 import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Container } from "@/components/Container";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectFilters } from "@/components/ProjectFilters";
 import { SourceBanner } from "@/components/SourceBanner";
-import type { Project } from "@/data/types";
+import type { GeographyScope, HazardType, Instrument, Project, ProjectStatus, Sector } from "@/data/types";
 import { useI18n } from "@/i18n/LanguageProvider";
-
-type Stats = {
-  count: number;
-  attributedSum: number;
-  attributedCount: number;
-  regional: number;
-};
+import { filterProjects, portfolioStats } from "@/lib/projects";
 
 export function ProjectsView({
-  filtered,
-  stats,
+  projects,
   funders,
 }: {
-  filtered: Project[];
-  stats: Stats;
+  projects: Project[];
   funders: string[];
 }) {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <div className="h-24 animate-pulse rounded-2xl bg-primary-soft/40" />
+        </div>
+      }
+    >
+      <ProjectsBody projects={projects} funders={funders} />
+    </Suspense>
+  );
+}
+
+function ProjectsBody({
+  projects,
+  funders,
+}: {
+  projects: Project[];
+  funders: string[];
+}) {
+  const searchParams = useSearchParams();
   const { dict, formatMoney } = useI18n();
   const copy = dict.projects;
+  const get = (key: string) => searchParams.get(key) ?? undefined;
+  const filtered = filterProjects(
+    {
+      q: get("q"),
+      status: (get("status") as ProjectStatus | "all") || "all",
+      hazard: (get("hazard") as HazardType | "all") || "all",
+      funder: get("funder") || "all",
+      objective: get("objective") || "all",
+      geography: (get("geography") as GeographyScope | "all") || "all",
+      sector: (get("sector") as Sector | "all") || "all",
+      instrument: (get("instrument") as Instrument | "all") || "all",
+    },
+    projects,
+  );
+  const stats = portfolioStats(filtered);
 
   return (
     <>
@@ -51,7 +80,7 @@ export function ProjectsView({
                 {copy.openMap}
               </Link>
               <a
-                href="/api/projects.csv"
+                href="/data/projects.csv"
                 className="inline-flex rounded-lg bg-primary px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark"
               >
                 {copy.downloadCsv}
@@ -91,13 +120,7 @@ export function ProjectsView({
 
       <section className="py-8 sm:py-10">
         <Container className="space-y-6">
-          <Suspense
-            fallback={
-              <div className="h-24 animate-pulse rounded-2xl bg-primary-soft/40" />
-            }
-          >
-            <ProjectFilters funders={funders} />
-          </Suspense>
+          <ProjectFilters funders={funders} />
 
           {filtered.length === 0 ? (
             <p className="rounded-2xl border border-dashed border-border bg-card p-8 text-center text-sm text-muted">
@@ -113,7 +136,7 @@ export function ProjectsView({
 
           <p className="text-center text-xs text-muted">
             {copy.alsoAvailable}{" "}
-            <a href="/api/projects" className="font-semibold text-primary">
+            <a href="/data/projects.json" className="font-semibold text-primary">
               {copy.jsonApi}
             </a>{" "}
             ·{" "}

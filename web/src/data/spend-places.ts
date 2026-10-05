@@ -249,7 +249,8 @@ export const spendPlaces: SpendPlace[] = [
 ];
 
 export function getSpendPlaces(): SpendPlace[] {
-  return spendPlaces;
+  const ids = new Set(getAllProjects().map((p) => p.id));
+  return spendPlaces.filter((p) => ids.has(p.projectId));
 }
 
 export function getSpendPlacesForProject(projectId: string): SpendPlace[] {
@@ -257,7 +258,7 @@ export function getSpendPlacesForProject(projectId: string): SpendPlace[] {
 }
 
 export function getDefaultViewPlaces(): SpendPlace[] {
-  return spendPlaces.filter((p) => p.includeInDefaultView);
+  return getSpendPlaces().filter((p) => p.includeInDefaultView);
 }
 
 export function projectsWithoutSpendPlaces() {

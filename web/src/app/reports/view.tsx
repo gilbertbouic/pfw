@@ -15,10 +15,10 @@ import { useI18n } from "@/i18n/LanguageProvider";
 export function ReportsView() {
   const { dict } = useI18n();
   const copy = dict.reports;
-  const reports = getAllReports();
   const titles = Object.fromEntries(
     getAllProjects().map((p) => [p.id, p.title]),
   );
+  const reports = getAllReports().filter((r) => titles[r.projectId]);
   const missing = projectsWithoutReports(getAllProjects().map((p) => p.id));
 
   return (

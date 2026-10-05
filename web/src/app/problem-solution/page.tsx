@@ -4,7 +4,7 @@ import { ProblemSolutionView } from "./view";
 export const metadata: Metadata = {
   title: "Problem & Solution",
   description:
-    "Why climate finance delivery fails communities - and how Climate Fund Watch closes the gap.",
+    "Why public-fund delivery fails communities - and how Public Funds Watch closes the gap.",
   alternates: { canonical: "/problem-solution" },
   openGraph: { url: "/problem-solution" },
 };

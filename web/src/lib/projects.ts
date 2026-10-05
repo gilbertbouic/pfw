@@ -1,10 +1,6 @@
 import { getAllProjects } from "@/data/projects";
-import {
-  attributedMauritiusAmount,
-  type HazardType,
-  type Project,
-  type ProjectStatus,
-} from "@/data/types";
+import { portfolioUsd, type HazardType, type Instrument, type Project, type ProjectStatus, type Sector } from "@/data/types";
+export { projectsToCsv } from "@/data/csv";
 
 export type ProjectFilters = {
   q?: string;
@@ -14,6 +10,8 @@ export type ProjectFilters = {
   funder?: string;
   objective?: string;
   geography?: string;
+  sector?: Sector | "all";
+  instrument?: Instrument | "all";
 };
 
 export function filterProjects(
@@ -34,6 +32,12 @@ export function filterProjects(
     filters.objective && filters.objective !== "all" ? filters.objective : null;
   const geography =
     filters.geography && filters.geography !== "all" ? filters.geography : null;
+  const sector =
+    filters.sector && filters.sector !== "all" ? filters.sector : null;
+  const instrument =
+    filters.instrument && filters.instrument !== "all"
+      ? filters.instrument
+      : null;
 
   return list.filter((p) => {
     if (status && p.status !== status) return false;
@@ -42,6 +46,8 @@ export function filterProjects(
     if (hazard && !p.hazards.includes(hazard)) return false;
     if (objective && p.climateObjective !== objective) return false;
     if (geography && p.geographyScope !== geography) return false;
+    if (sector && p.sector !== sector) return false;
+    if (instrument && p.instrument !== instrument) return false;
     if (
       funder &&
       !p.funders.some((f) => f.toLowerCase().includes(funder))
@@ -73,91 +79,15 @@ export function uniqueFunders(list = getAllProjects()): string[] {
   return Array.from(new Set(list.flatMap((p) => p.funders))).sort();
 }
 
-export function projectsToCsv(list: Project[]): string {
-  const headers = [
-    "id",
-    "title",
-    "kind",
-    "status",
-    "climate_objective",
-    "geography_scope",
-    "mauritius_share_known",
-    "country",
-    "district",
-    "admin_unit",
-    "lat",
-    "lng",
-    "funders",
-    "implementing_entities",
-    "currency",
-    "amount_label",
-    "amount",
-    "cofinancing",
-    "total_value",
-    "disbursed",
-    "mauritius_share",
-    "start_year",
-    "end_year",
-    "source_urls",
-    "last_reviewed",
-    "confidence",
-  ];
-
-  const escape = (v: string | number | null | undefined) => {
-    const s = v == null ? "" : String(v);
-    if (/[",\n]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
-    return s;
-  };
-
-  const rows = list.map((p) =>
-    [
-      p.id,
-      p.title,
-      p.kind,
-      p.status,
-      p.climateObjective,
-      p.geographyScope,
-      attributedMauritiusAmount(p) != null ? "yes" : "no",
-      p.country,
-      p.district,
-      p.adminUnit,
-      p.lat,
-      p.lng,
-      p.funders.join("|"),
-      p.implementingEntities.join("|"),
-      p.currency,
-      p.amountLabel,
-      p.amount,
-      p.cofinancing,
-      p.totalValue,
-      p.disbursed,
-      p.mauritiusShare,
-      p.startYear ?? "",
-      p.endYear ?? "",
-      p.sources.map((s) => s.url).join("|"),
-      p.lastReviewed,
-      p.confidence,
-    ]
-      .map(escape)
-      .join(","),
-  );
-
-  return [headers.join(","), ...rows].join("\n");
-}
-
 export function portfolioStats(list = getAllProjects()) {
-  const mauritiusAttributed = list.filter(
-    (p) => attributedMauritiusAmount(p) != null,
-  );
-  const attributedSum = mauritiusAttributed
-    .filter((p) => p.currency === "USD")
-    .reduce((s, p) => s + (attributedMauritiusAmount(p) ?? 0), 0);
+  const counted = list.filter((p) => portfolioUsd(p) != null);
+  const attributedSum = counted.reduce((s, p) => s + (portfolioUsd(p) ?? 0), 0);
   const regional = list.filter((p) => p.geographyScope === "multi_country").length;
   const completed = list.filter((p) => p.status === "completed").length;
   return {
     count: list.length,
     attributedSum,
-    attributedCount: mauritiusAttributed.length,
+    attributedCount: counted.length,
     regional,
     completed,
   };

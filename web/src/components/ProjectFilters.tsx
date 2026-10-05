@@ -5,7 +5,9 @@ import { useCallback, useTransition } from "react";
 import {
   type GeographyScope,
   type HazardType,
+  type Instrument,
   type ProjectStatus,
+  type Sector,
 } from "@/data/types";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -112,6 +114,38 @@ export function ProjectFilters({ funders }: Props) {
           {Object.entries(dict.labels.objective).map(([k, label]) => (
             <option key={k} value={k}>
               {label}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label className="block text-xs font-semibold uppercase tracking-wide text-muted">
+        {copy.sector}
+        <select
+          className={`${selectClass} mt-1`}
+          value={searchParams.get("sector") ?? "all"}
+          onChange={(e) => update("sector", e.target.value)}
+        >
+          <option value="all">{copy.allSectors}</option>
+          {(Object.keys(dict.labels.sector) as Sector[]).map((s) => (
+            <option key={s} value={s}>
+              {dict.labels.sector[s]}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label className="block text-xs font-semibold uppercase tracking-wide text-muted">
+        {copy.instrument}
+        <select
+          className={`${selectClass} mt-1`}
+          value={searchParams.get("instrument") ?? "all"}
+          onChange={(e) => update("instrument", e.target.value)}
+        >
+          <option value="all">{copy.allInstruments}</option>
+          {(Object.keys(dict.labels.recordInstrument) as Instrument[]).map((s) => (
+            <option key={s} value={s}>
+              {dict.labels.recordInstrument[s]}
             </option>
           ))}
         </select>

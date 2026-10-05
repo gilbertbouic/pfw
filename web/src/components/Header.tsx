@@ -50,7 +50,7 @@ export function Header() {
             className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow-sm"
             aria-hidden
           >
-            CF
+            PF
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-semibold tracking-tight text-foreground sm:text-base">

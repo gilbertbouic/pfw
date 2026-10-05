@@ -1,19 +1,19 @@
-# Climate Fund Watch (`cfw`)
+# Public Funds Watch (`pfw`)
 
-Independent, sourced public ledger of climate-finance figures for Mauritius, plus a proposed multi-country transparency product.
+Independent, sourced public ledger of external public funding for Mauritius. Climate finance stays one sector.
 
 | | |
 |--|--|
-| **Public site** | https://cfw.mkweli.tech |
-| **GitHub** | https://github.com/gilbertbouic/cfw |
-| **Contact** | support@mkweli.tech · form on [/get-involved](https://cfw.mkweli.tech/get-involved) |
-| **Reference pilot** | ClimateFunds Watch Mauritius |
+| **Public site** | https://pfw.mkweli.tech |
+| **GitHub** | https://github.com/gilbertbouic/pfw |
+| **Contact** | support@mkweli.tech · form on [/get-involved](https://pfw.mkweli.tech/get-involved) |
+| **Reference ledger** | Mauritius |
 
 ## What is live
 
-A **sourced Mauritius briefing**: need (NDC / CCDR), tagged domestic spend, international projects, and citations. Every money field is taken from a public URL or shown as “Not published.”
+A **sourced Mauritius registry**. Every money field is taken from a public URL or shown as “Not published.” New rows are grants over USD 1 million with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, or the African Development Bank. Existing climate records stay, including amounts under USD 1 million. Red Cross projects and Mauritian NGO grants over USD 500,000 are included when a public source states a Mauritius figure. Loans are not added as grants. Shared money is counted once. A non-USD amount keeps its original currency and stores a pinned ECB reference rate.
 
-Community evidence, the integrity vault, and government consoles are **proposed**, not operating.
+Community evidence, the integrity vault, government consoles, and a weekly grant checker are **not** part of this site.
 
 ## Repository layout
 
@@ -40,30 +40,22 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Description |
 |------|-------------|
-| `/` | Mauritius climate-finance briefing |
+| `/` | Mauritius public-funding briefing |
 | `/projects` | Sourced registry |
 | `/projects/[id]` | Record detail with citations |
 | `/landscape` | Need vs tagged spend vs donor channels |
 | `/map` | Island schematic of named works sites; site-level spend or not reported |
 | `/reports` | Published donor APRs, PPRs and evaluations |
-| `/sources` | Methods and source list (`/methodology` redirects here) |
-| `/api/projects` | JSON (includes source URLs) |
-| `/api/projects.csv` | CSV download |
+| `/sources` | Methods, older-than-10-years note, and records reviewed and not added |
+| `/data/projects.json` | JSON (includes source URLs) |
+| `/data/projects.csv` | CSV download |
 | `/about` · `/problem-solution` · `/get-involved` | Product narrative + contact |
 
-## Deploy (Vercel)
+## Deploy (GitHub Pages)
 
-The Next.js app lives in **`web/`**. In the Vercel project settings, **Root Directory must be `web`**.
+The site is a static export of `web/` (`output: 'export'`). Pushing `main` runs [`.github/workflows/pages.yml`](./.github/workflows/pages.yml), which publishes `web/out`.
 
-### Custom domain `cfw.mkweli.tech`
-
-In Hostinger DNS:
-
-| Type | Name | Value |
-|------|------|-------|
-| CNAME | `cfw` | `cname.vercel-dns.com` |
-
-**Not** `gilbertbouic.github.io`. Then add the domain in the Vercel project settings.
+The custom domain is **https://pfw.mkweli.tech**. DNS is a CNAME from `pfw` to `gilbertbouic.github.io`. `web/public/CNAME` contains `pfw.mkweli.tech`. Do not point this site at Vercel, and do not recreate `cfw.mkweli.tech`.
 
 ## Product status
 

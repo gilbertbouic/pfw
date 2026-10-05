@@ -5,13 +5,13 @@ import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
 import { SourceBanner } from "@/components/SourceBanner";
 import { headlines } from "@/data/headlines";
-import { getAllProjects } from "@/data/projects";
+import { coverageNotes, getAllProjects, olderThanTenYears } from "@/data/projects";
 import { LEDGER_REVIEWED } from "@/data/types";
 import type { HeadlineId } from "@/i18n/dictionaries";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 export function SourcesView() {
-  const { dict } = useI18n();
+  const { dict, lang } = useI18n();
   const copy = dict.sources;
   const projects = getAllProjects();
   const [beforeEmail, afterEmail] = copy.corrections
@@ -98,17 +98,61 @@ export function SourcesView() {
           </ul>
 
           <h2 className="mt-10 font-display text-xl font-semibold text-foreground">
+            {copy.olderTitle}
+          </h2>
+          <p className="mt-3 text-sm text-muted">{copy.olderLead}</p>
+          <ul className="mt-4 space-y-3 text-sm">
+            {olderThanTenYears.map((note) => (
+              <li key={note.url}>
+                <a
+                  href={note.url}
+                  className="font-semibold text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {note.title}
+                </a>
+                <p className="mt-1 text-muted">
+                  {note.funderClass}. {lang === "fr" ? note.reasonFr : note.reason}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <h2 className="mt-10 font-display text-xl font-semibold text-foreground">
+            {copy.skippedTitle}
+          </h2>
+          <p className="mt-3 text-sm text-muted">{copy.skippedLead}</p>
+          <ul className="mt-4 space-y-4 text-sm">
+            {coverageNotes.map((note) => (
+              <li key={note.title}>
+                <a
+                  href={note.url}
+                  className="font-semibold text-foreground hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {note.title}
+                </a>
+                <p className="mt-1 text-muted">
+                  {note.funderClass}. {lang === "fr" ? note.reasonFr : note.reason}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <h2 className="mt-10 font-display text-xl font-semibold text-foreground">
             {copy.openDownloads}
           </h2>
           <p className="mt-3 text-sm text-muted">{copy.csvNote}</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
-              <a href="/api/projects" className="font-semibold text-primary">
+              <a href="/data/projects.json" className="font-semibold text-primary">
                 {copy.jsonLink}
               </a>
             </li>
             <li>
-              <a href="/api/projects.csv" className="font-semibold text-primary">
+              <a href="/data/projects.csv" className="font-semibold text-primary">
                 {copy.csvLink}
               </a>
             </li>

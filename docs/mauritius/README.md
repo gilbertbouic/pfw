@@ -1,6 +1,6 @@
 # Mauritius reference pack
 
-Research and concept materials that seed **Country Pack MU** for Climate Fund Watch.
+Research and concept materials for the Mauritius ledger. The live site is **Public Funds Watch** at https://pfw.mkweli.tech.
 
 These documents support the reference pilot brand **ClimateFunds Watch Mauritius**. They are not the product boundary — the platform is multi-country (see root `PRODUCT_BUILD_PLAN.md` §27).
 

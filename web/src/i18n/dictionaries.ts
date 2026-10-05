@@ -52,6 +52,20 @@ const en = {
       energy_transition: "Energy transition",
       multi: "Multi-hazard",
     },
+    sector: {
+      climate: "Climate",
+      transport: "Transport",
+      health: "Health",
+      social: "Social",
+      other: "Other",
+    },
+    recordInstrument: {
+      grant: "Grant",
+      loan: "Loan",
+      mixed: "Mixed",
+      technical_assistance: "Technical assistance",
+      unknown: "Not stated as grant or loan",
+    },
     confidence: {
       official_register: "Official funder register",
       government_document: "Government document",
@@ -77,8 +91,8 @@ const en = {
   header: {
     backTo: "Back to",
     backToHub: "Back to mkweli.tech",
-    productName: "Climate Fund Watch",
-    tagline: "Mauritius climate finance, sourced",
+    productName: "Public Funds Watch",
+    tagline: "Mauritius external public funding, each figure cited",
     browseRegistry: "Browse registry",
     toggleMenu: "Toggle menu",
     primaryNav: "Primary",
@@ -95,7 +109,7 @@ const en = {
   },
   footer: {
     blurb:
-      "An independent public ledger of climate-finance figures for Mauritius, compiled from cited government and funder documents. Product modules beyond this sourced registry are proposed, not live.",
+      "An independent public ledger of external public funding for Mauritius, including climate finance. Every figure is copied from a cited document or labelled Not published.",
     explore: "Explore",
     projectRegistry: "Project registry",
     fundingLandscape: "Funding landscape",
@@ -109,7 +123,7 @@ const en = {
     lastReviewed: "Last reviewed {date}",
     unknownAmounts: 'Unknown amounts shown as "Not published"',
     sourcedOnly: "Sourced records only",
-    copyright: "© {year} Climate Fund Watch. All rights reserved.",
+    copyright: "© {year} Public Funds Watch. All rights reserved.",
     disclaimer: "Not an official government or funder reporting system.",
   },
   sourceBanner: {
@@ -151,7 +165,7 @@ const en = {
     sending: "Sending...",
     send: "Send message",
     orEmail: "Or email support@mkweli.tech →",
-    subject: "Climate Fund Watch - Get involved",
+    subject: "Public Funds Watch - Get involved",
     fallbackName: "Name",
     fallbackOrg: "Organisation",
     fallbackEmail: "Email",
@@ -177,6 +191,10 @@ const en = {
     allObjectives: "All objectives",
     funder: "Funder",
     allFunders: "All funders",
+    sector: "Sector",
+    allSectors: "All sectors",
+    instrument: "Instrument",
+    allInstruments: "All instruments",
   },
   worksSchematic: {
     mauritiusTitle: "Mauritius - named localities",
@@ -190,9 +208,16 @@ const en = {
   home: {
     sourcesReviewed: "Public sources · last reviewed {date}",
     heroTitle: "What public documents say about",
-    heroTitleAccent: "climate finance in Mauritius",
+    heroTitleAccent: "external public funding in Mauritius",
     heroLead:
-      "Three different questions are often mixed together: how much is needed, what the budget tags as climate-related, and which international projects are published. This site keeps them apart and links every figure to a source.",
+      "Climate finance stays one sector. New grants are over USD 1 million from the last 10 years. Red Cross projects and Mauritian NGO grants over USD 500,000 are included when a public source states a Mauritius figure. Unpublished figures stay “Not published.”",
+    coverageTitle: "What this registry includes",
+    coveragePoints: [
+      "Mauritius only. Climate records already on the list stay, including amounts under USD 1 million.",
+      "A new row is a grant over USD 1 million with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, or the African Development Bank.",
+      "Loans are not added as grants. Where one project publishes both a grant and a loan, only the grant is in the registry amount.",
+      "Per diems, overheads, and expenditure stay “Not published” unless the source states the figure. Shared money is counted once in the registry total.",
+    ],
     openRegistry: "Open the sourced registry",
     fundingLandscape: "Funding landscape",
     readSeparately: "Read the numbers separately",
@@ -213,7 +238,7 @@ const en = {
     whatThisIs: "What this site is",
     briefingTitle: "A public briefing, not a live government dashboard.",
     briefingBody:
-      "Climate Fund Watch is also a proposed transparency platform (community evidence, integrity channel, council consoles). Those modules are not live. The pages here publish only what we could verify in public documents as of {date}.",
+      "Public Funds Watch is also a proposed transparency platform (community evidence, integrity channel, council consoles). Those modules are not live. The pages here publish only what we could verify in public documents as of {date}.",
     howWeCite: "How we cite",
     aboutProduct: "About the product",
     weDoNotInvent: "We do not invent",
@@ -259,19 +284,19 @@ const en = {
     eyebrow: "About",
     title: "A digital public good for climate finance accountability",
     description:
-      "Climate Fund Watch combines open project tracking, community verification, and a hard-isolated integrity channel. Mauritius is the reference pilot; the platform is designed for any country.",
+      "Public Funds Watch combines open project tracking, community verification, and a hard-isolated integrity channel. Mauritius is the reference pilot; the platform is designed for any country.",
     buildingTitle: "What we are building",
     buildingP1:
       "Climate finance is mobilizing at speed worldwide, but delivery often fails for the same reasons: fragmented project reporting, weak budget-to-site traceability, limited local authority visibility, closed data, and unsafe or absent integrity channels.",
     buildingP2a:
-      "Climate Fund Watch is the shared accountability layer: a",
+      "Public Funds Watch is the shared accountability layer: a",
     buildingP2strong: "multi-tenant, multi-country platform",
     buildingP2b: "with a common core and configurable",
     buildingP2strong2: "country packs",
     buildingP2c:
       "(legal text, languages, admin boundaries, funder catalogs, hazard layers).",
     buildingP3a: "The product name is global -",
-    buildingP3name: "Climate Fund Watch",
+    buildingP3name: "Public Funds Watch",
     buildingP3b: ". The first reference implementation is branded",
     buildingP3brand: "ClimateFunds Watch Mauritius",
     buildingP3c:
@@ -316,7 +341,7 @@ const en = {
     ],
     principlesTitle: "Product principles",
     principlesLead:
-      "Non-negotiables from the Climate Fund Watch product build plan. They guide engineering, governance, and country onboarding.",
+      "Non-negotiables from the Public Funds Watch product build plan. They guide engineering, governance, and country onboarding.",
     principles: [
       "Two-zone architecture: public transparency and whistleblower data never share identity links.",
       "Open by default for public money; anonymous by default for integrity reports.",
@@ -376,7 +401,7 @@ const en = {
     publicRepo: "(public)",
     transparency: "Transparency note",
     transparencyBody:
-      "Project and budget records on this site are compiled from cited public documents. They are not a live government feed. See {sources}. The USD 550,000 Year-1 envelope mentioned in concept notes is a proposed Climate Fund Watch pilot cost, not a Mauritius climate-finance statistic.",
+      "Project and budget records on this site are compiled from cited public documents. They are not a live government feed. See {sources}. The USD 550,000 Year-1 envelope mentioned in concept notes is a proposed Public Funds Watch pilot cost, not a Mauritius climate-finance statistic.",
     sourcesWord: "sources",
   },
   landscape: {
@@ -495,14 +520,22 @@ const en = {
       "Status is taken from the funder or UNDP page (under implementation, completed) or left unknown. We do not mark projects delayed for illustration.",
       'Named works sites are shown on a Mauritius/Rodrigues schematic (not a world map). Dots are approximate localities from CEB, UNDP, GCF or Adaptation Fund reports, not surveyed works polygons. Site-level spend is "Not reported" unless a document publishes a figure for that site. Batch grants are not divided across substations.',
       'Donor reports are APRs, PPRs and evaluations linked from GCF or Adaptation Fund pages. GCF public reporting for these projects is annual. We do not add a quarterly "next tranche" calendar unless a cited document states that cycle.',
+      "A currency other than USD is tested with the European Central Bank reference rate for the document date, pinned via Frankfurter. The original currency stays the cited amount. The rate is not refreshed on each page view.",
+      "A project that started before 5 October 2016 is named with the older records and does not get a project page. An existing climate record with no published start date stays on the main list.",
     ],
     headlineFigures: "Headline figures",
     registryRecords: "Registry records",
     openDownloads: "Open downloads",
     csvNote:
       "The CSV includes a source_urls column so a download stays verifiable offline.",
-    jsonLink: "JSON - /api/projects",
-    csvLink: "CSV - /api/projects.csv",
+    olderTitle: "Older than 10 years",
+    olderLead:
+      "A project that started before 5 October 2016 is not given a project page, including when it is still open. It is named here.",
+    skippedTitle: "Reviewed and not added",
+    skippedLead:
+      "These pages were opened for this pass. A class with no qualifying public grant is named here. A blank field is not filled with a loan or an estimate.",
+    jsonLink: "JSON - /data/projects.json",
+    csvLink: "CSV - /data/projects.csv",
     corrections: "Ledger last reviewed {date}. Corrections: {email}.",
   },
   problemSolution: {
@@ -555,7 +588,7 @@ const en = {
     solutionEyebrow: "The solution",
     solutionTitle: "Modular platform, two security zones",
     solutionLead:
-      "Climate Fund Watch is designed as pluggable modules on a multi-tenant core. Public transparency data is open by default. Integrity reports would live in a separate vault with no identity join keys to the public zone. Community evidence, the integrity channel, and government consoles are not operating on this site.",
+      "Public Funds Watch is designed as pluggable modules on a multi-tenant core. Public transparency data is open by default. Integrity reports would live in a separate vault with no identity join keys to the public zone. Community evidence, the integrity channel, and government consoles are not operating on this site.",
     modules: [
       {
         id: "M1",
@@ -636,20 +669,20 @@ const en = {
   },
   projects: {
     eyebrow: "Public registry",
-    title: "Sourced climate-finance records",
+    title: "Sourced public-funding records",
     lead:
       'Only records with at least one public URL. Regional programme totals are not treated as Mauritius receipts. Amounts that funders have not published are shown as "Not published."',
     openMap: "Open map",
     downloadCsv: "Download CSV",
     recordsShown: "Records shown",
-    attributedSum: "Mauritius-attributed USD (sum)",
+    attributedSum: "Listed USD, shared money once",
     withAmount: "With a Mauritius amount",
     multiCountry: "Multi-country programmes",
     sumNote:
-      "The Mauritius-attributed USD sum adds only USD amounts a source assigns to Mauritius (GCF FP033 grant, AF coastal grant, AF coral Mauritius component, NDC NAP lines). It omits the EC farmer grant (€) and does not add regional GCF programme totals.",
+      "The USD sum adds Mauritius amounts a source assigns to Mauritius. A euro amount is included at the European Central Bank reference rate pinned on the record. Shared money is counted once. Regional programme totals without a Mauritius line are omitted. The 2012 Adaptation Fund coastal programme is older than 10 years and is not in this sum.",
     noMatch: "No records match these filters. Clear a filter and try again.",
     alsoAvailable: "Also available as",
-    jsonApi: "JSON API",
+    jsonApi: "JSON",
     sourcesAndMethods: "Sources and methods",
   },
   projectDetail: {
@@ -690,6 +723,19 @@ const en = {
     hazards: "Hazards",
     funders: "Funders",
     implementing: "Implementing entities",
+    declaredExpenditure: "Declared expenditure",
+    usdEquivalent: "USD equivalent for the threshold test",
+    rateSource: "Rate source",
+    perDiems: "Per diems",
+    overheads: "Overheads",
+    sharedExpenditure: "Shared expenditure:",
+    outsideAgreed: "Outside the agreed budget:",
+    discrepancy: "Published figures differ:",
+    reportingProfile: "Reporting profile",
+    staleAnnual:
+      "The last review of this annual report is more than 12 months before 5 October 2026. This line does not invent a filing deadline.",
+    startUnpublished:
+      "The start date is not published in the sources reviewed for this record, so the 10-year test cannot be applied. The record stays because it was already on the climate list.",
   },
 };
 
@@ -745,6 +791,20 @@ const fr: typeof en = {
       energy_transition: "Transition énergétique",
       multi: "Multi-aléas",
     },
+    sector: {
+      climate: "Climat",
+      transport: "Transport",
+      health: "Santé",
+      social: "Social",
+      other: "Autre",
+    },
+    recordInstrument: {
+      grant: "Don",
+      loan: "Prêt",
+      mixed: "Mixte",
+      technical_assistance: "Assistance technique",
+      unknown: "Non indiqué comme don ou prêt",
+    },
     confidence: {
       official_register: "Registre officiel du bailleur",
       government_document: "Document gouvernemental",
@@ -770,8 +830,8 @@ const fr: typeof en = {
   header: {
     backTo: "Retour vers",
     backToHub: "Retour vers mkweli.tech",
-    productName: "Climate Fund Watch",
-    tagline: "Finance climatique de Maurice, sourcée",
+    productName: "Public Funds Watch",
+    tagline: "Financement public extérieur de Maurice, chaque chiffre cité",
     browseRegistry: "Parcourir le registre",
     toggleMenu: "Ouvrir le menu",
     primaryNav: "Principal",
@@ -788,7 +848,7 @@ const fr: typeof en = {
   },
   footer: {
     blurb:
-      "Un registre public indépendant des chiffres de finance climatique pour Maurice, compilé à partir de documents cités des autorités et des bailleurs. Les modules du produit au-delà de ce registre sourcé sont proposés, pas encore en service.",
+      "Un registre public indépendant du financement public extérieur de Maurice, y compris la finance climatique. Chaque chiffre est copié d'un document cité ou marqué Non publié.",
     explore: "Explorer",
     projectRegistry: "Registre des projets",
     fundingLandscape: "Paysage du financement",
@@ -802,7 +862,7 @@ const fr: typeof en = {
     lastReviewed: "Dernière revue le {date}",
     unknownAmounts: 'Les montants inconnus s\'affichent comme "Non publié"',
     sourcedOnly: "Fiches sourcées uniquement",
-    copyright: "© {year} Climate Fund Watch. Tous droits réservés.",
+    copyright: "© {year} Public Funds Watch. Tous droits réservés.",
     disclaimer:
       "Ceci n'est pas un système officiel de notification d'un gouvernement ou d'un bailleur.",
   },
@@ -846,7 +906,7 @@ const fr: typeof en = {
     sending: "Envoi...",
     send: "Envoyer le message",
     orEmail: "Ou écrire à support@mkweli.tech →",
-    subject: "Climate Fund Watch - Participer",
+    subject: "Public Funds Watch - Participer",
     fallbackName: "Nom",
     fallbackOrg: "Organisation",
     fallbackEmail: "E-mail",
@@ -872,6 +932,10 @@ const fr: typeof en = {
     allObjectives: "Tous les objectifs",
     funder: "Bailleur",
     allFunders: "Tous les bailleurs",
+    sector: "Secteur",
+    allSectors: "Tous les secteurs",
+    instrument: "Instrument",
+    allInstruments: "Tous les instruments",
   },
   worksSchematic: {
     mauritiusTitle: "Maurice - localités nommées",
@@ -885,9 +949,16 @@ const fr: typeof en = {
   home: {
     sourcesReviewed: "Sources publiques · dernière revue le {date}",
     heroTitle: "Ce que disent les documents publics sur",
-    heroTitleAccent: "la finance climatique à Maurice",
+    heroTitleAccent: "le financement public extérieur à Maurice",
     heroLead:
-      "Trois questions distinctes sont souvent mélangées : de combien a-t-on besoin, ce que le budget étiquette comme lié au climat, et quels projets internationaux sont publiés. Ce site les sépare et relie chaque chiffre à une source.",
+      "La finance climatique reste un secteur. Les nouveaux dons dépassent 1 million USD sur les 10 dernières années. Les projets de la Croix-Rouge et les dons à des ONG mauriciennes de plus de 500 000 USD sont inclus lorsqu'une source publique indique un chiffre pour Maurice. Les chiffres non publiés restent « Non publié ».",
+    coverageTitle: "Ce que ce registre inclut",
+    coveragePoints: [
+      "Maurice seulement. Les fiches climat déjà sur la liste restent, y compris les montants sous 1 million USD.",
+      "Une nouvelle fiche est un don de plus de 1 million USD dont le début ou l'approbation est le 5 octobre 2016 ou après, venant de l'ONU, d'un gouvernement étranger nommé, de la Banque mondiale, de la Banque asiatique de développement ou de la Banque africaine de développement.",
+      "Les prêts ne sont pas ajoutés comme des dons. Lorsqu'un projet publie un don et un prêt, seul le don entre dans le montant du registre.",
+      "Les per diem, les frais généraux et les dépenses restent « Non publié » tant que la source n'énonce pas le chiffre. L'argent partagé n'est compté qu'une fois dans le total du registre.",
+    ],
     openRegistry: "Ouvrir le registre sourcé",
     fundingLandscape: "Paysage du financement",
     readSeparately: "Lire les chiffres séparément",
@@ -909,7 +980,7 @@ const fr: typeof en = {
     briefingTitle:
       "Un briefing public, pas un tableau de bord gouvernemental en direct.",
     briefingBody:
-      "Climate Fund Watch est aussi une plateforme de transparence proposée (preuves citoyennes, canal d'intégrité, consoles des conseils). Ces modules ne sont pas en service. Les pages ici ne publient que ce que nous avons pu vérifier dans des documents publics au {date}.",
+      "Public Funds Watch est aussi une plateforme de transparence proposée (preuves citoyennes, canal d'intégrité, consoles des conseils). Ces modules ne sont pas en service. Les pages ici ne publient que ce que nous avons pu vérifier dans des documents publics au {date}.",
     howWeCite: "Comment nous citons",
     aboutProduct: "À propos du produit",
     weDoNotInvent: "Nous n'inventons pas",
@@ -956,19 +1027,19 @@ const fr: typeof en = {
     title:
       "Un bien public numérique pour la redevabilité de la finance climatique",
     description:
-      "Climate Fund Watch combine le suivi ouvert des projets, la vérification citoyenne et un canal d'intégrité isolé. Maurice est le pilote de référence ; la plateforme est conçue pour n'importe quel pays.",
+      "Public Funds Watch combine le suivi ouvert des projets, la vérification citoyenne et un canal d'intégrité isolé. Maurice est le pilote de référence ; la plateforme est conçue pour n'importe quel pays.",
     buildingTitle: "Ce que nous construisons",
     buildingP1:
       "La finance climatique se mobilise vite dans le monde, mais la mise en oeuvre échoue souvent pour les mêmes raisons : reporting projet fragmenté, faible traçabilité du budget jusqu'au site, visibilité limitée des autorités locales, données fermées, et canaux d'intégrité absents ou non sûrs.",
     buildingP2a:
-      "Climate Fund Watch est la couche de redevabilité partagée : une",
+      "Public Funds Watch est la couche de redevabilité partagée : une",
     buildingP2strong: "plateforme multi-locataire et multi-pays",
     buildingP2b: "avec un noyau commun et des",
     buildingP2strong2: "packs pays",
     buildingP2c:
       "configurables (textes juridiques, langues, découpages administratifs, catalogues de bailleurs, couches d'aléas).",
     buildingP3a: "Le nom du produit est mondial -",
-    buildingP3name: "Climate Fund Watch",
+    buildingP3name: "Public Funds Watch",
     buildingP3b: ". La première mise en oeuvre de référence s'appelle",
     buildingP3brand: "ClimateFunds Watch Mauritius",
     buildingP3c:
@@ -1014,7 +1085,7 @@ const fr: typeof en = {
     ],
     principlesTitle: "Principes du produit",
     principlesLead:
-      "Non-négociables du plan de construction de Climate Fund Watch. Ils guident l'ingénierie, la gouvernance et l'accueil d'un pays.",
+      "Non-négociables du plan de construction de Public Funds Watch. Ils guident l'ingénierie, la gouvernance et l'accueil d'un pays.",
     principles: [
       "Architecture à deux zones : la transparence publique et les données de lanceurs d'alerte ne partagent jamais de liens d'identité.",
       "Ouvert par défaut pour l'argent public ; anonyme par défaut pour les signalements d'intégrité.",
@@ -1075,7 +1146,7 @@ const fr: typeof en = {
     publicRepo: "(public)",
     transparency: "Note de transparence",
     transparencyBody:
-      "Les fiches de projets et de budgets sur ce site sont compilées à partir de documents publics cités. Ce n'est pas un flux gouvernemental en direct. Voir {sources}. L'enveloppe de 550 000 USD pour l'année 1 mentionnée dans les notes de concept est un coût proposé du pilote Climate Fund Watch, pas une statistique de finance climatique de Maurice.",
+      "Les fiches de projets et de budgets sur ce site sont compilées à partir de documents publics cités. Ce n'est pas un flux gouvernemental en direct. Voir {sources}. L'enveloppe de 550 000 USD pour l'année 1 mentionnée dans les notes de concept est un coût proposé du pilote Public Funds Watch, pas une statistique de finance climatique de Maurice.",
     sourcesWord: "sources",
   },
   landscape: {
@@ -1194,14 +1265,22 @@ const fr: typeof en = {
       "Le statut est pris sur la page du bailleur ou du PNUD (en cours de mise en oeuvre, achevé) ou laissé inconnu. Nous ne marquons pas de projets en retard pour l'illustration.",
       'Les sites d\'ouvrages nommés apparaissent sur un schéma Maurice/Rodrigues (pas une carte du monde). Les points sont des localités approximatives tirées de rapports CEB, PNUD, GCF ou Adaptation Fund, pas des polygones d\'ouvrages levés. La dépense au site est "Non communiqué" sauf si un document publie un chiffre pour ce site. Les subventions groupées ne sont pas réparties entre sous-stations.',
       'Les rapports des bailleurs sont des APR, PPR et évaluations liés depuis les pages GCF ou Adaptation Fund. Le reporting public GCF pour ces projets est annuel. Nous n\'ajoutons pas de calendrier trimestriel de "prochaine tranche" sauf si un document cité indique ce cycle.',
+      "Une devise autre que le USD est testée avec le taux de référence de la Banque centrale européenne à la date du document, figé via Frankfurter. La devise d'origine reste le montant cité. Le taux n'est pas rafraîchi à chaque consultation.",
+      "Un projet commencé avant le 5 octobre 2016 est nommé avec les fiches plus anciennes et n'a pas de page projet. Une fiche climat déjà présente sans date de début publiée reste sur la liste principale.",
     ],
     headlineFigures: "Chiffres d'accroche",
     registryRecords: "Fiches du registre",
     openDownloads: "Téléchargements ouverts",
     csvNote:
       "Le CSV inclut une colonne source_urls pour qu'un téléchargement reste vérifiable hors ligne.",
-    jsonLink: "JSON - /api/projects",
-    csvLink: "CSV - /api/projects.csv",
+    olderTitle: "Plus de 10 ans",
+    olderLead:
+      "Un projet commencé avant le 5 octobre 2016 n'a pas de page projet, même s'il est encore ouvert. Il est nommé ici.",
+    skippedTitle: "Examiné et non ajouté",
+    skippedLead:
+      "Ces pages ont été ouvertes pour cette passe. Une catégorie sans don public qui atteint le seuil est nommée ici. Un champ vide n'est pas rempli avec un prêt ou une estimation.",
+    jsonLink: "JSON - /data/projects.json",
+    csvLink: "CSV - /data/projects.csv",
     corrections: "Registre revu le {date}. Corrections : {email}.",
   },
   problemSolution: {
@@ -1254,7 +1333,7 @@ const fr: typeof en = {
     solutionEyebrow: "La solution",
     solutionTitle: "Plateforme modulaire, deux zones de sécurité",
     solutionLead:
-      "Climate Fund Watch est conçu comme des modules branchables sur un noyau multi-locataire. Les données de transparence publique sont ouvertes par défaut. Les signalements d'intégrité vivraient dans un coffre séparé, sans clé de jointure d'identité vers la zone publique. Les preuves citoyennes, le canal d'intégrité et les consoles gouvernementales ne fonctionnent pas sur ce site.",
+      "Public Funds Watch est conçu comme des modules branchables sur un noyau multi-locataire. Les données de transparence publique sont ouvertes par défaut. Les signalements d'intégrité vivraient dans un coffre séparé, sans clé de jointure d'identité vers la zone publique. Les preuves citoyennes, le canal d'intégrité et les consoles gouvernementales ne fonctionnent pas sur ce site.",
     modules: [
       {
         id: "M1",
@@ -1335,21 +1414,21 @@ const fr: typeof en = {
   },
   projects: {
     eyebrow: "Registre public",
-    title: "Fiches sourcées de finance climatique",
+    title: "Fiches sourcées de financement public",
     lead:
       'Uniquement des fiches avec au moins une URL publique. Les totaux de programmes régionaux ne sont pas traités comme des recettes de Maurice. Les montants que les bailleurs n\'ont pas publiés s\'affichent comme "Non publié."',
     openMap: "Ouvrir la carte",
     downloadCsv: "Télécharger le CSV",
     recordsShown: "Fiches affichées",
-    attributedSum: "USD attribué à Maurice (somme)",
+    attributedSum: "USD listés, argent partagé une fois",
     withAmount: "Avec un montant Maurice",
     multiCountry: "Programmes multi-pays",
     sumNote:
-      "La somme USD attribuée à Maurice n'ajoute que les montants USD qu'une source assigne à Maurice (don GCF FP033, don côtier AF, composante corail AF Maurice, lignes PAN CDN). Elle omet la subvention agricole CE (€) et n'ajoute pas les totaux de programmes GCF régionaux.",
+      "La somme USD ajoute les montants Maurice qu'une source assigne à Maurice. Un montant en euros est inclus au taux de référence de la Banque centrale européenne figé sur la fiche. L'argent partagé n'est compté qu'une fois. Les totaux de programmes régionaux sans ligne Maurice sont omis. Le programme côtier du Fonds d'adaptation de 2012 a plus de 10 ans et n'est pas dans cette somme.",
     noMatch:
       "Aucune fiche ne correspond à ces filtres. Effacez un filtre et réessayez.",
     alsoAvailable: "Aussi disponible en",
-    jsonApi: "API JSON",
+    jsonApi: "JSON",
     sourcesAndMethods: "Sources et méthodes",
   },
   projectDetail: {
@@ -1390,6 +1469,19 @@ const fr: typeof en = {
     hazards: "Aléas",
     funders: "Bailleurs",
     implementing: "Entités de mise en oeuvre",
+    declaredExpenditure: "Dépense déclarée",
+    usdEquivalent: "Équivalent USD pour le test de seuil",
+    rateSource: "Source du taux",
+    perDiems: "Per diem",
+    overheads: "Frais généraux",
+    sharedExpenditure: "Dépense partagée :",
+    outsideAgreed: "Hors du budget convenu :",
+    discrepancy: "Les chiffres publiés diffèrent :",
+    reportingProfile: "Profil de reporting",
+    staleAnnual:
+      "La dernière revue de ce rapport annuel date de plus de 12 mois avant le 5 octobre 2026. Cette ligne n'invente pas de date limite de dépôt.",
+    startUnpublished:
+      "La date de début n'est pas publiée dans les sources examinées pour cette fiche, donc le test des 10 ans ne peut pas être appliqué. La fiche reste parce qu'elle était déjà sur la liste climat.",
   },
 };
 

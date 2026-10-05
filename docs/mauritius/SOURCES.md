@@ -1,6 +1,8 @@
-# Mauritius climate-finance sources
+# Mauritius public-funding sources
 
-Public URLs behind the Climate Fund Watch ledger (`web/src/data/`). Last reviewed **2026-09-16**.
+Public URLs behind the Public Funds Watch ledger (`web/src/data/`). Climate rows were last reviewed **2026-09-16**. The inclusion pass below was reviewed **2026-10-05**.
+
+The live site is https://pfw.mkweli.tech. The 2012 Adaptation Fund coastal programme is named on the sources page and is not a project page. New rows must be grants. The Rodrigues Airport record (`mu-wb-p180266-grant`) keeps the World Bank grant of USD 16,000,000 and leaves the IBRD loan of USD 184,000,000 out of the registry sum. Pages opened for classes with no qualifying row are in `web/src/data/coverage.ts`.
 
 Rules: copy figures as published; do not invent Mauritius splits of regional programmes; do not treat NDC need, budget tags, and donor receipts as one total.
 

@@ -4,7 +4,7 @@ import { AboutView } from "./view";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What Climate Fund Watch is, who it serves, and how Mauritius anchors the first country pack.",
+    "What Public Funds Watch is, and how the Mauritius public-funding ledger is sourced.",
   alternates: { canonical: "/about" },
   openGraph: { url: "/about" },
 };

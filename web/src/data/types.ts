@@ -79,12 +79,90 @@ export const PRECISION_LABELS: Record<PlacePrecision, string> = {
 export const PIN_CAVEAT =
   "Approximate locality for a place named in a public report - not a surveyed works polygon.";
 
+export const AS_OF = "2026-10-05";
+export const TEN_YEAR_CUTOFF = "2016-10-05";
+
+export type Sector =
+  | "climate"
+  | "transport"
+  | "health"
+  | "social"
+  | "other";
+
+export type Instrument =
+  | "grant"
+  | "loan"
+  | "mixed"
+  | "technical_assistance"
+  | "unknown";
+
+export type ReportCycle = "annual" | "project_record";
+
+export type MoneyLine = {
+  amount: number | null;
+  currency: string;
+  label: string;
+  note: string;
+  sourceUrl: string | null;
+};
+
+export type UsdEquivalent = {
+  amount: number;
+  /** Null when the cited figure is already in USD. */
+  rate: number | null;
+  rateDate: string | null;
+  rateUrl: string | null;
+  note: string;
+};
+
+export type SharedExpenditure = {
+  otherProjectId: string;
+  what: string;
+  amount: number | null;
+  currency: string;
+  sourceUrl: string;
+};
+
+export type OutsideAgreed = {
+  statement: string;
+  sourceTitle: string;
+  sourceUrl: string;
+};
+
+export type Discrepancy = {
+  statement: string;
+  sourceUrls: string[];
+};
+
+export type ReportingProfile = {
+  reportName: string;
+  identifier: string;
+  sourceUrl: string;
+  cycle: ReportCycle;
+  /** Fields a future checker may propose from this report. It does not write them. */
+  fields: Array<
+    "committed" | "disbursed" | "declaredExpenditure" | "status" | "end"
+  >;
+};
+
+export type CoverageNote = {
+  title: string;
+  funderClass: string;
+  reason: string;
+  reasonFr: string;
+  url: string;
+};
+
+export type AgeNote = "start_unpublished";
+
 export type Project = {
   id: string;
   title: string;
   summary: string;
   kind: RecordKind;
-  climateObjective: ClimateObjective;
+  sector: Sector;
+  instrument: Instrument;
+  climateObjective: ClimateObjective | null;
   hazards: HazardType[];
   status: ProjectStatus;
   country: string;
@@ -109,8 +187,24 @@ export type Project = {
   totalValueNote?: string;
   disbursed: number | null;
   disbursedNote?: string;
+  /** Spend a source says was incurred. Never computed as committed minus disbursed. */
+  declaredExpenditure: number | null;
+  declaredExpenditureNote?: string;
   mauritiusShare: number | null;
   mauritiusShareNote?: string;
+  usd: UsdEquivalent | null;
+  perDiems: MoneyLine;
+  overheads: MoneyLine;
+  sharedExpenditure: SharedExpenditure[];
+  outsideAgreed: OutsideAgreed[];
+  discrepancies: Discrepancy[];
+  /** When true, this row's amount is already inside another row's total. */
+  excludeFromSum: boolean;
+  reporting: ReportingProfile;
+  /** ISO date when the source publishes one. Year-only records leave this null. */
+  startDate: string | null;
+  /** Shown when the start date is unpublished, so the 10-year test cannot be applied. */
+  ageNote?: AgeNote;
   startYear: number | null;
   endYear: number | null;
   publishedResults: PublishedResult[];
@@ -163,6 +257,22 @@ export const HAZARD_LABELS: Record<HazardType, string> = {
   multi: "Multi-hazard",
 };
 
+export const SECTOR_LABELS: Record<Sector, string> = {
+  climate: "Climate",
+  transport: "Transport",
+  health: "Health",
+  social: "Social",
+  other: "Other",
+};
+
+export const INSTRUMENT_LABELS: Record<Instrument, string> = {
+  grant: "Grant",
+  loan: "Loan",
+  mixed: "Mixed",
+  technical_assistance: "Technical assistance",
+  unknown: "Not stated as grant or loan",
+};
+
 export const CONFIDENCE_LABELS: Record<Confidence, string> = {
   official_register: "Official funder register",
   government_document: "Government document",
@@ -193,4 +303,34 @@ export function attributedMauritiusAmount(p: Project): number | null {
   if (p.mauritiusShare != null) return p.mauritiusShare;
   if (p.geographyScope === "multi_country") return null;
   return p.amount;
+}
+
+/** USD used in the registry sum. Shared rows flagged excludeFromSum contribute nothing. */
+export function portfolioUsd(p: Project): number | null {
+  if (p.excludeFromSum) return null;
+  const base = attributedMauritiusAmount(p);
+  if (base == null) return null;
+  if (p.currency === "USD") return base;
+  return p.usd?.amount ?? null;
+}
+
+export function annualReportIsStale(p: Project): boolean {
+  if (p.reporting.cycle !== "annual") return false;
+  const reviewed = Date.parse(`${p.lastReviewed}T00:00:00Z`);
+  const asOf = Date.parse(`${AS_OF}T00:00:00Z`);
+  if (Number.isNaN(reviewed) || Number.isNaN(asOf)) return false;
+  const months =
+    (new Date(asOf).getUTCFullYear() - new Date(reviewed).getUTCFullYear()) * 12 +
+    (new Date(asOf).getUTCMonth() - new Date(reviewed).getUTCMonth());
+  return months > 12;
+}
+
+export function unpublishedLine(label: string, currency: string): MoneyLine {
+  return {
+    amount: null,
+    currency,
+    label,
+    note: "Not published in the sources reviewed for this record.",
+    sourceUrl: null,
+  };
 }

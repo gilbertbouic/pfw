@@ -1,6 +1,6 @@
-# Climate Fund Watch — Web (Phase B)
+# Public Funds Watch — web
 
-Public narrative site for Climate Fund Watch.
+Public site for Public Funds Watch. Canonical URL: https://pfw.mkweli.tech.
 
 ## Develop
 
@@ -13,8 +13,9 @@ npm run dev
 
 ```bash
 npm run build
-npm start
 ```
+
+`npm run build` writes a static site to `out/` and refreshes `public/data/projects.json` and `public/data/projects.csv`. GitHub Pages serves `out/`. `npm start` is not used in production.
 
 ## Pages
 
@@ -24,7 +25,7 @@ npm start
 - `/map` — MapLibre map
 - `/methodology` — Data disclaimer
 - `/about` · `/problem-solution` · `/get-involved`
-- `/api/projects` · `/api/projects.csv`
+- `/data/projects.json` · `/data/projects.csv`
 
 ## Stack
 
@@ -32,9 +33,4 @@ Next.js (App Router) · TypeScript · Tailwind CSS v4 · MapLibre GL
 
 ## Deploy
 
-Root directory for Vercel must be `web/`:
-
-```bash
-npx vercel login
-npx vercel --prod
-```
+GitHub Actions builds this directory and publishes `out/` to GitHub Pages for https://pfw.mkweli.tech.

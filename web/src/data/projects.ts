@@ -1,12 +1,16 @@
-import type { Project } from "./types";
+import { annotate, type Seed } from "./annotate";
+import { coverageNotes } from "./coverage";
+import { RODRIGUES_AIRPORT_GRANT } from "./new-grants";
+import type { CoverageNote, Project } from "./types";
 import { LEDGER_REVIEWED } from "./types";
 
 /**
- * Sourced Mauritius climate-finance ledger.
+ * Sourced Mauritius public-funding ledger.
  * Every money field is taken from a cited public URL, or is null.
  * Regional programmes do not invent a Mauritius-only split.
+ * New rows are grants. Existing climate rows stay, including amounts under USD 1 million.
  */
-export const projects: Project[] = [
+const seeds: Seed[] = [
   {
     id: "mu-gcf-fp033",
     title:
@@ -671,25 +675,82 @@ export const projects: Project[] = [
   },
 ];
 
+const OLDER_THAN_TEN_YEARS = new Set(["mu-af-coastal"]);
+
+const annotated = seeds.map(annotate);
+
+export const olderThanTenYears: CoverageNote[] = annotated
+  .filter((p) => OLDER_THAN_TEN_YEARS.has(p.id))
+  .map((p) => ({
+    title: p.title,
+    funderClass: "Adaptation Fund",
+    reason: `Started in ${p.startYear} and completed. The Adaptation Fund grant was USD ${p.amount?.toLocaleString("en-US")}. It is older than 5 October 2016, so it is not on the main registry.`,
+    reasonFr: `Commencé en ${p.startYear} et achevé. Le don du Fonds d'adaptation était de ${p.amount?.toLocaleString("fr-FR")} USD. Il est antérieur au 5 octobre 2016, donc il n'est pas au registre principal.`,
+    url: p.sources[0]?.url ?? "https://www.adaptation-fund.org/",
+  }));
+
+export { coverageNotes };
+
+export const projects: Project[] = [
+  ...annotated.filter((p) => !OLDER_THAN_TEN_YEARS.has(p.id)),
+  RODRIGUES_AIRPORT_GRANT,
+];
+
 function assertSourcedLedger(list: Project[]) {
   const errors: string[] = [];
   for (const p of list) {
+    if (!p.sector) errors.push(`${p.id}: no sector`);
+    if (!p.instrument) errors.push(`${p.id}: no instrument`);
     if (!p.sources.length) errors.push(`${p.id}: no sources`);
     for (const s of p.sources) {
       if (!/^https:\/\//.test(s.url)) errors.push(`${p.id}: source is not https`);
+    }
+    if (!/^https:\/\//.test(p.reporting.sourceUrl)) {
+      errors.push(`${p.id}: reporting profile source is not https`);
+    }
+    if (p.reporting.identifier.length < 3) {
+      errors.push(`${p.id}: reporting identifier is too short`);
     }
     if (p.showOnMap && (p.lat == null || p.lng == null)) {
       errors.push(`${p.id}: showOnMap without coordinates`);
     }
     if (p.geographyScope === "multi_country" && p.mauritiusShare != null) {
-      // Country split only when a cited document publishes a Mauritius line
       if (p.id !== "mu-af-coral" && p.id !== "mu-gcf-resislands") {
         errors.push(`${p.id}: unexpected Mauritius share on multi-country record`);
       }
     }
+    if (p.perDiems.amount != null && !p.perDiems.sourceUrl?.startsWith("https://")) {
+      errors.push(`${p.id}: per diem figure without an https source`);
+    }
+    if (p.overheads.amount != null && !p.overheads.sourceUrl?.startsWith("https://")) {
+      errors.push(`${p.id}: overhead figure without an https source`);
+    }
+    for (const shared of p.sharedExpenditure) {
+      if (!shared.sourceUrl.startsWith("https://")) {
+        errors.push(`${p.id}: shared expenditure without an https source`);
+      }
+    }
+    for (const flag of p.outsideAgreed) {
+      if (!flag.sourceUrl.startsWith("https://")) {
+        errors.push(`${p.id}: outside-agreed flag without an https source`);
+      }
+    }
+    for (const gap of p.discrepancies) {
+      if (gap.sourceUrls.length < 2 || gap.sourceUrls.some((u) => !u.startsWith("https://"))) {
+        errors.push(`${p.id}: discrepancy needs two https sources`);
+      }
+    }
+    if (p.currency !== "USD" && p.amount != null && p.usd == null) {
+      errors.push(`${p.id}: non-USD amount without a pinned USD equivalent`);
+    }
+    if (p.id === "mu-af-coastal") {
+      errors.push(`${p.id}: older than 10 years and must stay off the main list`);
+    }
   }
   if (errors.length) {
-    throw new Error(`Climate Fund Watch ledger failed verification:\n${errors.join("\n")}`);
+    throw new Error(
+      `Public Funds Watch ledger failed verification:\n${errors.join("\n")}`,
+    );
   }
 }
 

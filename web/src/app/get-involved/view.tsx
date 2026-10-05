@@ -69,21 +69,21 @@ export function GetInvolvedView() {
                   <li>
                     <span className="font-semibold">{copy.site} </span>
                     <a
-                      href="https://cfw.mkweli.tech"
+                      href="https://pfw.mkweli.tech"
                       className="text-primary hover:underline"
                     >
-                      cfw.mkweli.tech
+                      pfw.mkweli.tech
                     </a>
                   </li>
                   <li>
                     <span className="font-semibold">{copy.repository} </span>
                     <a
-                      href="https://github.com/gilbertbouic/cfw"
+                      href="https://github.com/gilbertbouic/pfw"
                       className="text-primary hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      github.com/gilbertbouic/cfw
+                      github.com/gilbertbouic/pfw
                     </a>
                     <span className="text-muted"> {copy.publicRepo}</span>
                   </li>

@@ -18,13 +18,13 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cfw.mkweli.tech"),
+  metadataBase: new URL("https://pfw.mkweli.tech"),
   title: {
-    default: "Climate Fund Watch",
-    template: "%s · Climate Fund Watch",
+    default: "Public Funds Watch",
+    template: "%s · Public Funds Watch",
   },
   description:
-    "Independent, sourced ledger of public climate-finance figures for Mauritius. Every number links to a government or funder document.",
+    "Independent, sourced ledger of external public funding for Mauritius, including climate finance. Every number links to a public document.",
   keywords: [
     "climate finance",
     "transparency",
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
     icon: "/brand/mkweli-favicon.ico",
   },
   openGraph: {
-    title: "Climate Fund Watch",
+    title: "Public Funds Watch",
     description:
-      "Sourced climate-finance figures for Mauritius - need, tagged budget, and international projects, each with a public citation.",
+      "Sourced external public funding for Mauritius. Climate finance stays one sector. Each figure has a public citation.",
     type: "website",
-    siteName: "Climate Fund Watch",
+    siteName: "Public Funds Watch",
     locale: "en_MU",
   },
 };

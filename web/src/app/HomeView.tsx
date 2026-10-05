@@ -58,6 +58,19 @@ export function HomeView() {
       </section>
 
       <section className="border-b border-border bg-card">
+        <Container className="py-10 sm:py-12">
+          <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground">
+            {copy.coverageTitle}
+          </h2>
+          <ul className="mt-4 max-w-3xl space-y-2 text-sm text-muted">
+            {copy.coveragePoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <section className="border-b border-border bg-card">
         <Container className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {headlines.map((h) => {
             const local = dict.headlines[h.id as HeadlineId];
@@ -235,11 +248,11 @@ export function HomeView() {
             <hr className="my-5 border-border" />
             <p className="text-sm text-muted">
               {copy.machineReadable}{" "}
-              <a href="/api/projects" className="font-semibold text-primary">
+              <a href="/data/projects.json" className="font-semibold text-primary">
                 JSON
               </a>{" "}
               ·{" "}
-              <a href="/api/projects.csv" className="font-semibold text-primary">
+              <a href="/data/projects.csv" className="font-semibold text-primary">
                 CSV
               </a>
             </p>

@@ -15,7 +15,9 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-wrap items-start justify-between gap-2">
         <StatusBadge status={project.status} />
         <span className="text-xs font-medium text-muted">
-          {dict.labels.objective[project.climateObjective]}
+          {project.climateObjective
+            ? dict.labels.objective[project.climateObjective]
+            : dict.labels.sector[project.sector]}
         </span>
       </div>
       <h2 className="mt-3 text-base font-semibold leading-snug text-foreground">

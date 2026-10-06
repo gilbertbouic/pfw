@@ -35,6 +35,16 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2 text-sm text-muted">
             <li>
+              <Link href="/about" className="hover:text-primary">
+                {dict.footer.aboutProduct}
+              </Link>
+            </li>
+            <li>
+              <Link href="/ledger" className="hover:text-primary">
+                {dict.header.nav.home}
+              </Link>
+            </li>
+            <li>
               <Link href="/projects" className="hover:text-primary">
                 {dict.footer.projectRegistry}
               </Link>
@@ -57,11 +67,6 @@ export function Footer() {
             <li>
               <Link href="/sources" className="hover:text-primary">
                 {dict.footer.sources}
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-primary">
-                {dict.footer.aboutProduct}
               </Link>
             </li>
             <li>

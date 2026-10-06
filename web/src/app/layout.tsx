@@ -71,7 +71,7 @@ export default function RootLayout({
       className={`${sourceSans.variable} ${sourceSerif.variable} ${plexMono.variable} h-full antialiased`}
     >
       <Script id="pfw-gate" strategy="beforeInteractive">
-        {`try{if(sessionStorage.getItem("pfw-entered")==="1")document.documentElement.dataset.pfwEntered="1";else document.documentElement.dataset.pfwGate="show"}catch(e){document.documentElement.dataset.pfwGate="show"}`}
+        {`try{var entered=sessionStorage.getItem("pfw-entered")==="1";var path=location.pathname;var root=path==="/"||path==="/index.html";if(entered){document.documentElement.dataset.pfwEntered="1";if(root)location.replace("/about/");}else if(root){document.documentElement.dataset.pfwGate="show";}}catch(e){document.documentElement.dataset.pfwGate="show";}`}
       </Script>
       <body className="flex min-h-full flex-col font-sans">
         <LanguageProvider>

@@ -41,10 +41,9 @@ export function FrontDoor({ children }: { children: React.ReactNode }) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const alreadyEntered = useSyncExternalStore(subscribeEntered, readEntered, serverFalse);
   const reduceMotion = useSyncExternalStore(subscribeReduce, readReduce, serverFalse);
-  const [dismissed, setDismissed] = useState(false);
   const [phase, setPhase] = useState<"public" | "transparency">("public");
   const [count, setCount] = useState(100);
-  const open = !alreadyEntered && !dismissed;
+  const open = !alreadyEntered;
   const shown = reduceMotion ? "transparency" : phase;
 
   const enter = useCallback(() => {
@@ -56,8 +55,17 @@ export function FrontDoor({ children }: { children: React.ReactNode }) {
     const root = document.documentElement;
     root.dataset.pfwEntered = "1";
     delete root.dataset.pfwGate;
-    setDismissed(true);
+    window.location.assign("/about/");
   }, []);
+
+  useLayoutEffect(() => {
+    const path = window.location.pathname;
+    const atRoot = path === "/" || path === "/index.html";
+    if (!atRoot) return;
+    if (alreadyEntered || document.documentElement.dataset.pfwEntered === "1") {
+      window.location.replace("/about/");
+    }
+  }, [alreadyEntered]);
 
   useLayoutEffect(() => {
     if (!open || document.documentElement.dataset.pfwEntered === "1") return;

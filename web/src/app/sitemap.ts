@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
     "",
     "/about",
+    "/ledger",
     "/get-involved",
     "/landscape",
     "/map",
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path || "/"}`,
     lastModified,
     changeFrequency: path === "" || path === "/projects" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/projects" ? 0.9 : 0.7,
+    priority: path === "" || path === "/about" ? 1 : path === "/ledger" || path === "/projects" ? 0.9 : 0.7,
   }));
 
   const projectEntries: MetadataRoute.Sitemap = getAllProjects().map((p) => ({

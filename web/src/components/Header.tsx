@@ -8,7 +8,8 @@ import { Container } from "./Container";
 import { MkweliLockup } from "./MkweliLockup";
 
 const NAV_HREFS = [
-  { href: "/", key: "home" },
+  { href: "/about", key: "about" },
+  { href: "/ledger", key: "home" },
   { href: "/projects", key: "registry" },
   { href: "/landscape", key: "landscape" },
   { href: "/map", key: "places" },
@@ -64,10 +65,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 md:flex" aria-label={dict.header.primaryNav}>
           {NAV_HREFS.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.href}
@@ -138,10 +136,7 @@ export function Header() {
               ← {dict.header.backToHub}
             </a>
             {NAV_HREFS.map((item) => {
-              const active =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}

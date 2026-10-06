@@ -309,90 +309,20 @@ const en = {
   },
   about: {
     eyebrow: "About",
-    title: "A digital public good for climate finance accountability",
+    title: "A public ledger of donor-funded projects",
     description:
-      "Public Funds Watch combines open project tracking, community verification, and a hard-isolated integrity channel. Mauritius is the reference pilot; the platform is designed for any country.",
-    buildingTitle: "What we are building",
-    buildingP1:
-      "Climate finance is mobilizing at speed worldwide, but delivery often fails for the same reasons: fragmented project reporting, weak budget-to-site traceability, limited local authority visibility, closed data, and unsafe or absent integrity channels.",
-    buildingP2a:
-      "Public Funds Watch is the shared accountability layer: a",
-    buildingP2strong: "multi-tenant, multi-country platform",
-    buildingP2b: "with a common core and configurable",
-    buildingP2strong2: "country packs",
-    buildingP2c:
-      "(legal text, languages, admin boundaries, funder catalogs, hazard layers).",
-    buildingP3a: "The product name is global -",
-    buildingP3name: "Public Funds Watch",
-    buildingP3b: ". The first reference implementation is branded",
-    buildingP3brand: "ClimateFunds Watch Mauritius",
-    buildingP3c:
-      ", seeded from concept notes, active project research, and a proposed 12-month pilot in two councils.",
-    oneLine: "One-line definition",
-    oneLineBody:
-      "A mobile-first climate finance transparency platform with open project/budget tracking, community evidence, and a cryptographically isolated anonymous integrity channel - configurable for any country.",
-    productStatus: "Product status",
-    statusLive1: "Sourced Mauritius ledger, landscape, and citations - live",
-    statusLive2: "JSON/CSV downloads with source URLs - live",
-    statusProposed:
-      "Community evidence, integrity vault, government consoles - proposed, not live",
-    readProblem: "Read problem & solution →",
-    whoTitle: "Who it serves",
-    whoLead:
-      "Designed for the full accountability ecosystem - not only one ministry dashboard.",
-    audiences: [
-      {
-        title: "Citizens & residents",
-        body: "Find projects near you, understand budgets in plain language, and submit field evidence when delivery fails.",
-      },
-      {
-        title: "Media & researchers",
-        body: "Use the sourced registry, citation pages, and JSON/CSV exports to audit published claims independently.",
-      },
-      {
-        title: "Local authorities",
-        body: "Update milestones, see delay alerts, and respond to community reports under clear SLAs.",
-      },
-      {
-        title: "National units & donors",
-        body: "Portfolio oversight, transparency scorecards, and evidence for results-based climate finance.",
-      },
-      {
-        title: "CSOs & verifiers",
-        body: "Confirm or dispute field signals and strengthen independent oversight without gatekeeping public data.",
-      },
-      {
-        title: "Whistleblowers",
-        body: "Report integrity risks through a cryptographically isolated channel with case-code follow-up - never mixed with public identity graphs.",
-      },
+      "Donor-funded projects in Mauritius with a published amount of at least USD 100,000. Climate finance is one sector.",
+    rulesTitle: "What is included",
+    rules: [
+      "A Mauritius amount the source prints, of at least USD 100,000. USD 100,000 is included.",
+      "The same floor covers the UN, a named foreign government, World Bank grants, Asian Development Bank grants, African Development Bank grants, Red Cross projects, and a Mauritian body the source calls an NGO.",
+      "A still-open project over USD 5 million stays even if it started before 5 October 2016.",
+      "No published Mauritius amount: named on Sources, no project page.",
+      "A figure the source does not print stays “Not published.”",
     ],
-    principlesTitle: "Product principles",
-    principlesLead:
-      "Non-negotiables from the Public Funds Watch product build plan. They guide engineering, governance, and country onboarding.",
-    principles: [
-      "Two-zone architecture: public transparency and whistleblower data never share identity links.",
-      "Open by default for public money; anonymous by default for integrity reports.",
-      "Country-configurable, not country-forked - one codebase, country packs for law, language, and boundaries.",
-      "Mobile-first and offline-aware so low-connectivity communities can participate.",
-      "Security and privacy are product features, not compliance afterthoughts.",
-      "Action over dashboards: every alert should have an owner, an SLA, and a public aggregate outcome.",
-    ],
-    pilotTitle: "Mauritius reference pilot",
-    pilotBody:
-      "Concept materials describe a 12-month implementation to publish a unified registry of adaptation projects in pilot councils, track budget flows and milestones, enable citizen oversight, establish confidential reporting workflows, and produce public transparency bulletins.",
-    indicativeBudget: "Indicative budget",
-    indicativeBudgetValue: "USD 550,000 (proposed)",
-    pilotGeography: "Pilot geography",
-    pilotGeographyValue: "2 local councils",
-    hazardFocus: "Hazard focus",
-    hazardFocusValue: "Floods & cyclones",
-    scalePath: "Scale path",
-    scalePathValue: "National + SIDS",
-    pilotNote:
-      "Pilot numbers and institutional arrangements are proposals for partnership discussions - not commitments of any government agency unless formally adopted.",
-    architectureCta:
-      "Want the full architecture, modules, and security model? See the product build plan in the project repository.",
-    getInvolved: "Get involved",
+    openLedger: "The ledger",
+    proposed:
+      "Community evidence, the integrity vault, and government consoles are proposed, not live.",
   },
   getInvolved: {
     eyebrow: "Get involved",
@@ -1082,92 +1012,20 @@ const fr: typeof en = {
   },
   about: {
     eyebrow: "À propos",
-    title:
-      "Un bien public numérique pour la redevabilité de la finance climatique",
+    title: "Un registre public des projets financés par des bailleurs",
     description:
-      "Public Funds Watch combine le suivi ouvert des projets, la vérification citoyenne et un canal d'intégrité isolé. Maurice est le pilote de référence ; la plateforme est conçue pour n'importe quel pays.",
-    buildingTitle: "Ce que nous construisons",
-    buildingP1:
-      "La finance climatique se mobilise vite dans le monde, mais la mise en oeuvre échoue souvent pour les mêmes raisons : reporting projet fragmenté, faible traçabilité du budget jusqu'au site, visibilité limitée des autorités locales, données fermées, et canaux d'intégrité absents ou non sûrs.",
-    buildingP2a:
-      "Public Funds Watch est la couche de redevabilité partagée : une",
-    buildingP2strong: "plateforme multi-locataire et multi-pays",
-    buildingP2b: "avec un noyau commun et des",
-    buildingP2strong2: "packs pays",
-    buildingP2c:
-      "configurables (textes juridiques, langues, découpages administratifs, catalogues de bailleurs, couches d'aléas).",
-    buildingP3a: "Le nom du produit est mondial -",
-    buildingP3name: "Public Funds Watch",
-    buildingP3b: ". La première mise en oeuvre de référence s'appelle",
-    buildingP3brand: "ClimateFunds Watch Mauritius",
-    buildingP3c:
-      ", nourrie de notes de concept, de recherche sur des projets en cours, et d'un pilote proposé de 12 mois dans deux conseils.",
-    oneLine: "Définition en une ligne",
-    oneLineBody:
-      "Une plateforme mobile-first de transparence de la finance climatique, avec suivi ouvert des projets et des budgets, preuves citoyennes, et un canal d'intégrité anonyme isolé par cryptographie - configurable pour tout pays.",
-    productStatus: "Statut du produit",
-    statusLive1:
-      "Registre sourcé de Maurice, paysage et citations - en service",
-    statusLive2: "Téléchargements JSON/CSV avec URL de sources - en service",
-    statusProposed:
-      "Preuves citoyennes, coffre d'intégrité, consoles gouvernementales - proposés, pas en service",
-    readProblem: "Lire problème et solution →",
-    whoTitle: "À qui cela s'adresse",
-    whoLead:
-      "Conçu pour tout l'écosystème de redevabilité - pas seulement le tableau de bord d'un ministère.",
-    audiences: [
-      {
-        title: "Citoyens et résidents",
-        body: "Trouver les projets près de chez vous, comprendre les budgets en langage clair, et transmettre des preuves de terrain quand la livraison échoue.",
-      },
-      {
-        title: "Médias et chercheurs",
-        body: "Utiliser le registre sourcé, les pages de citation et les exports JSON/CSV pour auditer les affirmations publiées de façon indépendante.",
-      },
-      {
-        title: "Autorités locales",
-        body: "Mettre à jour les jalons, voir les alertes de retard, et répondre aux signalements citoyens selon des SLA clairs.",
-      },
-      {
-        title: "Unités nationales et bailleurs",
-        body: "Suivi de portefeuille, tableaux de transparence, et preuves pour une finance climatique fondée sur les résultats.",
-      },
-      {
-        title: "OSC et vérificateurs",
-        body: "Confirmer ou contester les signaux de terrain et renforcer le contrôle indépendant sans verrouiller les données publiques.",
-      },
-      {
-        title: "Lanceurs d'alerte",
-        body: "Signaler des risques d'intégrité via un canal isolé par cryptographie, avec suivi par code de dossier - jamais mélangé aux graphes d'identité publics.",
-      },
+      "Projets financés par un bailleur à Maurice avec un montant publié d'au moins 100 000 USD. La finance climatique est un secteur.",
+    rulesTitle: "Ce qui est inclus",
+    rules: [
+      "Un montant Maurice imprimé par la source, d'au moins 100 000 USD. 100 000 USD est inclus.",
+      "Le même seuil couvre l'ONU, un gouvernement étranger nommé, les dons de la Banque mondiale, les dons de la Banque asiatique de développement, les dons de la Banque africaine de développement, les projets de la Croix-Rouge, et un organisme mauricien que la source appelle une ONG.",
+      "Un projet encore ouvert de plus de 5 millions USD reste même s'il a commencé avant le 5 octobre 2016.",
+      "Pas de montant Maurice publié : nommé sur Sources, pas de page projet.",
+      "Un chiffre que la source n'imprime pas reste « Non publié ».",
     ],
-    principlesTitle: "Principes du produit",
-    principlesLead:
-      "Non-négociables du plan de construction de Public Funds Watch. Ils guident l'ingénierie, la gouvernance et l'accueil d'un pays.",
-    principles: [
-      "Architecture à deux zones : la transparence publique et les données de lanceurs d'alerte ne partagent jamais de liens d'identité.",
-      "Ouvert par défaut pour l'argent public ; anonyme par défaut pour les signalements d'intégrité.",
-      "Configurable par pays, pas forké par pays - un seul code, des packs pays pour le droit, la langue et les frontières.",
-      "Mobile-first et utilisable hors ligne pour que les communautés peu connectées puissent participer.",
-      "La sécurité et la vie privée sont des fonctions du produit, pas des pensées après coup de conformité.",
-      "L'action plutôt que les tableaux de bord : chaque alerte doit avoir un responsable, un SLA et un résultat public agrégé.",
-    ],
-    pilotTitle: "Pilote de référence à Maurice",
-    pilotBody:
-      "Les notes de concept décrivent une mise en oeuvre de 12 mois pour publier un registre unifié des projets d'adaptation dans des conseils pilotes, suivre les flux budgétaires et les jalons, permettre un contrôle citoyen, établir des circuits de signalement confidentiel, et produire des bulletins publics de transparence.",
-    indicativeBudget: "Budget indicatif",
-    indicativeBudgetValue: "550 000 USD (proposé)",
-    pilotGeography: "Géographie du pilote",
-    pilotGeographyValue: "2 conseils locaux",
-    hazardFocus: "Aléas visés",
-    hazardFocusValue: "Inondations et cyclones",
-    scalePath: "Trajectoire d'échelle",
-    scalePathValue: "National + PEID",
-    pilotNote:
-      "Les chiffres du pilote et les montages institutionnels sont des propositions pour des discussions de partenariat - pas des engagements d'une agence publique, sauf adoption formelle.",
-    architectureCta:
-      "Vous voulez l'architecture complète, les modules et le modèle de sécurité ? Voir le plan de construction du produit dans le dépôt du projet.",
-    getInvolved: "Participer",
+    openLedger: "Le registre",
+    proposed:
+      "Les preuves citoyennes, le coffre d'intégrité et les consoles gouvernementales sont proposés, pas en service.",
   },
   getInvolved: {
     eyebrow: "Participer",

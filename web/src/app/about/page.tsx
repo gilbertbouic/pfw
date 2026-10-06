@@ -4,7 +4,7 @@ import { AboutView } from "./view";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What Public Funds Watch is, and how the Mauritius public-funding ledger is sourced.",
+    "Donor-funded projects in Mauritius with a published amount of at least USD 100,000. Climate finance is one sector.",
   alternates: { canonical: "/about" },
   openGraph: { url: "/about" },
 };

@@ -40,7 +40,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Description |
 |------|-------------|
-| `/` | Mauritius public-funding briefing |
+| `/` | Opening gate. ENTER opens About. |
+| `/about` | First page: donor-funded projects of at least USD 100,000 |
+| `/ledger` | Cited figures |
 | `/projects` | Sourced registry |
 | `/projects/[id]` | Record detail with citations |
 | `/landscape` | Need vs tagged spend vs donor channels |

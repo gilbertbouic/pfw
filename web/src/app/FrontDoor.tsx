@@ -6,6 +6,21 @@ import { useI18n } from "@/i18n/LanguageProvider";
 const COUNT_MS = 2600;
 const WAVE_DELAY = 3;
 const WORD = "TRANSPARENCY";
+/** PUBLIC's six cuts. The small letter and the wide letter appear once, so the longer word still reads. */
+const CUTS = [
+  "font-display italic",
+  "font-sans font-black",
+  "pfw-outline font-sans font-semibold",
+  "font-mono font-medium",
+  "pfw-i font-display font-semibold",
+  "font-sans font-black",
+  "font-display italic",
+  "font-sans font-black",
+  "pfw-outline font-sans font-semibold",
+  "font-mono font-medium",
+  "font-sans font-light",
+  "pfw-c font-sans",
+] as const;
 
 function subscribeEntered(onChange: () => void) {
   window.addEventListener("storage", onChange);
@@ -254,7 +269,7 @@ function TransparencyWord({
             }}
             className="pfw-wave-letter"
           >
-            {letter}
+            <span className={CUTS[index]}>{letter}</span>
           </span>
         ))}
       </h1>

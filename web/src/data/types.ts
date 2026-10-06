@@ -31,12 +31,49 @@ export type Confidence =
   | "government_document"
   | "secondary_report";
 
+export type SourceGroup =
+  | "un"
+  | "world_bank"
+  | "government_mauritius"
+  | "ngo_red_cross"
+  | "other";
+
+export function sourceGroupOf(source: SourceRef): SourceGroup {
+  if (source.group) return source.group;
+  const publisher = source.publisher.toLowerCase();
+  if (publisher.includes("world bank")) return "world_bank";
+  if (publisher.includes("red cross") || publisher.includes("ifrc")) {
+    return "ngo_red_cross";
+  }
+  if (
+    publisher.includes("government of mauritius") ||
+    publisher.includes("ministry of finance") ||
+    publisher.includes("ministry of environment")
+  ) {
+    return "government_mauritius";
+  }
+  if (
+    publisher.includes("unfccc") ||
+    publisher.includes("undp") ||
+    publisher.includes("unep") ||
+    publisher.includes("united nations")
+  ) {
+    return "un";
+  }
+  return "other";
+}
+
 export type SourceRef = {
   title: string;
   url: string;
   publisher: string;
   asOf: string;
   notes?: string;
+  /** A sentence copied from the document. Absent when that sentence was not recorded. */
+  quote?: string;
+  /** Printed page or slide. Absent when the file does not show one, or it was not recorded. */
+  page?: string;
+  group?: SourceGroup;
 };
 
 export type PublishedResult = {

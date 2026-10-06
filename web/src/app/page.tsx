@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FrontDoor } from "./FrontDoor";
 import { HomeView } from "./HomeView";
 
 export const metadata: Metadata = {
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <HomeView />;
+  return (
+    <FrontDoor>
+      <HomeView />
+    </FrontDoor>
+  );
 }

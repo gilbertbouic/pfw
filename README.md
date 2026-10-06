@@ -11,7 +11,7 @@ Independent, sourced public ledger of external public funding for Mauritius. Cli
 
 ## What is live
 
-A **sourced Mauritius registry**. Every money field is taken from a public URL or shown as “Not published.” New rows are grants over USD 1 million with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, or the African Development Bank. Existing climate records stay, including amounts under USD 1 million. Red Cross projects and Mauritian NGO grants over USD 500,000 are included when a public source states a Mauritius figure. Loans are not added as grants. Shared money is counted once. A non-USD amount keeps its original currency and stores a pinned ECB reference rate.
+A **sourced Mauritius registry**. Every money field is taken from a public URL or shown as “Not published.” The main list is publicly donor-funded projects with a published Mauritius amount of at least USD 100,000, including Red Cross projects and Mauritian NGO grants when a public source states a Mauritius figure. A still-open project over USD 5 million stays even if it started before 5 October 2016. Loans are not added as grants. Shared money is counted once. A non-USD amount keeps its original currency and stores a pinned ECB reference rate.
 
 Community evidence, the integrity vault, government consoles, and a weekly grant checker are **not** part of this site.
 

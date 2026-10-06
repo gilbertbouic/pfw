@@ -205,16 +205,43 @@ const en = {
     caption:
       "Schematic outline for orientation only - not a surveyed coastline. Dots are approximate localities named in public reports.",
   },
+  glance: {
+    ledgerLine: "Sourced ledger. Not an official portal. Reviewed {date}.",
+    notOneTotal: "These four figures are not added together.",
+    record: "Record",
+    donor: "Donor",
+    year: "Year",
+    amount: "Mauritius amount",
+    notPublished: "Not published",
+    olderLabel: "Older completed project",
+    diffTitle: "Since {date}",
+    doNotInvent: "We do not invent a figure.",
+    sources: "Sources",
+    quoteMissing: "A verbatim sentence and a page were not recorded for this figure.",
+    openSource: "Open the document",
+    close: "Close",
+    added: "Added",
+    removed: "Left the main list",
+    offList: "Shown here, off the main list",
+    conversion: "Conversion pinned",
+    groups: {
+      un: "UN",
+      world_bank: "World Bank",
+      government_mauritius: "Government of Mauritius",
+      ngo_red_cross: "NGO / Red Cross",
+      other: "Other publisher",
+    },
+  },
   home: {
     sourcesReviewed: "Public sources · last reviewed {date}",
     heroTitle: "What public documents say about",
     heroTitleAccent: "external public funding in Mauritius",
     heroLead:
-      "Climate finance stays one sector. New grants are over USD 1 million from the last 10 years. Red Cross projects and Mauritian NGO grants over USD 500,000 are included when a public source states a Mauritius figure. Unpublished figures stay “Not published.”",
+      "Donor-funded projects with a published Mauritius amount of at least USD 100,000. A still-open project over USD 5 million stays even if it started before 5 October 2016.",
     coverageTitle: "What this registry includes",
     coveragePoints: [
-      "Mauritius only. Climate records already on the list stay, including amounts under USD 1 million.",
-      "A new row is a grant over USD 1 million with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, or the African Development Bank.",
+      "Mauritius only. A row needs a published Mauritius amount of at least USD 100,000.",
+      "A new row is a donor-funded grant of at least USD 100,000 with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, the African Development Bank, the Red Cross, or a Mauritian body the source calls an NGO. A still-open project over USD 5 million can be older.",
       "Loans are not added as grants. Where one project publishes both a grant and a loan, only the grant is in the registry amount.",
       "Per diems, overheads, and expenditure stay “Not published” unless the source states the figure. Shared money is counted once in the registry total.",
     ],
@@ -521,7 +548,7 @@ const en = {
       'Named works sites are shown on a Mauritius/Rodrigues schematic (not a world map). Dots are approximate localities from CEB, UNDP, GCF or Adaptation Fund reports, not surveyed works polygons. Site-level spend is "Not reported" unless a document publishes a figure for that site. Batch grants are not divided across substations.',
       'Donor reports are APRs, PPRs and evaluations linked from GCF or Adaptation Fund pages. GCF public reporting for these projects is annual. We do not add a quarterly "next tranche" calendar unless a cited document states that cycle.',
       "A currency other than USD is tested with the European Central Bank reference rate for the document date, pinned via Frankfurter. The original currency stays the cited amount. The rate is not refreshed on each page view.",
-      "A project that started before 5 October 2016 is named with the older records and does not get a project page. An existing climate record with no published start date stays on the main list.",
+      "A main-list row is a donor-funded project with a published Mauritius amount of at least USD 100,000. Red Cross projects and Mauritian NGO grants use that same rule when a public source states a Mauritius figure. A project that started before 5 October 2016 stays off the main list, unless it is still open and that amount is over USD 5 million. A row with no published Mauritius amount is named on this page and has no project page. An existing climate record with no published start date stays when its published amount is at least USD 100,000.",
     ],
     headlineFigures: "Headline figures",
     registryRecords: "Registry records",
@@ -530,7 +557,7 @@ const en = {
       "The CSV includes a source_urls column so a download stays verifiable offline.",
     olderTitle: "Older than 10 years",
     olderLead:
-      "A project that started before 5 October 2016 is not given a project page, including when it is still open. It is named here.",
+      "A project that started before 5 October 2016 stays off the main list, unless it is still open and the published Mauritius amount is over USD 5 million. It is named here.",
     skippedTitle: "Reviewed and not added",
     skippedLead:
       "These pages were opened for this pass. A class with no qualifying public grant is named here. A blank field is not filled with a loan or an estimate.",
@@ -736,6 +763,10 @@ const en = {
       "The last review of this annual report is more than 12 months before 5 October 2026. This line does not invent a filing deadline.",
     startUnpublished:
       "The start date is not published in the sources reviewed for this record, so the 10-year test cannot be applied. The record stays because it was already on the climate list.",
+  },
+  gate: {
+    label: "Opening",
+    enter: "Enter",
   },
 };
 
@@ -946,16 +977,43 @@ const fr: typeof en = {
     caption:
       "Contour schématique pour l'orientation seulement - pas un trait de côte levé. Les points sont des localités approximatives nommées dans des rapports publics.",
   },
+  glance: {
+    ledgerLine: "Registre sourcé. Pas un portail officiel. Revu le {date}.",
+    notOneTotal: "Ces quatre chiffres ne s'additionnent pas.",
+    record: "Fiche",
+    donor: "Bailleur",
+    year: "Année",
+    amount: "Montant Maurice",
+    notPublished: "Non publié",
+    olderLabel: "Projet ancien achevé",
+    diffTitle: "Depuis le {date}",
+    doNotInvent: "Nous n'inventons pas un chiffre.",
+    sources: "Sources",
+    quoteMissing: "Une phrase exacte et une page n'ont pas été relevées pour ce chiffre.",
+    openSource: "Ouvrir le document",
+    close: "Fermer",
+    added: "Ajouté",
+    removed: "Sorti de la liste principale",
+    offList: "Affiché ici, hors liste principale",
+    conversion: "Conversion figée",
+    groups: {
+      un: "ONU",
+      world_bank: "Banque mondiale",
+      government_mauritius: "Gouvernement de Maurice",
+      ngo_red_cross: "ONG / Croix-Rouge",
+      other: "Autre éditeur",
+    },
+  },
   home: {
     sourcesReviewed: "Sources publiques · dernière revue le {date}",
     heroTitle: "Ce que disent les documents publics sur",
     heroTitleAccent: "le financement public extérieur à Maurice",
     heroLead:
-      "La finance climatique reste un secteur. Les nouveaux dons dépassent 1 million USD sur les 10 dernières années. Les projets de la Croix-Rouge et les dons à des ONG mauriciennes de plus de 500 000 USD sont inclus lorsqu'une source publique indique un chiffre pour Maurice. Les chiffres non publiés restent « Non publié ».",
+      "Projets financés par un bailleur avec un montant Maurice publié d'au moins 100 000 USD. Un projet encore ouvert de plus de 5 millions USD reste même s'il a commencé avant le 5 octobre 2016.",
     coverageTitle: "Ce que ce registre inclut",
     coveragePoints: [
-      "Maurice seulement. Les fiches climat déjà sur la liste restent, y compris les montants sous 1 million USD.",
-      "Une nouvelle fiche est un don de plus de 1 million USD dont le début ou l'approbation est le 5 octobre 2016 ou après, venant de l'ONU, d'un gouvernement étranger nommé, de la Banque mondiale, de la Banque asiatique de développement ou de la Banque africaine de développement.",
+      "Maurice seulement. Une fiche exige un montant Maurice publié d'au moins 100 000 USD.",
+      "Une nouvelle fiche est un don d'un bailleur d'au moins 100 000 USD dont le début ou l'approbation est le 5 octobre 2016 ou après, venant de l'ONU, d'un gouvernement étranger nommé, de la Banque mondiale, de la Banque asiatique de développement, de la Banque africaine de développement, de la Croix-Rouge, ou d'un organisme mauricien que la source appelle une ONG. Un projet encore ouvert de plus de 5 millions USD peut être plus ancien.",
       "Les prêts ne sont pas ajoutés comme des dons. Lorsqu'un projet publie un don et un prêt, seul le don entre dans le montant du registre.",
       "Les per diem, les frais généraux et les dépenses restent « Non publié » tant que la source n'énonce pas le chiffre. L'argent partagé n'est compté qu'une fois dans le total du registre.",
     ],
@@ -1266,7 +1324,7 @@ const fr: typeof en = {
       'Les sites d\'ouvrages nommés apparaissent sur un schéma Maurice/Rodrigues (pas une carte du monde). Les points sont des localités approximatives tirées de rapports CEB, PNUD, GCF ou Adaptation Fund, pas des polygones d\'ouvrages levés. La dépense au site est "Non communiqué" sauf si un document publie un chiffre pour ce site. Les subventions groupées ne sont pas réparties entre sous-stations.',
       'Les rapports des bailleurs sont des APR, PPR et évaluations liés depuis les pages GCF ou Adaptation Fund. Le reporting public GCF pour ces projets est annuel. Nous n\'ajoutons pas de calendrier trimestriel de "prochaine tranche" sauf si un document cité indique ce cycle.',
       "Une devise autre que le USD est testée avec le taux de référence de la Banque centrale européenne à la date du document, figé via Frankfurter. La devise d'origine reste le montant cité. Le taux n'est pas rafraîchi à chaque consultation.",
-      "Un projet commencé avant le 5 octobre 2016 est nommé avec les fiches plus anciennes et n'a pas de page projet. Une fiche climat déjà présente sans date de début publiée reste sur la liste principale.",
+      "Une fiche de la liste principale est un projet financé par un bailleur avec un montant Maurice publié d'au moins 100 000 USD. Les projets de la Croix-Rouge et les dons d'ONG mauriciennes suivent la même règle lorsqu'une source publique énonce un chiffre pour Maurice. Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que ce montant dépasse 5 millions USD. Une fiche sans montant Maurice publié est nommée sur cette page et n'a pas de page projet. Une fiche climat déjà présente sans date de début publiée reste si son montant publié est d'au moins 100 000 USD.",
     ],
     headlineFigures: "Chiffres d'accroche",
     registryRecords: "Fiches du registre",
@@ -1275,7 +1333,7 @@ const fr: typeof en = {
       "Le CSV inclut une colonne source_urls pour qu'un téléchargement reste vérifiable hors ligne.",
     olderTitle: "Plus de 10 ans",
     olderLead:
-      "Un projet commencé avant le 5 octobre 2016 n'a pas de page projet, même s'il est encore ouvert. Il est nommé ici.",
+      "Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que le montant Maurice publié dépasse 5 millions USD. Il est nommé ici.",
     skippedTitle: "Examiné et non ajouté",
     skippedLead:
       "Ces pages ont été ouvertes pour cette passe. Une catégorie sans don public qui atteint le seuil est nommée ici. Un champ vide n'est pas rempli avec un prêt ou une estimation.",
@@ -1482,6 +1540,10 @@ const fr: typeof en = {
       "La dernière revue de ce rapport annuel date de plus de 12 mois avant le 5 octobre 2026. Cette ligne n'invente pas de date limite de dépôt.",
     startUnpublished:
       "La date de début n'est pas publiée dans les sources examinées pour cette fiche, donc le test des 10 ans ne peut pas être appliqué. La fiche reste parce qu'elle était déjà sur la liste climat.",
+  },
+  gate: {
+    label: "Ouverture",
+    enter: "Entrer",
   },
 };
 

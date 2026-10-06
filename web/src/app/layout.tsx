@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { IBM_Plex_Mono, Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { LanguageProvider, SkipToContent } from "@/i18n/LanguageProvider";
@@ -14,6 +15,14 @@ const sourceSans = Source_Sans_3({
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
   subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -59,8 +68,11 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sourceSans.variable} ${sourceSerif.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${sourceSerif.variable} ${plexMono.variable} h-full antialiased`}
     >
+      <Script id="pfw-gate" strategy="beforeInteractive">
+        {`try{if(sessionStorage.getItem("pfw-entered")==="1")document.documentElement.dataset.pfwEntered="1";else document.documentElement.dataset.pfwGate="show"}catch(e){document.documentElement.dataset.pfwGate="show"}`}
+      </Script>
       <body className="flex min-h-full flex-col font-sans">
         <LanguageProvider>
           <SkipToContent />

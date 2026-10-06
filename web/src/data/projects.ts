@@ -1,14 +1,14 @@
 import { annotate, type Seed } from "./annotate";
-import { coverageNotes } from "./coverage";
+import { coverageNotes as openedNotes } from "./coverage";
 import { RODRIGUES_AIRPORT_GRANT } from "./new-grants";
 import type { CoverageNote, Project } from "./types";
-import { LEDGER_REVIEWED } from "./types";
+import { LEDGER_REVIEWED, portfolioUsd } from "./types";
 
 /**
  * Sourced Mauritius public-funding ledger.
  * Every money field is taken from a cited public URL, or is null.
- * Regional programmes do not invent a Mauritius-only split.
- * New rows are grants. Existing climate rows stay, including amounts under USD 1 million.
+ * A main-list row is a donor-funded project with a published Mauritius amount
+ * of at least USD 100,000. A regional total is not that amount.
  */
 const seeds: Seed[] = [
   {
@@ -677,6 +677,15 @@ const seeds: Seed[] = [
 
 const OLDER_THAN_TEN_YEARS = new Set(["mu-af-coastal"]);
 
+/** Programme total may exist. The Mauritius amount was not published. */
+const NO_MAURITIUS_AMOUNT = new Set([
+  "mu-gcf-fp135",
+  "mu-gcf-fp161",
+  "mu-gcf-fp095",
+  "mu-gcf-fp099",
+  "mu-gcf-fp223",
+]);
+
 const annotated = seeds.map(annotate);
 
 export const olderThanTenYears: CoverageNote[] = annotated
@@ -684,15 +693,32 @@ export const olderThanTenYears: CoverageNote[] = annotated
   .map((p) => ({
     title: p.title,
     funderClass: "Adaptation Fund",
-    reason: `Started in ${p.startYear} and completed. The Adaptation Fund grant was USD ${p.amount?.toLocaleString("en-US")}. It is older than 5 October 2016, so it is not on the main registry.`,
-    reasonFr: `Commencé en ${p.startYear} et achevé. Le don du Fonds d'adaptation était de ${p.amount?.toLocaleString("fr-FR")} USD. Il est antérieur au 5 octobre 2016, donc il n'est pas au registre principal.`,
+    reason: `Started in ${p.startYear} and completed. The Adaptation Fund grant was USD ${p.amount?.toLocaleString("en-US")}. It is over USD 5 million, and the exception for an older project applies only when the project is not yet completed, so it is not on the main registry.`,
+    reasonFr: `Commencé en ${p.startYear} et achevé. Le don du Fonds d'adaptation était de ${p.amount?.toLocaleString("fr-FR")} USD. Il dépasse 5 millions USD, et l'exception pour un projet plus ancien ne vaut que s'il n'est pas encore achevé, donc il n'est pas au registre principal.`,
     url: p.sources[0]?.url ?? "https://www.adaptation-fund.org/",
   }));
 
-export { coverageNotes };
+const noMauritiusAmount: CoverageNote[] = annotated
+  .filter((p) => NO_MAURITIUS_AMOUNT.has(p.id))
+  .map((p) => ({
+    title: p.title,
+    funderClass: "Green Climate Fund",
+    reason:
+      "A Mauritius amount is not published on the page reviewed. The programme total is not used as a Mauritius figure, so this record is not on the main list.",
+    reasonFr:
+      "Un montant pour Maurice n'est pas publié sur la page examinée. Le total du programme n'est pas utilisé comme chiffre Maurice, donc cette fiche n'est pas sur la liste principale.",
+    url: p.sources[0]?.url ?? "https://www.greenclimate.fund/countries/mauritius",
+  }));
+
+export const coverageNotes: CoverageNote[] = [
+  ...noMauritiusAmount,
+  ...openedNotes,
+];
 
 export const projects: Project[] = [
-  ...annotated.filter((p) => !OLDER_THAN_TEN_YEARS.has(p.id)),
+  ...annotated.filter(
+    (p) => !OLDER_THAN_TEN_YEARS.has(p.id) && !NO_MAURITIUS_AMOUNT.has(p.id),
+  ),
   RODRIGUES_AIRPORT_GRANT,
 ];
 
@@ -745,6 +771,13 @@ function assertSourcedLedger(list: Project[]) {
     }
     if (p.id === "mu-af-coastal") {
       errors.push(`${p.id}: older than 10 years and must stay off the main list`);
+    }
+    if (NO_MAURITIUS_AMOUNT.has(p.id)) {
+      errors.push(`${p.id}: no published Mauritius amount and must stay off the main list`);
+    }
+    const usd = portfolioUsd(p);
+    if (usd == null || usd < 100_000) {
+      errors.push(`${p.id}: Mauritius amount is missing or under USD 100,000`);
     }
   }
   if (errors.length) {

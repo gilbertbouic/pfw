@@ -24,6 +24,7 @@ export const headlines: HeadlineFigure[] = [
       url: "https://unfccc.int/sites/default/files/NDC/2022-06/Final%20Updated%20NDC%20for%20the%20Republic%20of%20Mauritius%2001%20October%202021.docx",
       publisher: "Government of Mauritius / UNFCCC",
       asOf: "2021-10-01",
+      group: "government_mauritius",
     },
   },
   {
@@ -39,6 +40,7 @@ export const headlines: HeadlineFigure[] = [
       url: "https://reliefweb.int/report/mauritius/republic-mauritius-country-climate-and-development-report-february-2026",
       publisher: "World Bank Group (via ReliefWeb)",
       asOf: "2026-02",
+      group: "world_bank",
     },
   },
   {
@@ -54,6 +56,9 @@ export const headlines: HeadlineFigure[] = [
       url: "https://nationalbudget2025.govmu.org/documents/2025_26_appendixH.pdf",
       publisher: "Ministry of Finance, Mauritius",
       asOf: "2025-06",
+      group: "government_mauritius",
+      quote:
+        "Climate-related spending of the Government in 6 key Ministries and 2 Special Funds is estimated at Rs 6.7 billion, representing 2.8% of the Appropriated Expenditure, including the Climate Sustainability Fund and the Project Development Fund.",
     },
   },
   {
@@ -69,6 +74,9 @@ export const headlines: HeadlineFigure[] = [
       url: "https://unfccc.int/sites/default/files/resource/Mauritius-FMCP3-Presentation.pdf",
       publisher: "Ministry of Environment, Solid Waste Management and Climate Change / UNFCCC",
       asOf: "2026",
+      group: "government_mauritius",
+      quote:
+        "From 2017 onwards, Mauritius has received around 118.05 million USD both as grant and loan from various donor agencies for climate change adaptation and mitigation measures.",
     },
   },
 ];

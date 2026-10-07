@@ -1,6 +1,6 @@
 import { getAllProjects } from "@/data/projects";
 import { portfolioUsd, type HazardType, type Instrument, type Project, type ProjectStatus, type Sector } from "@/data/types";
-export { projectsToCsv } from "@/data/csv";
+export { publicLinesToCsv } from "@/data/csv";
 
 export type ProjectFilters = {
   q?: string;

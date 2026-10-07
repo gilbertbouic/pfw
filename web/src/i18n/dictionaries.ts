@@ -484,7 +484,7 @@ const en = {
     registryRecords: "Registry records",
     openDownloads: "Open downloads",
     csvNote:
-      "The CSV includes a source_urls column so a download stays verifiable offline.",
+      "Each CSV row is one published line: amount, currency, instrument, sentence, page, URL, and the day that URL was opened. An empty amount or page was not in the file copied. The JSON has the same lines, plus the full records. in_registry_sum marks the lines inside the registry total.",
     olderTitle: "Older than 10 years",
     olderLead:
       "A project that started before 5 October 2016 stays off the main list, unless it is still open and the published Mauritius amount is over USD 5 million. It is named here.",
@@ -1188,7 +1188,7 @@ const fr: typeof en = {
     registryRecords: "Fiches du registre",
     openDownloads: "Téléchargements ouverts",
     csvNote:
-      "Le CSV inclut une colonne source_urls pour qu'un téléchargement reste vérifiable hors ligne.",
+      "Chaque ligne du CSV est une ligne publiée : montant, devise, instrument, phrase, page, URL, et le jour où cette URL a été ouverte. Un montant ou une page vide n'était pas dans le fichier copié. Le JSON contient les mêmes lignes, plus les fiches complètes. in_registry_sum marque les lignes qui entrent dans le total du registre.",
     olderTitle: "Plus de 10 ans",
     olderLead:
       "Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que le montant Maurice publié dépasse 5 millions USD. Il est nommé ici.",

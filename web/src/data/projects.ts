@@ -797,6 +797,18 @@ export function getAllProjects(): Project[] {
   return projects;
 }
 
+/** Main list plus records kept off it. The off-list records stay out of the registry sum. */
+export function getReviewedProjects(): Project[] {
+  const byId = new Map<string, Project>();
+  for (const project of annotated) byId.set(project.id, project);
+  byId.set(RODRIGUES_AIRPORT_GRANT.id, RODRIGUES_AIRPORT_GRANT);
+  return [...byId.values()];
+}
+
+export function isOnMainList(id: string): boolean {
+  return projects.some((project) => project.id === id);
+}
+
 export function getMappableProjects(list = projects): Project[] {
   return list.filter((p) => p.showOnMap && p.lat != null && p.lng != null);
 }

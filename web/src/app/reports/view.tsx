@@ -12,6 +12,11 @@ import {
 import type { ReportType } from "@/data/reports";
 import { useI18n } from "@/i18n/LanguageProvider";
 
+function reportWhen(period: string | null, coverDate: string | null) {
+  if (period && coverDate) return `${period} · ${coverDate}`;
+  return period || coverDate || "—";
+}
+
 export function ReportsView() {
   const { dict } = useI18n();
   const copy = dict.reports;
@@ -67,9 +72,8 @@ export function ReportsView() {
                     <td className="hidden px-4 py-3 text-muted sm:table-cell">
                       {dict.labels.reportType[r.type as ReportType]}
                     </td>
-                    <td className="hidden px-4 py-3 text-muted md:table-cell">
-                      {r.reportingPeriod ?? "-"}
-                      {r.coverDate ? ` · ${r.coverDate}` : ""}
+                    <td className="hidden whitespace-nowrap px-4 py-3 text-muted md:table-cell">
+                      {reportWhen(r.reportingPeriod, r.coverDate)}
                     </td>
                     <td className="px-4 py-3">
                       <Link

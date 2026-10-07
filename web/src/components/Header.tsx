@@ -15,7 +15,7 @@ const NAV_HREFS = [
   { href: "/map", key: "places" },
   { href: "/reports", key: "reports" },
   { href: "/sources", key: "sources" },
-  { href: "/about", key: "about" },
+  { href: "/problem-solution", key: "problemSolution" },
   { href: "/get-involved", key: "getInvolved" },
 ] as const;
 
@@ -25,74 +25,64 @@ export function Header() {
   const { dict } = useI18n();
   const nav = dict.header.nav;
 
+  function isActive(href: string) {
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
+  const links = NAV_HREFS.map((item) => {
+    const active = isActive(item.href);
+    return { ...item, active, label: nav[item.key] };
+  });
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-card/90 backdrop-blur-md">
       <div className="border-b border-border/60 bg-primary-soft/50">
         <Container className="flex h-9 items-center justify-between gap-3 text-xs sm:text-sm">
           <a
             href="https://mkweli.tech"
-            className="inline-flex items-center gap-1.5 font-medium text-primary-dark transition hover:text-primary"
+            className="inline-flex min-w-0 items-center gap-1.5 font-medium text-primary-dark transition hover:text-primary"
           >
             <span aria-hidden className="text-muted">
               ←
             </span>
-            <span>
+            <span className="truncate">
               {dict.header.backTo}{" "}
               <span className="font-semibold">mkweli.tech</span>
             </span>
           </a>
-          <MkweliLockup className="text-xs sm:text-sm" />
+          <MkweliLockup className="shrink-0 text-xs sm:text-sm" />
         </Container>
       </div>
 
-      <Container className="flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+      <Container className="flex h-16 items-center justify-between gap-3">
+        <Link href="/" className="flex min-w-0 items-center gap-2.5" onClick={() => setOpen(false)}>
           <span
-            className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow-sm"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white shadow-sm"
             aria-hidden
           >
             PF
           </span>
-          <span className="leading-tight">
-            <span className="block text-sm font-semibold tracking-tight text-foreground sm:text-base">
+          <span className="min-w-0 leading-tight">
+            <span className="block truncate whitespace-nowrap text-sm font-semibold tracking-tight text-foreground sm:text-base">
               {dict.header.productName}
             </span>
-            <span className="hidden text-xs text-muted sm:block">
+            <span className="hidden truncate whitespace-nowrap text-xs text-muted sm:block">
               {dict.header.tagline}
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label={dict.header.primaryNav}>
-          {NAV_HREFS.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                  active
-                    ? "bg-primary-soft text-primary-dark"
-                    : "text-muted hover:bg-primary-soft/60 hover:text-foreground"
-                }`}
-              >
-                {nav[item.key]}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden shrink-0 items-center gap-2 lg:flex">
           <LanguageToggle />
           <Link
             href="/projects"
-            className="inline-flex items-center rounded-lg bg-primary px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-dark"
+            className="inline-flex items-center whitespace-nowrap rounded-lg bg-primary px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-dark"
           >
             {dict.header.browseRegistry}
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex shrink-0 items-center gap-2 lg:hidden">
           <LanguageToggle />
           <button
             type="button"
@@ -123,10 +113,31 @@ export function Header() {
         </div>
       </Container>
 
+      <nav
+        className="hidden border-t border-border/70 lg:block"
+        aria-label={dict.header.primaryNav}
+      >
+        <Container className="flex h-11 items-center gap-1 overflow-x-auto">
+          {links.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`shrink-0 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors ${
+                item.active
+                  ? "bg-primary-soft text-primary-dark"
+                  : "text-muted hover:bg-primary-soft/60 hover:text-foreground"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </Container>
+      </nav>
+
       {open && (
         <div
           id="mobile-nav"
-          className="border-t border-border bg-card md:hidden"
+          className="border-t border-border bg-card lg:hidden"
         >
           <Container className="flex flex-col gap-1 py-3">
             <a
@@ -135,23 +146,20 @@ export function Header() {
             >
               ← {dict.header.backToHub}
             </a>
-            {NAV_HREFS.map((item) => {
-              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
-                    active
-                      ? "bg-primary-soft text-primary-dark"
-                      : "text-foreground hover:bg-primary-soft/60"
-                  }`}
-                >
-                  {nav[item.key]}
-                </Link>
-              );
-            })}
+            {links.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`rounded-lg px-3 py-2.5 text-sm font-medium ${
+                  item.active
+                    ? "bg-primary-soft text-primary-dark"
+                    : "text-foreground hover:bg-primary-soft/60"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               href="/projects"
               onClick={() => setOpen(false)}

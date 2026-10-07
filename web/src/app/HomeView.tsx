@@ -206,7 +206,7 @@ export function HomeView() {
           ) : null}
         </div>
 
-        <aside className="sticky top-24 hidden lg:block">
+        <aside className="sticky top-40 hidden lg:block">
           {active ? (
             <SourceCard source={active.source} groupLabel={copy.groups[sourceGroupOf(active.source)]} />
           ) : null}

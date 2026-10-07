@@ -114,7 +114,7 @@ export const PRECISION_LABELS: Record<PlacePrecision, string> = {
 };
 
 export const PIN_CAVEAT =
-  "Approximate locality for a place named in a public report - not a surveyed works polygon.";
+  "Locality named in a public report.";
 
 export const AS_OF = "2026-10-05";
 export const TEN_YEAR_CUTOFF = "2016-10-05";

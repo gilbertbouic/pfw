@@ -22,7 +22,7 @@ export const RODRIGUES_AIRPORT_GRANT: Project = {
   countryCode: "MU",
   geographyScope: "site",
   geographyNote:
-    "Rodrigues Airport. No map pin: the API fields used here name the project and do not publish a works coordinate.",
+    "Rodrigues Airport. The project record names the airport and does not include a works coordinate.",
   adminUnit: "Rodrigues",
   district: "Rodrigues",
   lat: null,
@@ -34,10 +34,10 @@ export const RODRIGUES_AIRPORT_GRANT: Project = {
   amountLabel: "World Bank grant",
   amount: 16_000_000,
   amountNote:
-    "World Bank Projects API field grantamt for P180266. The same response publishes ibrdcommamt USD 184,000,000. That loan is not this amount.",
+    "World Bank Projects API field grantamt for P180266. The same response publishes ibrdcommamt USD 184,000,000. The registry amount is the grant.",
   cofinancing: null,
   cofinancingNote:
-    "The IBRD loan of USD 184,000,000 is published on the same API record. It is not recorded as co-financing and it is not a grant.",
+    "The IBRD loan of USD 184,000,000 is published on the same API record. The registry amount is the grant.",
   totalValue: 200_000_000,
   totalValueNote:
     "API total commitment USD 200,000,000, which is the grant plus the IBRD loan. The registry amount is the grant.",

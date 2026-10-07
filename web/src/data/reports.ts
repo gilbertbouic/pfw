@@ -137,7 +137,7 @@ export const donorReports: DonorReport[] = [
     coverDate: "2022-02-16",
     url: "https://www.greenclimate.fund/document/2022-annual-performance-report-fp135-ecosystem-based-adaptation-indian-ocean-eba-io",
     publisher: "Green Climate Fund / AFD",
-    geographyNote: "Programme-level (four countries). Not a Mauritius-only report.",
+    geographyNote: "Programme-level (four countries).",
   },
   {
     id: "fp161-apr-2024",
@@ -148,7 +148,7 @@ export const donorReports: DonorReport[] = [
     coverDate: "2025-08-16",
     url: "https://www.greenclimate.fund/document/2024-annual-performance-report-fp161-building-regional-resilience-through-strengthened",
     publisher: "Green Climate Fund / AFD",
-    geographyNote: "Programme-level (IOC members). Not a Mauritius-only report.",
+    geographyNote: "Programme-level (IOC members).",
   },
   {
     id: "fp161-apr-2023",
@@ -159,7 +159,7 @@ export const donorReports: DonorReport[] = [
     coverDate: "2024-10-17",
     url: "https://www.greenclimate.fund/document/2023-annual-performance-report-fp161-building-regional-resilience-through-strengthened",
     publisher: "Green Climate Fund / AFD",
-    geographyNote: "Programme-level (IOC members). Not a Mauritius-only report.",
+    geographyNote: "Programme-level (IOC members).",
   },
   {
     id: "fp095-apr-2024",
@@ -170,7 +170,7 @@ export const donorReports: DonorReport[] = [
     coverDate: "2025-03-29",
     url: "https://www.greenclimate.fund/document/2024-annual-performance-report-fp095-transforming-financial-systems-climate",
     publisher: "Green Climate Fund / AFD",
-    geographyNote: "Programme-level (17 countries). Not a Mauritius-only report.",
+    geographyNote: "Programme-level (17 countries).",
   },
   {
     id: "fp095-apr-2023",
@@ -181,7 +181,7 @@ export const donorReports: DonorReport[] = [
     coverDate: "2024-09-27",
     url: "https://www.greenclimate.fund/document/2023-annual-performance-report-fp095-transforming-financial-systems-climate",
     publisher: "Green Climate Fund / AFD",
-    geographyNote: "Programme-level (17 countries). Not a Mauritius-only report.",
+    geographyNote: "Programme-level (17 countries).",
   },
   {
     id: "resislands-proposal-2024",

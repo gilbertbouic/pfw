@@ -25,12 +25,12 @@ const seeds: Seed[] = [
     countryCode: "MU",
     geographyScope: "national",
     geographyNote:
-      "National programme covering Mauritius, Rodrigues and Agaléga. Map pin is Port Louis as an illustrative national centroid, not a project site.",
+      "National programme covering Mauritius, Rodrigues and Agaléga. The map pin is Port Louis, the national centroid.",
     adminUnit: "National",
     district: "National / multi-island",
     lat: -20.1609,
     lng: 57.5012,
-    pinNote: "Illustrative national centroid (Port Louis), not a surveyed site.",
+    pinNote: "National centroid (Port Louis).",
     showOnMap: true,
     funders: ["Green Climate Fund", "Government of Mauritius", "AFD"],
     implementingEntities: [
@@ -111,7 +111,7 @@ const seeds: Seed[] = [
     district: "Mon Choisy / Rivière des Galets / Quatre Soeurs",
     lat: -20.017,
     lng: 57.558,
-    pinNote: "Mon Choisy - one of three named project sites, not the only location.",
+    pinNote: "Mon Choisy, one of three named project sites.",
     showOnMap: true,
     funders: ["Adaptation Fund"],
     implementingEntities: ["UNDP", "Ministry of Environment"],
@@ -166,7 +166,7 @@ const seeds: Seed[] = [
     title:
       "Restoring marine ecosystem services by rehabilitating coral reefs (Mauritius and Seychelles)",
     summary:
-      "Adaptation Fund coral restoration programme shared by Mauritius and Seychelles. The Mauritius-specific component in the AF budget table is USD 2.5 million. The USD 10 million grant amount is regional, not a Mauritius-only envelope.",
+      "Adaptation Fund coral restoration programme shared by Mauritius and Seychelles. The Mauritius-specific component in the AF budget table is USD 2.5 million. The USD 10 million grant is the regional total.",
     kind: "multilateral_project",
     climateObjective: "adaptation",
     hazards: ["coastal", "biodiversity", "heat"],
@@ -175,7 +175,7 @@ const seeds: Seed[] = [
     countryCode: "MU",
     geographyScope: "multi_country",
     geographyNote:
-      "Mauritius, Rodrigues and Seychelles. No single surveyed site is used as a map pin.",
+      "Mauritius, Rodrigues and Seychelles.",
     adminUnit: "Coastal / lagoon (regional)",
     district: "Mauritius, Rodrigues and Seychelles",
     lat: null,
@@ -232,7 +232,7 @@ const seeds: Seed[] = [
     countryCode: "MU",
     geographyScope: "multi_country",
     geographyNote:
-      "Four Indian Ocean countries. Do not treat the USD 38 million GCF grant as Mauritius funding.",
+      "Four Indian Ocean countries. The USD 38 million GCF grant is the regional total.",
     adminUnit: "Regional (IOC)",
     district: "Comoros, Madagascar, Mauritius, Seychelles",
     lat: null,
@@ -326,7 +326,7 @@ const seeds: Seed[] = [
     countryCode: "MU",
     geographyScope: "multi_country",
     geographyNote:
-      "Seventeen countries in Africa and Latin America. Do not treat programme totals as Mauritius receipts.",
+      "Seventeen countries in Africa and Latin America. Programme totals are regional.",
     adminUnit: "Multi-country",
     district: "17 countries including Mauritius",
     lat: null,
@@ -478,7 +478,7 @@ const seeds: Seed[] = [
     countryCode: "MU",
     geographyScope: "multi_country",
     geographyNote:
-      "Nine AISCC member states: Cabo Verde, Comoros, Equatorial Guinea, Guinea-Bissau, Madagascar, Mauritius, São Tomé and Príncipe, Seychelles, and Tanzania (Zanzibar). Madagascar has no country allocation in the March 2024 table. Do not treat the USD 4,943,086 total as Mauritius funding. Cabinet noted a Mauritius launch at the United Docks, Port Louis, on 25 September 2026 - that is an event venue, not a surveyed works site.",
+      "Nine AISCC member states: Cabo Verde, Comoros, Equatorial Guinea, Guinea-Bissau, Madagascar, Mauritius, São Tomé and Príncipe, Seychelles, and Tanzania (Zanzibar). Madagascar has no country allocation in the March 2024 table. The USD 4,943,086 figure is the regional total. Cabinet noted a Mauritius launch at the United Docks, Port Louis, on 25 September 2026.",
     adminUnit: "Regional (AISCC)",
     district: "AISCC member states",
     lat: null,

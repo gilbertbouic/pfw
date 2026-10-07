@@ -125,11 +125,11 @@ const en = {
     unknownAmounts: 'Unknown amounts shown as "Not published"',
     sourcedOnly: "Sourced records only",
     copyright: "© {year} Public Funds Watch. All rights reserved.",
-    disclaimer: "Not an official government or funder reporting system.",
+    disclaimer: "An independent compilation of public documents.",
   },
   sourceBanner: {
     title: "Sourced ledger",
-    body: "Independent compilation of public documents. Not an official government or funder portal. Last reviewed {date}.",
+    body: "Independent compilation of public documents. Last reviewed {date}.",
     sourcesLink: "Sources →",
   },
   contactForm: {
@@ -161,8 +161,8 @@ const en = {
     disclaimer:
       "This form is for partnership, pilot, press, and technical enquiries.",
     disclaimerStrong:
-      "Do not use it for confidential integrity or whistleblower reports",
-    disclaimerTail: "- a separate safe channel is planned. Messages go to {email}.",
+      "Confidential integrity or whistleblower reports belong in a separate channel",
+    disclaimerTail: ", which is still planned. Messages go to {email}.",
     sending: "Sending...",
     send: "Send message",
     orEmail: "Or email support@mkweli.tech →",
@@ -204,11 +204,11 @@ const en = {
     siteSpendNotReported: "Site-level spend not reported.",
     pinTitle: "{name} - site-level spend not reported",
     caption:
-      "Schematic outline for orientation only - not a surveyed coastline. Dots are approximate localities named in public reports.",
+      "Outline of Mauritius and Rodrigues for orientation. Dots mark localities named in public reports.",
   },
   glance: {
-    ledgerLine: "Sourced ledger. Not an official portal. Reviewed {date}.",
-    notOneTotal: "These four figures are not added together.",
+    ledgerLine: "Sourced ledger. Reviewed {date}.",
+    notOneTotal: "These four figures are listed separately.",
     record: "Record",
     donor: "Donor",
     year: "Year",
@@ -216,7 +216,7 @@ const en = {
     notPublished: "Not published",
     olderLabel: "Older completed project",
     diffTitle: "Since {date}",
-    doNotInvent: "We do not invent a figure.",
+    doNotInvent: "How a figure is cited",
     sources: "Sources",
     quoteMissing: "A verbatim sentence and a page were not recorded for this figure.",
     openSource: "Open the document",
@@ -243,16 +243,16 @@ const en = {
     coveragePoints: [
       "Mauritius only. A row needs a published Mauritius amount of at least USD 100,000.",
       "A new row is a donor-funded grant of at least USD 100,000 with a start or approval on or after 5 October 2016, from the UN, a named foreign government, the World Bank, the Asian Development Bank, the African Development Bank, the Red Cross, or a Mauritian body the source calls an NGO. A still-open project over USD 5 million can be older.",
-      "Loans are not added as grants. Where one project publishes both a grant and a loan, only the grant is in the registry amount.",
+      "Where one project publishes both a grant and a loan, only the grant is in the registry amount.",
       "Per diems, overheads, and expenditure stay “Not published” unless the source states the figure. Shared money is counted once in the registry total.",
     ],
     openRegistry: "Open the sourced registry",
     fundingLandscape: "Funding landscape",
     readSeparately: "Read the numbers separately",
     notOneTotal:
-      "Need, tagged spend, and donor projects are not one total.",
+      "Need, tagged spend, and donor projects are listed separately.",
     fmcpNote:
-      "The ministry FMCP presentation also lists {amount} of international support from 2017 onwards, and says 8.4% of the NDC requirement has been mobilized. {amount} is about 1.8% of USD 6.5 billion - that 8.4% line is published as-is and not reconciled here.",
+      "The ministry FMCP presentation also lists {amount} of international support from 2017 onwards, and says 8.4% of the NDC requirement has been mobilized. {amount} is about 1.8% of USD 6.5 billion. Both figures are printed as published.",
     agencyTable: "Agency table",
     registryEyebrow: "Registry",
     registryTitle:
@@ -264,12 +264,12 @@ const en = {
     tableGeography: "Geography",
     tableMauritiusAmount: "Mauritius amount",
     whatThisIs: "What this site is",
-    briefingTitle: "A public briefing, not a live government dashboard.",
+    briefingTitle: "A public briefing from cited documents.",
     briefingBody:
-      "Public Funds Watch is also a proposed transparency platform (community evidence, integrity channel, council consoles). Those modules are not live. The pages here publish only what we could verify in public documents as of {date}.",
+      "Public Funds Watch is also a proposed transparency platform (community evidence, integrity channel, council consoles). The pages here publish only what we could verify in public documents as of {date}.",
     howWeCite: "How we cite",
     aboutProduct: "About the product",
-    weDoNotInvent: "We do not invent",
+    weDoNotInvent: "Left blank",
     doNotInvent: [
       "Disbursement or expenditure when the source is silent",
       "Mauritius splits of regional programmes",
@@ -282,30 +282,30 @@ const en = {
     "ndc-need": {
       label: "NDC implementation need (to 2030)",
       measures:
-        "Mauritius's own estimate of financial needs to implement the updated 2021 NDC - not money already received.",
+        "Mauritius's own estimate of financial needs to implement the updated 2021 NDC.",
       detail:
         "USD 4.5 billion adaptation and USD 2.0 billion mitigation. Unconditional USD 2.3 billion (35%, government and private sector); conditional USD 4.2 billion (65%, international sources).",
     },
     "ccdr-need": {
       label: "CCDR additional investment (25 years, NPV)",
       measures:
-        "World Bank modelled investment need - a different question from the NDC USD 6.5 billion to 2030. Do not add the two figures.",
+        "World Bank modelled investment need over 25 years, separate from the NDC USD 6.5 billion to 2030.",
       detail:
         "World Bank Country Climate and Development Report: additional investment over the next 25 years in net present value terms, with an estimated annual gap of USD 213 million. About USD 1.4 billion is required through 2030.",
     },
     "appendix-h": {
       label: "Climate-tagged budget (FY 2025/26)",
       measures:
-        "Government climate-budget tagging of selected votes for one fiscal year - not international climate finance received, and not comparable to the UNDRR DRR/CCA tagging exercise.",
+        "Government climate-budget tagging of selected votes for one fiscal year.",
       detail:
         "Adaptation Rs 5.589 billion, mitigation Rs 1.012 billion, mixed Rs 0.100 billion across six ministries and two special funds (Climate and Sustainability Fund and Projects Development Fund). About 2.9% of appropriated expenditure including those funds. CSF itself is tagged at Rs 3.473 billion.",
     },
     "fmcp-received": {
       label: "International support listed (from 2017)",
       measures:
-        "A ministry-compiled list of approved international support, not a complete national climate-finance account.",
+        "A ministry-compiled list of approved international support.",
       detail:
-        'Ministry of Environment FMCP presentation: grants and loans from named agencies from 2017 onwards (GCF 38.51, GEF 37.35, Adaptation Fund 4.44, AFD 9.20, EU 13.15, GCCA+ 2.26, Abu Dhabi Fund 10.00 loan, AfDB 2.44 loan, and smaller lines). The same slide states "8.4% of the requirement has been mobilized." USD 118.05 million is about 1.8% of the NDC USD 6.5 billion - the 8.4% line is not explained by that total.',
+        'Ministry of Environment FMCP presentation: grants and loans from named agencies from 2017 onwards (GCF 38.51, GEF 37.35, Adaptation Fund 4.44, AFD 9.20, EU 13.15, GCCA+ 2.26, Abu Dhabi Fund 10.00 loan, AfDB 2.44 loan, and smaller lines). The same slide states "8.4% of the requirement has been mobilized." The slide also prints USD 118.05 million.',
     },
   },
   about: {
@@ -323,7 +323,7 @@ const en = {
     ],
     openLedger: "The ledger",
     proposed:
-      "Community evidence, the integrity vault, and government consoles are proposed, not live.",
+      "Community evidence, the integrity vault, and government consoles are proposed.",
   },
   getInvolved: {
     eyebrow: "Get involved",
@@ -359,7 +359,7 @@ const en = {
     publicRepo: "(public)",
     transparency: "Transparency note",
     transparencyBody:
-      "Project and budget records on this site are compiled from cited public documents. They are not a live government feed. See {sources}. The USD 550,000 Year-1 envelope mentioned in concept notes is a proposed Public Funds Watch pilot cost, not a Mauritius climate-finance statistic.",
+      "Project and budget records on this site are compiled from cited public documents. See {sources}. The USD 550,000 Year-1 envelope in the concept notes is the proposed Public Funds Watch pilot cost.",
     sourcesWord: "sources",
   },
   landscape: {
@@ -367,13 +367,13 @@ const en = {
     title:
       "Channels of climate money - and what each number actually measures",
     description:
-      "Public climate-finance figures for Mauritius come from different systems. This page lists those channels without adding them into a single total.",
+      "Public climate-finance figures for Mauritius come from different systems. This page lists those channels separately.",
     needTitle: "Need versus spend versus support received",
     needLead:
-      "The NDC, the World Bank CCDR, the national budget tag, and the ministry's FMCP table answer different questions. Mixing them produces a number no source published.",
+      "The NDC, the World Bank CCDR, the national budget tag, and the ministry's FMCP table answer different questions.",
     fmcpTitle: "International support listed by the ministry (from 2017)",
     fmcpLead:
-      "Copied from the Ministry of Environment FMCP-3 presentation. The slide total is USD 118.05 million. The same slide says 8.4% of the NDC requirement has been mobilized; 118.05 / 6,500 is about 1.8%. We do not choose between those two statements.",
+      "Copied from the Ministry of Environment FMCP-3 presentation. The slide total is USD 118.05 million. The same slide says 8.4% of the NDC requirement has been mobilized. Both figures are printed on the slide.",
     agency: "Agency",
     usdMillion: "USD million",
     instrument: "Instrument",
@@ -382,10 +382,10 @@ const en = {
       "Source: {link}. Agency lines are not always the same as a single project in the registry (for example GCF 38.51 vs FP033 grant 28.21).",
     fmcpSourceLink: "Mauritius FMCP-3 presentation",
     domesticTitle: "Domestic instruments",
-    privateTitle: "Private lending (not public expenditure)",
+    privateTitle: "Private lending",
     integrityTitle: "Tracking and integrity - published findings",
     integrityLead:
-      "These are survey and research claims, cited as such. They are not legal findings.",
+      "These are survey and research claims, cited as such.",
     footerNote:
       "Project-level records live in the {registry}. Citation rules are on {sources}.",
     registryWord: "registry",
@@ -401,7 +401,7 @@ const en = {
       },
       undrr: {
         title: "UNDRR DRR + CCA budget tagging (pilot)",
-        body: "A combined disaster-risk-reduction and climate-change-adaptation tagging exercise for 2023-24 and 2024-25 estimated unweighted principal and significant expenditure at MUR 38.927 billion (15.1% of Vote expenditure, 5.2% of GDP). This uses a wider definition than Appendix H and is not an update of the same series.",
+        body: "A combined disaster-risk-reduction and climate-change-adaptation tagging exercise for 2023-24 and 2024-25 estimated unweighted principal and significant expenditure at MUR 38.927 billion (15.1% of Vote expenditure, 5.2% of GDP). This uses a wider definition than Appendix H.",
       },
     },
     integrityNotes: {
@@ -411,7 +411,7 @@ const en = {
       },
       conversation: {
         title: "Independent research on tracking gaps",
-        body: "A June 2026 analysis in The Conversation reports no legal convictions or formal corruption indictments linked to climate finance in Mauritius, and argues that tracking and reporting of funds once they enter the system remain weak. It discusses a flood-drainage implementation case as mismanagement, not as a conviction.",
+        body: "A June 2026 analysis in The Conversation reports no legal convictions or formal corruption indictments linked to climate finance in Mauritius, and argues that tracking and reporting of funds once they enter the system remain weak. It discusses a flood-drainage implementation case as mismanagement.",
       },
       taxonomy: {
         title: "National green taxonomy (in development)",
@@ -421,7 +421,7 @@ const en = {
     privateNotes: {
       absa: {
         title: "Absa Mauritius green-loan target",
-        body: "Absa Mauritius stated it intends to increase green loans to MUR 30 billion by 2030, from MUR 8 billion at the end of the previous year. This is a bank lending target, not public climate expenditure.",
+        body: "Absa Mauritius stated it intends to increase green loans to MUR 30 billion by 2030, from MUR 8 billion at the end of the previous year. This is a bank lending target.",
       },
     },
   },
@@ -429,15 +429,14 @@ const en = {
     eyebrow: "Places",
     title: "Where public reports name a place",
     lead:
-      "A schematic of Mauritius and Rodrigues - not a world map - with localities named in CEB, UNDP, GCF or Adaptation Fund documents. Site-level spend is almost never published, so those lines say {notReported}. {caveat}",
+      "Localities named in CEB, UNDP, GCF or Adaptation Fund documents, drawn on an outline of Mauritius and Rodrigues. Where a document does not give spending for that place, the line says {notReported}.",
     notReportedStrong: "not reported",
-    pinCaveat:
-      "Approximate locality for a place named in a public report - not a surveyed works polygon.",
+    pinCaveat: "",
     registryList: "Registry list",
-    onMapCount: "{count} places on the island figures · no tile server",
+    onMapCount: "{count} places on the island figures",
     namedTitle: "Named in reports",
     namedLead:
-      "Works or activity reported at these places. A batch grant (for example USD 7.5 million for 14 MW of batteries) is not divided across substations.",
+      "Works or activity reported at these places. A batch grant (for example USD 7.5 million for 14 MW of batteries) stays as one amount.",
     colPlace: "Place",
     colIsland: "Island",
     colSpend: "Site-level spend",
@@ -454,7 +453,7 @@ const en = {
     eyebrow: "Reports",
     title: "What funders have published",
     description:
-      "Disbursements are often gated on reports. For these Mauritius-linked GCF projects the public library is annual performance reports, not a quarterly calendar. We list documents that are on GCF, AF or UNDP pages - we do not invent due dates.",
+      "For these Mauritius-linked GCF projects, the public documents are annual performance reports. This list is what is on the GCF, Adaptation Fund or UNDP pages.",
     colReport: "Report",
     colType: "Type",
     colPeriod: "Period",
@@ -468,17 +467,17 @@ const en = {
     eyebrow: "Sources & methods",
     title: "Every public number on this site has a URL",
     description:
-      "This is an independent compilation, last reviewed on the date in the banner. It is not an official government, GCF, or Adaptation Fund reporting system.",
+      "This is an independent compilation, last reviewed on the date in the banner.",
     rulesTitle: "Rules",
     rules: [
       "A money figure appears only if a cited public document contains that figure (or an official table from which it is copied).",
-      'If a funder has not published disbursement or expenditure, the field is "Not published" - never zero, never estimated.',
-      "Multi-country programmes keep programme totals and state that the Mauritius share is unpublished unless a document splits it (the Adaptation Fund coral component is the current exception).",
-      "Need (NDC, CCDR), tagged domestic spend (Appendix H), and international support received (FMCP, funder pages) are not added together.",
-      "Status is taken from the funder or UNDP page (under implementation, completed) or left unknown. We do not mark projects delayed for illustration.",
-      'Named works sites are shown on a Mauritius/Rodrigues schematic (not a world map). Dots are approximate localities from CEB, UNDP, GCF or Adaptation Fund reports, not surveyed works polygons. Site-level spend is "Not reported" unless a document publishes a figure for that site. Batch grants are not divided across substations.',
-      'Donor reports are APRs, PPRs and evaluations linked from GCF or Adaptation Fund pages. GCF public reporting for these projects is annual. We do not add a quarterly "next tranche" calendar unless a cited document states that cycle.',
-      "A currency other than USD is tested with the European Central Bank reference rate for the document date, pinned via Frankfurter. The original currency stays the cited amount. The rate is not refreshed on each page view.",
+      'If a funder has not published disbursement or expenditure, the field is "Not published".',
+      "Multi-country programmes keep programme totals. A Mauritius share is shown when a document splits it (the Adaptation Fund coral component is the current case).",
+      "Need (NDC, CCDR), tagged domestic spend (Appendix H), and international support received (FMCP, funder pages) are listed separately.",
+      "Status is taken from the funder or UNDP page (under implementation, completed) or left unknown.",
+      'Named works sites are shown on an outline of Mauritius and Rodrigues. Dots mark localities named in CEB, UNDP, GCF or Adaptation Fund reports. Site-level spend is "Not reported" where the document does not publish a figure for that site. A batch grant stays as one amount.',
+      "Donor reports are APRs, PPRs and evaluations linked from GCF or Adaptation Fund pages. GCF public reporting for these projects is annual.",
+      "A currency other than USD is tested with the European Central Bank reference rate for the document date, pinned via Frankfurter. The original currency stays the cited amount.",
       "A main-list row is a donor-funded project with a published Mauritius amount of at least USD 100,000. Red Cross projects and Mauritian NGO grants use that same rule when a public source states a Mauritius figure. A project that started before 5 October 2016 stays off the main list, unless it is still open and that amount is over USD 5 million. A row with no published Mauritius amount is named on this page and has no project page. An existing climate record with no published start date stays when its published amount is at least USD 100,000.",
     ],
     headlineFigures: "Headline figures",
@@ -491,7 +490,7 @@ const en = {
       "A project that started before 5 October 2016 stays off the main list, unless it is still open and the published Mauritius amount is over USD 5 million. It is named here.",
     skippedTitle: "Reviewed and not added",
     skippedLead:
-      "These pages were opened for this pass. A class with no qualifying public grant is named here. A blank field is not filled with a loan or an estimate.",
+      "These pages were opened for this pass. A class with no qualifying public grant is named here.",
     jsonLink: "JSON - /data/projects.json",
     csvLink: "CSV - /data/projects.csv",
     corrections: "Ledger last reviewed {date}. Corrections: {email}.",
@@ -599,7 +598,7 @@ const en = {
     ],
     howTitle: "How it works",
     howLead:
-      "Intended loop from funding decision to community verification and public accountability - a product design, not a description of live workflows.",
+      "Intended loop from funding decision to community verification and public accountability.",
     flow: [
       "Fund approved / project listed",
       "Budget chain & milestones published",
@@ -629,7 +628,7 @@ const en = {
     eyebrow: "Public registry",
     title: "Sourced public-funding records",
     lead:
-      'Only records with at least one public URL. Regional programme totals are not treated as Mauritius receipts. Amounts that funders have not published are shown as "Not published."',
+      "Records with at least one public URL. A regional programme total stays with the programme. Amounts a funder has not published are shown as \"Not published.\"",
     openMap: "Open map",
     downloadCsv: "Download CSV",
     recordsShown: "Records shown",
@@ -637,7 +636,7 @@ const en = {
     withAmount: "With a Mauritius amount",
     multiCountry: "Multi-country programmes",
     sumNote:
-      "The USD sum adds Mauritius amounts a source assigns to Mauritius. A euro amount is included at the European Central Bank reference rate pinned on the record. Shared money is counted once. Regional programme totals without a Mauritius line are omitted. The 2012 Adaptation Fund coastal programme is older than 10 years and is not in this sum.",
+      "The USD sum adds Mauritius amounts a source assigns to Mauritius. A euro amount is included at the European Central Bank reference rate pinned on the record. Shared money is counted once. The sum uses Mauritius lines only. The 2012 Adaptation Fund coastal programme is older than 10 years and sits outside this sum.",
     noMatch: "No records match these filters. Clear a filter and try again.",
     alsoAvailable: "Also available as",
     jsonApi: "JSON",
@@ -647,7 +646,7 @@ const en = {
     allRecords: "← All records",
     publishedAmounts: "Published amounts",
     publishedAmountsLead:
-      "Only lines a cited document publishes. Empty rows mean the source does not give a number, not that the amount is zero.",
+      "Only lines a cited document publishes. An empty row means the source does not give a number.",
     cofinancing: "Co-financing (as published)",
     totalValue: "Total value (as published)",
     disbursed: "Disbursed (as published)",
@@ -656,7 +655,7 @@ const en = {
     end: "End / estimated completion",
     whereMoney: "Where the money went",
     whereMoneyLead:
-      "Disbursement to an accredited entity is not the same as expenditure at a named site. Site-level rupees or dollars are shown only when a cited report publishes them.",
+      "A disbursement to an accredited entity is listed separately from expenditure at a named site. Site-level rupees or dollars appear when a cited report publishes them.",
     disbursedToImplementer: "Disbursed to implementer",
     namedWorksSites: "Named works sites",
     placeOne: "{count} place in public reports",
@@ -667,7 +666,7 @@ const en = {
     openMap: "Open spend geography map →",
     donorReports: "Donor reports",
     donorReportsLead:
-      "Public performance reports linked from the funder. GCF reporting for these projects is annual (APR), not a quarterly calendar unless a document says so. A missing year means it was not on the funder site we reviewed - not that we marked it overdue.",
+      "Public performance reports linked from the funder. GCF reporting for these projects is annual (APR). A missing year was not on the funder site reviewed.",
     noReports:
       "No public APR, PPR or evaluation was listed on the funder pages reviewed for this record.",
     allReports: "All published reports →",
@@ -677,7 +676,7 @@ const en = {
     geography: "Geography",
     showPlaces: "Show named places →",
     notPinned:
-      "No named works site in the documents reviewed - not pinned.",
+      "No named works site in the documents reviewed.",
     hazards: "Hazards",
     funders: "Funders",
     implementing: "Implementing entities",
@@ -691,9 +690,9 @@ const en = {
     discrepancy: "Published figures differ:",
     reportingProfile: "Reporting profile",
     staleAnnual:
-      "The last review of this annual report is more than 12 months before 5 October 2026. This line does not invent a filing deadline.",
+      "The last review of this annual report is more than 12 months before 5 October 2026.",
     startUnpublished:
-      "The start date is not published in the sources reviewed for this record, so the 10-year test cannot be applied. The record stays because it was already on the climate list.",
+      "The sources reviewed for this record print no start date. The record stays because it was already on the climate list.",
   },
   gate: {
     label: "Opening",
@@ -827,11 +826,11 @@ const fr: typeof en = {
     sourcedOnly: "Fiches sourcées uniquement",
     copyright: "© {year} Public Funds Watch. Tous droits réservés.",
     disclaimer:
-      "Ceci n'est pas un système officiel de notification d'un gouvernement ou d'un bailleur.",
+      "Compilation indépendante de documents publics.",
   },
   sourceBanner: {
     title: "Registre sourcé",
-    body: "Compilation indépendante de documents publics. Ceci n'est pas un portail officiel d'un gouvernement ou d'un bailleur. Dernière revue le {date}.",
+    body: "Compilation indépendante de documents publics. Dernière revue le {date}.",
     sourcesLink: "Sources →",
   },
   contactForm: {
@@ -863,9 +862,9 @@ const fr: typeof en = {
     disclaimer:
       "Ce formulaire sert aux demandes de partenariat, de pilote, de presse et d'appui technique.",
     disclaimerStrong:
-      "Ne l'utilisez pas pour des signalements confidentiels d'intégrité ou de lanceur d'alerte",
+      "Les signalements confidentiels d'intégrité ou de lanceur d'alerte relèvent d'un canal distinct",
     disclaimerTail:
-      "- un canal sécurisé distinct est prévu. Les messages vont à {email}.",
+      ", encore à venir. Les messages vont à {email}.",
     sending: "Envoi...",
     send: "Envoyer le message",
     orEmail: "Ou écrire à support@mkweli.tech →",
@@ -907,11 +906,11 @@ const fr: typeof en = {
     siteSpendNotReported: "Dépense au site non communiquée.",
     pinTitle: "{name} - dépense au site non communiquée",
     caption:
-      "Contour schématique pour l'orientation seulement - pas un trait de côte levé. Les points sont des localités approximatives nommées dans des rapports publics.",
+      "Contour de Maurice et de Rodrigues pour l'orientation. Les points marquent des localités nommées dans des rapports publics.",
   },
   glance: {
-    ledgerLine: "Registre sourcé. Pas un portail officiel. Revu le {date}.",
-    notOneTotal: "Ces quatre chiffres ne s'additionnent pas.",
+    ledgerLine: "Registre sourcé. Revu le {date}.",
+    notOneTotal: "Ces quatre chiffres sont listés séparément.",
     record: "Fiche",
     donor: "Bailleur",
     year: "Année",
@@ -919,7 +918,7 @@ const fr: typeof en = {
     notPublished: "Non publié",
     olderLabel: "Projet ancien achevé",
     diffTitle: "Depuis le {date}",
-    doNotInvent: "Nous n'inventons pas un chiffre.",
+    doNotInvent: "Comment un chiffre est cité",
     sources: "Sources",
     quoteMissing: "Une phrase exacte et une page n'ont pas été relevées pour ce chiffre.",
     openSource: "Ouvrir le document",
@@ -946,16 +945,16 @@ const fr: typeof en = {
     coveragePoints: [
       "Maurice seulement. Une fiche exige un montant Maurice publié d'au moins 100 000 USD.",
       "Une nouvelle fiche est un don d'un bailleur d'au moins 100 000 USD dont le début ou l'approbation est le 5 octobre 2016 ou après, venant de l'ONU, d'un gouvernement étranger nommé, de la Banque mondiale, de la Banque asiatique de développement, de la Banque africaine de développement, de la Croix-Rouge, ou d'un organisme mauricien que la source appelle une ONG. Un projet encore ouvert de plus de 5 millions USD peut être plus ancien.",
-      "Les prêts ne sont pas ajoutés comme des dons. Lorsqu'un projet publie un don et un prêt, seul le don entre dans le montant du registre.",
+      "Lorsqu'un projet publie un don et un prêt, seul le don entre dans le montant du registre.",
       "Les per diem, les frais généraux et les dépenses restent « Non publié » tant que la source n'énonce pas le chiffre. L'argent partagé n'est compté qu'une fois dans le total du registre.",
     ],
     openRegistry: "Ouvrir le registre sourcé",
     fundingLandscape: "Paysage du financement",
     readSeparately: "Lire les chiffres séparément",
     notOneTotal:
-      "Le besoin, les dépenses étiquetées et les projets des bailleurs ne forment pas un total unique.",
+      "Le besoin, les dépenses étiquetées et les projets des bailleurs sont listés séparément.",
     fmcpNote:
-      "La présentation FMCP du ministère liste aussi {amount} d'appui international depuis 2017, et indique que 8,4 % du besoin CDN a été mobilisé. {amount} représente environ 1,8 % de 6,5 milliards USD - la ligne de 8,4 % est reprise telle quelle et n'est pas réconciliée ici.",
+      "La présentation FMCP du ministère liste aussi {amount} d'appui international depuis 2017, et indique que 8,4 % du besoin CDN a été mobilisé. {amount} représente environ 1,8 % de 6,5 milliards USD. Les deux chiffres sont repris tels que publiés.",
     agencyTable: "Tableau des agences",
     registryEyebrow: "Registre",
     registryTitle:
@@ -968,12 +967,12 @@ const fr: typeof en = {
     tableMauritiusAmount: "Montant Maurice",
     whatThisIs: "Ce qu'est ce site",
     briefingTitle:
-      "Un briefing public, pas un tableau de bord gouvernemental en direct.",
+      "Un briefing public tiré de documents cités.",
     briefingBody:
-      "Public Funds Watch est aussi une plateforme de transparence proposée (preuves citoyennes, canal d'intégrité, consoles des conseils). Ces modules ne sont pas en service. Les pages ici ne publient que ce que nous avons pu vérifier dans des documents publics au {date}.",
+      "Public Funds Watch est aussi une plateforme de transparence proposée (preuves citoyennes, canal d'intégrité, consoles des conseils). Les pages ici ne publient que ce que nous avons pu vérifier dans des documents publics au {date}.",
     howWeCite: "Comment nous citons",
     aboutProduct: "À propos du produit",
-    weDoNotInvent: "Nous n'inventons pas",
+    weDoNotInvent: "Laissé vide",
     doNotInvent: [
       "Un décaissement ou une dépense lorsque la source est silencieuse",
       "Une ventilation Maurice des programmes régionaux",
@@ -986,30 +985,30 @@ const fr: typeof en = {
     "ndc-need": {
       label: "Besoin de mise en oeuvre de la CDN (jusqu'en 2030)",
       measures:
-        "Estimation par Maurice de ses besoins financiers pour mettre en oeuvre la CDN actualisée de 2021 - pas de l'argent déjà reçu.",
+        "Estimation par Maurice de ses besoins financiers pour mettre en oeuvre la CDN actualisée de 2021.",
       detail:
         "4,5 milliards USD pour l'adaptation et 2,0 milliards USD pour l'atténuation. Part inconditionnelle : 2,3 milliards USD (35 %, État et secteur privé) ; part conditionnelle : 4,2 milliards USD (65 %, sources internationales).",
     },
     "ccdr-need": {
       label: "Investissement additionnel CCDR (25 ans, VAN)",
       measures:
-        "Besoin d'investissement modélisé par la Banque mondiale - une question différente des 6,5 milliards USD de la CDN jusqu'en 2030. Ne pas additionner les deux chiffres.",
+        "Besoin d'investissement modélisé par la Banque mondiale sur 25 ans, distinct des 6,5 milliards USD de la CDN jusqu'en 2030.",
       detail:
         "Rapport pays sur le climat et le développement de la Banque mondiale : investissement additionnel sur les 25 prochaines années en valeur actuelle nette, avec un écart annuel estimé à 213 millions USD. Environ 1,4 milliard USD est requis d'ici 2030.",
     },
     "appendix-h": {
       label: "Budget étiqueté climat (exercice 2025/26)",
       measures:
-        "Étiquetage climat du budget national sur des votes choisis pour un exercice - pas la finance climatique internationale reçue, et non comparable à l'exercice d'étiquetage RRC/ACC de l'UNDRR.",
+        "Étiquetage climat du budget national sur des votes choisis pour un exercice.",
       detail:
         "Adaptation : 5,589 milliards Rs ; atténuation : 1,012 milliard Rs ; mixte : 0,100 milliard Rs, répartis entre six ministères et deux fonds spéciaux (Climate and Sustainability Fund et Projects Development Fund). Environ 2,9 % des dépenses votées y compris ces fonds. Le CSF lui-même est étiqueté à 3,473 milliards Rs.",
     },
     "fmcp-received": {
       label: "Appui international listé (depuis 2017)",
       measures:
-        "Liste d'appui international approuvé compilée par le ministère, pas un compte national complet de finance climatique.",
+        "Liste d'appui international approuvé compilée par le ministère.",
       detail:
-        "Présentation FMCP du ministère de l'Environnement : dons et prêts d'agences nommées depuis 2017 (GCF 38,51 ; GEF 37,35 ; Adaptation Fund 4,44 ; AFD 9,20 ; UE 13,15 ; GCCA+ 2,26 ; Abu Dhabi Fund 10,00 en prêt ; BAD 2,44 en prêt ; et des lignes plus petites). La même diapositive indique \"8,4 % du besoin a été mobilisé\". 118,05 millions USD représentent environ 1,8 % des 6,5 milliards USD de la CDN - la ligne de 8,4 % n'est pas expliquée par ce total.",
+        "Présentation FMCP du ministère de l'Environnement : dons et prêts d'agences nommées depuis 2017 (GCF 38,51 ; GEF 37,35 ; Adaptation Fund 4,44 ; AFD 9,20 ; UE 13,15 ; GCCA+ 2,26 ; Abu Dhabi Fund 10,00 en prêt ; BAD 2,44 en prêt ; et des lignes plus petites). La même diapositive indique \"8,4 % du besoin a été mobilisé\". Elle imprime aussi 118,05 millions USD.",
     },
   },
   about: {
@@ -1027,7 +1026,7 @@ const fr: typeof en = {
     ],
     openLedger: "Le registre",
     proposed:
-      "Les preuves citoyennes, le coffre d'intégrité et les consoles gouvernementales sont proposés, pas en service.",
+      "Les preuves citoyennes, le coffre d'intégrité et les consoles gouvernementales sont proposés.",
   },
   getInvolved: {
     eyebrow: "Participer",
@@ -1064,7 +1063,7 @@ const fr: typeof en = {
     publicRepo: "(public)",
     transparency: "Note de transparence",
     transparencyBody:
-      "Les fiches de projets et de budgets sur ce site sont compilées à partir de documents publics cités. Ce n'est pas un flux gouvernemental en direct. Voir {sources}. L'enveloppe de 550 000 USD pour l'année 1 mentionnée dans les notes de concept est un coût proposé du pilote Public Funds Watch, pas une statistique de finance climatique de Maurice.",
+      "Les fiches de projets et de budgets sur ce site sont compilées à partir de documents publics cités. Voir {sources}. L'enveloppe de 550 000 USD pour l'année 1 dans les notes de concept est le coût proposé du pilote Public Funds Watch.",
     sourcesWord: "sources",
   },
   landscape: {
@@ -1072,13 +1071,13 @@ const fr: typeof en = {
     title:
       "Canaux de l'argent climat - et ce que mesure réellement chaque chiffre",
     description:
-      "Les chiffres publics de finance climatique pour Maurice viennent de systèmes différents. Cette page les liste sans les additionner en un total unique.",
+      "Les chiffres publics de finance climatique pour Maurice viennent de systèmes différents. Cette page les liste séparément.",
     needTitle: "Besoin, dépense et appui reçu",
     needLead:
-      "La CDN, le CCDR de la Banque mondiale, l'étiquetage du budget national et le tableau FMCP du ministère répondent à des questions différentes. Les mélanger produit un chiffre qu'aucune source n'a publié.",
+      "La CDN, le CCDR de la Banque mondiale, l'étiquetage du budget national et le tableau FMCP du ministère répondent à des questions différentes.",
     fmcpTitle: "Appui international listé par le ministère (depuis 2017)",
     fmcpLead:
-      "Repris de la présentation FMCP-3 du ministère de l'Environnement. Le total de la diapositive est 118,05 millions USD. La même diapositive indique que 8,4 % du besoin CDN a été mobilisé ; 118,05 / 6 500 vaut environ 1,8 %. Nous ne choisissons pas entre ces deux énoncés.",
+      "Repris de la présentation FMCP-3 du ministère de l'Environnement. Le total de la diapositive est 118,05 millions USD. La même diapositive indique que 8,4 % du besoin CDN a été mobilisé. Les deux chiffres sont imprimés sur la diapositive.",
     agency: "Agence",
     usdMillion: "Millions USD",
     instrument: "Instrument",
@@ -1087,10 +1086,10 @@ const fr: typeof en = {
       "Source : {link}. Les lignes d'agences ne correspondent pas toujours à un seul projet du registre (par exemple GCF 38,51 contre le don FP033 de 28,21).",
     fmcpSourceLink: "Présentation FMCP-3 de Maurice",
     domesticTitle: "Instruments nationaux",
-    privateTitle: "Prêts privés (pas de la dépense publique)",
+    privateTitle: "Prêts privés",
     integrityTitle: "Suivi et intégrité - constats publiés",
     integrityLead:
-      "Ce sont des constats d'enquête et de recherche, cités comme tels. Ce ne sont pas des conclusions juridiques.",
+      "Ce sont des constats d'enquête et de recherche, cités comme tels.",
     footerNote:
       "Les fiches au niveau projet sont dans le {registry}. Les règles de citation sont sur {sources}.",
     registryWord: "registre",
@@ -1106,7 +1105,7 @@ const fr: typeof en = {
       },
       undrr: {
         title: "Étiquetage budgétaire RRC + ACC de l'UNDRR (pilote)",
-        body: "Un exercice combiné d'étiquetage réduction des risques de catastrophe et adaptation au changement climatique pour 2023-24 et 2024-25 a estimé la dépense principale et significative non pondérée à 38,927 milliards MUR (15,1 % de la dépense des votes, 5,2 % du PIB). La définition est plus large que l'annexe H et ce n'est pas une mise à jour de la même série.",
+        body: "Un exercice combiné d'étiquetage réduction des risques de catastrophe et adaptation au changement climatique pour 2023-24 et 2024-25 a estimé la dépense principale et significative non pondérée à 38,927 milliards MUR (15,1 % de la dépense des votes, 5,2 % du PIB). La définition est plus large que l'annexe H.",
       },
     },
     integrityNotes: {
@@ -1116,7 +1115,7 @@ const fr: typeof en = {
       },
       conversation: {
         title: "Recherche indépendante sur les lacunes de suivi",
-        body: "Une analyse de juin 2026 dans The Conversation ne signale aucune condamnation pénale ni mise en accusation formelle liée à la finance climatique à Maurice, et soutient que le suivi et le reporting des fonds une fois entrés dans le système restent faibles. Elle discute un cas de mise en oeuvre de drainage contre les inondations comme une mauvaise gestion, pas comme une condamnation.",
+        body: "Une analyse de juin 2026 dans The Conversation ne signale aucune condamnation pénale ni mise en accusation formelle liée à la finance climatique à Maurice, et soutient que le suivi et le reporting des fonds une fois entrés dans le système restent faibles. Elle discute un cas de mise en oeuvre de drainage contre les inondations comme une mauvaise gestion.",
       },
       taxonomy: {
         title: "Taxonomie verte nationale (en élaboration)",
@@ -1126,7 +1125,7 @@ const fr: typeof en = {
     privateNotes: {
       absa: {
         title: "Cible de prêts verts d'Absa Mauritius",
-        body: "Absa Mauritius a indiqué vouloir porter les prêts verts à 30 milliards MUR d'ici 2030, contre 8 milliards MUR à la fin de l'année précédente. C'est une cible de crédit bancaire, pas de la dépense climatique publique.",
+        body: "Absa Mauritius a indiqué vouloir porter les prêts verts à 30 milliards MUR d'ici 2030, contre 8 milliards MUR à la fin de l'année précédente. C'est une cible de crédit bancaire.",
       },
     },
   },
@@ -1134,15 +1133,14 @@ const fr: typeof en = {
     eyebrow: "Lieux",
     title: "Où les rapports publics nomment un lieu",
     lead:
-      "Un schéma de Maurice et de Rodrigues - pas une carte du monde - avec des localités nommées dans des documents CEB, PNUD, GCF ou Adaptation Fund. La dépense au site n'est presque jamais publiée, donc ces lignes indiquent {notReported}. {caveat}",
+      "Localités nommées dans des documents CEB, PNUD, GCF ou Adaptation Fund, dessinées sur un contour de Maurice et de Rodrigues. Lorsqu'un document ne donne pas la dépense pour ce lieu, la ligne indique {notReported}.",
     notReportedStrong: "non communiqué",
-    pinCaveat:
-      "Localité approximative d'un lieu nommé dans un rapport public - pas un polygone d'ouvrage levé.",
+    pinCaveat: "",
     registryList: "Liste du registre",
-    onMapCount: "{count} lieux sur les figures des îles · pas de serveur de tuiles",
+    onMapCount: "{count} lieux sur les figures des îles",
     namedTitle: "Nommés dans les rapports",
     namedLead:
-      "Ouvrages ou activité rapportés à ces lieux. Une subvention groupée (par exemple 7,5 millions USD pour 14 MW de batteries) n'est pas répartie entre sous-stations.",
+      "Ouvrages ou activité rapportés à ces lieux. Une subvention groupée (par exemple 7,5 millions USD pour 14 MW de batteries) reste un seul montant.",
     colPlace: "Lieu",
     colIsland: "Île",
     colSpend: "Dépense au site",
@@ -1159,7 +1157,7 @@ const fr: typeof en = {
     eyebrow: "Rapports",
     title: "Ce que les bailleurs ont publié",
     description:
-      "Les décaissements sont souvent conditionnés à des rapports. Pour ces projets GCF liés à Maurice, la bibliothèque publique est faite de rapports annuels de performance, pas d'un calendrier trimestriel. Nous listons les documents présents sur les pages GCF, AF ou PNUD - nous n'inventons pas d'échéances.",
+      "Pour ces projets GCF liés à Maurice, les documents publics sont des rapports annuels de performance. Cette liste est ce qui figure sur les pages GCF, Adaptation Fund ou PNUD.",
     colReport: "Rapport",
     colType: "Type",
     colPeriod: "Période",
@@ -1173,17 +1171,17 @@ const fr: typeof en = {
     eyebrow: "Sources et méthodes",
     title: "Chaque chiffre public sur ce site a une URL",
     description:
-      "Ceci est une compilation indépendante, revue à la date indiquée dans le bandeau. Ce n'est pas un système officiel de notification d'un gouvernement, du GCF ou de l'Adaptation Fund.",
+      "Ceci est une compilation indépendante, revue à la date indiquée dans le bandeau.",
     rulesTitle: "Règles",
     rules: [
       "Un montant n'apparaît que si un document public cité contient ce chiffre (ou un tableau officiel dont il est copié).",
-      'Si un bailleur n\'a pas publié de décaissement ou de dépense, le champ est "Non publié" - jamais zéro, jamais estimé.',
-      "Les programmes multi-pays gardent les totaux de programme et indiquent que la part Maurice n'est pas publiée, sauf si un document la ventile (la composante corail du Adaptation Fund est l'exception actuelle).",
-      "Le besoin (CDN, CCDR), la dépense nationale étiquetée (annexe H) et l'appui international reçu (FMCP, pages bailleurs) ne sont pas additionnés.",
-      "Le statut est pris sur la page du bailleur ou du PNUD (en cours de mise en oeuvre, achevé) ou laissé inconnu. Nous ne marquons pas de projets en retard pour l'illustration.",
-      'Les sites d\'ouvrages nommés apparaissent sur un schéma Maurice/Rodrigues (pas une carte du monde). Les points sont des localités approximatives tirées de rapports CEB, PNUD, GCF ou Adaptation Fund, pas des polygones d\'ouvrages levés. La dépense au site est "Non communiqué" sauf si un document publie un chiffre pour ce site. Les subventions groupées ne sont pas réparties entre sous-stations.',
-      'Les rapports des bailleurs sont des APR, PPR et évaluations liés depuis les pages GCF ou Adaptation Fund. Le reporting public GCF pour ces projets est annuel. Nous n\'ajoutons pas de calendrier trimestriel de "prochaine tranche" sauf si un document cité indique ce cycle.',
-      "Une devise autre que le USD est testée avec le taux de référence de la Banque centrale européenne à la date du document, figé via Frankfurter. La devise d'origine reste le montant cité. Le taux n'est pas rafraîchi à chaque consultation.",
+      'Si un bailleur n\'a pas publié de décaissement ou de dépense, le champ est "Non publié".',
+      "Les programmes multi-pays gardent les totaux de programme. Une part Maurice apparaît lorsqu'un document la ventile (la composante corail du Adaptation Fund est le cas actuel).",
+      "Le besoin (CDN, CCDR), la dépense nationale étiquetée (annexe H) et l'appui international reçu (FMCP, pages bailleurs) sont listés séparément.",
+      "Le statut est pris sur la page du bailleur ou du PNUD (en cours de mise en oeuvre, achevé) ou laissé inconnu.",
+      'Les sites d\'ouvrages nommés apparaissent sur un contour de Maurice et de Rodrigues. Les points marquent des localités nommées dans des rapports CEB, PNUD, GCF ou Adaptation Fund. La dépense au site est "Non communiqué" lorsqu\'un document ne publie pas de chiffre pour ce site. Une subvention groupée reste un seul montant.',
+      "Les rapports des bailleurs sont des APR, PPR et évaluations liés depuis les pages GCF ou Adaptation Fund. Le reporting public GCF pour ces projets est annuel.",
+      "Une devise autre que le USD est testée avec le taux de référence de la Banque centrale européenne à la date du document, figé via Frankfurter. La devise d'origine reste le montant cité.",
       "Une fiche de la liste principale est un projet financé par un bailleur avec un montant Maurice publié d'au moins 100 000 USD. Les projets de la Croix-Rouge et les dons d'ONG mauriciennes suivent la même règle lorsqu'une source publique énonce un chiffre pour Maurice. Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que ce montant dépasse 5 millions USD. Une fiche sans montant Maurice publié est nommée sur cette page et n'a pas de page projet. Une fiche climat déjà présente sans date de début publiée reste si son montant publié est d'au moins 100 000 USD.",
     ],
     headlineFigures: "Chiffres d'accroche",
@@ -1196,7 +1194,7 @@ const fr: typeof en = {
       "Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que le montant Maurice publié dépasse 5 millions USD. Il est nommé ici.",
     skippedTitle: "Examiné et non ajouté",
     skippedLead:
-      "Ces pages ont été ouvertes pour cette passe. Une catégorie sans don public qui atteint le seuil est nommée ici. Un champ vide n'est pas rempli avec un prêt ou une estimation.",
+      "Ces pages ont été ouvertes pour cette passe. Une catégorie sans don public qui atteint le seuil est nommée ici.",
     jsonLink: "JSON - /data/projects.json",
     csvLink: "CSV - /data/projects.csv",
     corrections: "Registre revu le {date}. Corrections : {email}.",
@@ -1304,7 +1302,7 @@ const fr: typeof en = {
     ],
     howTitle: "Comment cela fonctionne",
     howLead:
-      "Boucle prévue, de la décision de financement à la vérification citoyenne et à la redevabilité publique - un dessin de produit, pas une description de circuits en service.",
+      "Boucle prévue, de la décision de financement à la vérification citoyenne et à la redevabilité publique.",
     flow: [
       "Fonds approuvé / projet listé",
       "Chaîne budgétaire et jalons publiés",
@@ -1334,7 +1332,7 @@ const fr: typeof en = {
     eyebrow: "Registre public",
     title: "Fiches sourcées de financement public",
     lead:
-      'Uniquement des fiches avec au moins une URL publique. Les totaux de programmes régionaux ne sont pas traités comme des recettes de Maurice. Les montants que les bailleurs n\'ont pas publiés s\'affichent comme "Non publié."',
+      "Fiches avec au moins une URL publique. Un total de programme régional reste avec le programme. Les montants qu'un bailleur n'a pas publiés s'affichent comme \"Non publié.\"",
     openMap: "Ouvrir la carte",
     downloadCsv: "Télécharger le CSV",
     recordsShown: "Fiches affichées",
@@ -1342,7 +1340,7 @@ const fr: typeof en = {
     withAmount: "Avec un montant Maurice",
     multiCountry: "Programmes multi-pays",
     sumNote:
-      "La somme USD ajoute les montants Maurice qu'une source assigne à Maurice. Un montant en euros est inclus au taux de référence de la Banque centrale européenne figé sur la fiche. L'argent partagé n'est compté qu'une fois. Les totaux de programmes régionaux sans ligne Maurice sont omis. Le programme côtier du Fonds d'adaptation de 2012 a plus de 10 ans et n'est pas dans cette somme.",
+      "La somme USD ajoute les montants Maurice qu'une source assigne à Maurice. Un montant en euros est inclus au taux de référence de la Banque centrale européenne figé sur la fiche. L'argent partagé n'est compté qu'une fois. La somme n'utilise que les lignes Maurice. Le programme côtier du Fonds d'adaptation de 2012 a plus de 10 ans et reste hors de cette somme.",
     noMatch:
       "Aucune fiche ne correspond à ces filtres. Effacez un filtre et réessayez.",
     alsoAvailable: "Aussi disponible en",
@@ -1353,7 +1351,7 @@ const fr: typeof en = {
     allRecords: "← Toutes les fiches",
     publishedAmounts: "Montants publiés",
     publishedAmountsLead:
-      "Uniquement les lignes qu'un document cité publie. Une ligne vide signifie que la source ne donne pas de chiffre, pas que le montant est zéro.",
+      "Uniquement les lignes qu'un document cité publie. Une ligne vide signifie que la source ne donne pas de chiffre.",
     cofinancing: "Cofinancement (tel que publié)",
     totalValue: "Valeur totale (telle que publiée)",
     disbursed: "Décaissé (tel que publié)",
@@ -1362,7 +1360,7 @@ const fr: typeof en = {
     end: "Fin / achèvement estimé",
     whereMoney: "Où est allé l'argent",
     whereMoneyLead:
-      "Un décaissement vers une entité accréditée n'est pas la même chose qu'une dépense sur un site nommé. Les roupies ou dollars au niveau du site n'apparaissent que lorsqu'un rapport cité les publie.",
+      "Un décaissement vers une entité accréditée est listé à part d'une dépense sur un site nommé. Les roupies ou dollars au niveau du site apparaissent lorsqu'un rapport cité les publie.",
     disbursedToImplementer: "Décaissé à l'opérateur",
     namedWorksSites: "Sites d'ouvrages nommés",
     placeOne: "{count} lieu dans les rapports publics",
@@ -1373,7 +1371,7 @@ const fr: typeof en = {
     openMap: "Ouvrir la carte de géographie des dépenses →",
     donorReports: "Rapports des bailleurs",
     donorReportsLead:
-      "Rapports de performance publics liés depuis le bailleur. Le reporting GCF pour ces projets est annuel (APR), pas un calendrier trimestriel, sauf si un document le dit. Une année manquante signifie qu'elle n'était pas sur le site du bailleur que nous avons examiné - pas que nous l'avons marquée en retard.",
+      "Rapports de performance publics liés depuis le bailleur. Le reporting GCF pour ces projets est annuel (APR). Une année manquante n'était pas sur le site du bailleur examiné.",
     noReports:
       "Aucun APR, PPR ou évaluation public n'était listé sur les pages bailleur examinées pour cette fiche.",
     allReports: "Tous les rapports publiés →",
@@ -1383,7 +1381,7 @@ const fr: typeof en = {
     geography: "Géographie",
     showPlaces: "Voir les lieux nommés →",
     notPinned:
-      "Aucun site d'ouvrage nommé dans les documents examinés - pas d'épingle.",
+      "Aucun site d'ouvrage nommé dans les documents examinés.",
     hazards: "Aléas",
     funders: "Bailleurs",
     implementing: "Entités de mise en oeuvre",
@@ -1397,9 +1395,9 @@ const fr: typeof en = {
     discrepancy: "Les chiffres publiés diffèrent :",
     reportingProfile: "Profil de reporting",
     staleAnnual:
-      "La dernière revue de ce rapport annuel date de plus de 12 mois avant le 5 octobre 2026. Cette ligne n'invente pas de date limite de dépôt.",
+      "La dernière revue de ce rapport annuel date de plus de 12 mois avant le 5 octobre 2026.",
     startUnpublished:
-      "La date de début n'est pas publiée dans les sources examinées pour cette fiche, donc le test des 10 ans ne peut pas être appliqué. La fiche reste parce qu'elle était déjà sur la liste climat.",
+      "Les sources examinées pour cette fiche n'impriment pas de date de début. La fiche reste parce qu'elle était déjà sur la liste climat.",
   },
   gate: {
     label: "Ouverture",

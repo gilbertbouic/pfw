@@ -18,7 +18,7 @@ export const headlines: HeadlineFigure[] = [
     detail:
       "USD 4.5 billion adaptation and USD 2.0 billion mitigation. Unconditional USD 2.3 billion (35%, government and private sector); conditional USD 4.2 billion (65%, international sources).",
     measures:
-      "Mauritius’s own estimate of financial needs to implement the updated 2021 NDC - not money already received.",
+      "Mauritius's own estimate of financial needs to implement the updated 2021 NDC.",
     source: {
       title: "Updated NDC of the Republic of Mauritius",
       url: "https://unfccc.int/sites/default/files/NDC/2022-06/Final%20Updated%20NDC%20for%20the%20Republic%20of%20Mauritius%2001%20October%202021.docx",
@@ -34,7 +34,7 @@ export const headlines: HeadlineFigure[] = [
     detail:
       "World Bank Country Climate and Development Report: additional investment over the next 25 years in net present value terms, with an estimated annual gap of USD 213 million. About USD 1.4 billion is required through 2030.",
     measures:
-      "World Bank modelled investment need - a different question from the NDC USD 6.5 billion to 2030. Do not add the two figures.",
+      "World Bank modelled investment need over 25 years, separate from the NDC USD 6.5 billion to 2030.",
     source: {
       title: "The Republic of Mauritius: Country Climate and Development Report",
       url: "https://reliefweb.int/report/mauritius/republic-mauritius-country-climate-and-development-report-february-2026",
@@ -50,7 +50,7 @@ export const headlines: HeadlineFigure[] = [
     detail:
       "Adaptation Rs 5.589 billion, mitigation Rs 1.012 billion, mixed Rs 0.100 billion across six ministries and two special funds (Climate and Sustainability Fund and Projects Development Fund). About 2.9% of appropriated expenditure including those funds. CSF itself is tagged at Rs 3.473 billion.",
     measures:
-      "Government climate-budget tagging of selected votes for one fiscal year - not international climate finance received, and not comparable to the UNDRR DRR/CCA tagging exercise.",
+      "Government climate-budget tagging of selected votes for one fiscal year.",
     source: {
       title: "Estimates 2025-26, Appendix H - climate expenditure tagging",
       url: "https://nationalbudget2025.govmu.org/documents/2025_26_appendixH.pdf",
@@ -66,9 +66,9 @@ export const headlines: HeadlineFigure[] = [
     label: "International support listed (from 2017)",
     display: "USD 118.05 million",
     detail:
-      "Ministry of Environment FMCP presentation: grants and loans from named agencies from 2017 onwards (GCF 38.51, GEF 37.35, Adaptation Fund 4.44, AFD 9.20, EU 13.15, GCCA+ 2.26, Abu Dhabi Fund 10.00 loan, AfDB 2.44 loan, and smaller lines). The same slide states “8.4% of the requirement has been mobilized.” USD 118.05 million is about 1.8% of the NDC USD 6.5 billion - the 8.4% line is not explained by that total.",
+      "Ministry of Environment FMCP presentation: grants and loans from named agencies from 2017 onwards (GCF 38.51, GEF 37.35, Adaptation Fund 4.44, AFD 9.20, EU 13.15, GCCA+ 2.26, Abu Dhabi Fund 10.00 loan, AfDB 2.44 loan, and smaller lines). The same slide states “8.4% of the requirement has been mobilized.” The slide also prints USD 118.05 million.",
     measures:
-      "A ministry-compiled list of approved international support, not a complete national climate-finance account.",
+      "A ministry-compiled list of approved international support.",
     source: {
       title: "Mauritius FMCP-3 presentation - financial support needed and received",
       url: "https://unfccc.int/sites/default/files/resource/Mauritius-FMCP3-Presentation.pdf",
@@ -123,7 +123,7 @@ export const domesticNotes = [
   },
   {
     title: "UNDRR DRR + CCA budget tagging (pilot)",
-    body: "A combined disaster-risk-reduction and climate-change-adaptation tagging exercise for 2023-24 and 2024-25 estimated unweighted principal and significant expenditure at MUR 38.927 billion (15.1% of Vote expenditure, 5.2% of GDP). This uses a wider definition than Appendix H and is not an update of the same series.",
+    body: "A combined disaster-risk-reduction and climate-change-adaptation tagging exercise for 2023-24 and 2024-25 estimated unweighted principal and significant expenditure at MUR 38.927 billion (15.1% of Vote expenditure, 5.2% of GDP). This uses a wider definition than Appendix H.",
     source: {
       title: "Disaster risk reduction and climate change adaptation budget tagging: Mauritius country report",
       url: "https://www.undrr.org/publication/documents-and-publications/disaster-risk-reduction-and-climate-change-adaption-budget",

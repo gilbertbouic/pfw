@@ -334,7 +334,7 @@ function escape(value: string | number | boolean | null | undefined): string {
   return text;
 }
 
-const CSV_HEADERS = [
+export const PUBLIC_LINE_HEADERS = [
   "line_id",
   "record_id",
   "on_main_list",
@@ -352,29 +352,29 @@ const CSV_HEADERS = [
   "publisher",
 ] as const;
 
+export function publicLineCells(line: PublicLine): Array<string | number | null> {
+  return [
+    line.lineId,
+    line.recordId,
+    line.onMainList ? "yes" : "no",
+    line.inRegistrySum ? "yes" : "no",
+    line.title,
+    line.line,
+    line.label,
+    line.amount,
+    line.currency,
+    line.instrument,
+    line.sentence,
+    line.page,
+    line.url,
+    line.opened,
+    line.publisher,
+  ];
+}
+
 export function publicLinesToCsv(lines = publicLines()): string {
-  const rows = lines.map((line) =>
-    [
-      line.lineId,
-      line.recordId,
-      line.onMainList,
-      line.inRegistrySum,
-      line.title,
-      line.line,
-      line.label,
-      line.amount,
-      line.currency,
-      line.instrument,
-      line.sentence,
-      line.page,
-      line.url,
-      line.opened,
-      line.publisher,
-    ]
-      .map(escape)
-      .join(","),
-  );
-  return [CSV_HEADERS.join(","), ...rows].join("\n");
+  const rows = lines.map((line) => publicLineCells(line).map(escape).join(","));
+  return [PUBLIC_LINE_HEADERS.join(","), ...rows].join("\n");
 }
 
 export function publicLedger() {

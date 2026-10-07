@@ -484,7 +484,7 @@ const en = {
     registryRecords: "Registry records",
     openDownloads: "Open downloads",
     csvNote:
-      "Each CSV row is one published line: amount, currency, instrument, sentence, page, URL, and the day that URL was opened. An empty amount or page was not in the file copied. The JSON has the same lines, plus the full records. in_registry_sum marks the lines inside the registry total.",
+      "Each CSV row is one published line: amount, currency, instrument, sentence, page, URL, and the day that URL was opened. An empty amount or page was not in the file copied. The JSON has the same lines, plus the full records. The Excel file has the same rows. in_registry_sum marks the lines inside the registry total.",
     olderTitle: "Older than 10 years",
     olderLead:
       "A project that started before 5 October 2016 stays off the main list, unless it is still open and the published Mauritius amount is over USD 5 million. It is named here.",
@@ -493,6 +493,7 @@ const en = {
       "These pages were opened for this pass. A class with no qualifying public grant is named here.",
     jsonLink: "JSON - /data/projects.json",
     csvLink: "CSV - /data/projects.csv",
+    excelLink: "Excel - /data/projects.xlsx",
     corrections: "Ledger last reviewed {date}. Corrections: {email}.",
   },
   problemSolution: {
@@ -640,6 +641,7 @@ const en = {
     noMatch: "No records match these filters. Clear a filter and try again.",
     alsoAvailable: "Also available as",
     jsonApi: "JSON",
+    excel: "Excel",
     sourcesAndMethods: "Sources and methods",
   },
   projectDetail: {
@@ -1188,7 +1190,7 @@ const fr: typeof en = {
     registryRecords: "Fiches du registre",
     openDownloads: "Téléchargements ouverts",
     csvNote:
-      "Chaque ligne du CSV est une ligne publiée : montant, devise, instrument, phrase, page, URL, et le jour où cette URL a été ouverte. Un montant ou une page vide n'était pas dans le fichier copié. Le JSON contient les mêmes lignes, plus les fiches complètes. in_registry_sum marque les lignes qui entrent dans le total du registre.",
+      "Chaque ligne du CSV est une ligne publiée : montant, devise, instrument, phrase, page, URL, et le jour où cette URL a été ouverte. Un montant ou une page vide n'était pas dans le fichier copié. Le JSON contient les mêmes lignes, plus les fiches complètes. Le fichier Excel a les mêmes lignes. in_registry_sum marque les lignes qui entrent dans le total du registre.",
     olderTitle: "Plus de 10 ans",
     olderLead:
       "Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que le montant Maurice publié dépasse 5 millions USD. Il est nommé ici.",
@@ -1197,6 +1199,7 @@ const fr: typeof en = {
       "Ces pages ont été ouvertes pour cette passe. Une catégorie sans don public qui atteint le seuil est nommée ici.",
     jsonLink: "JSON - /data/projects.json",
     csvLink: "CSV - /data/projects.csv",
+    excelLink: "Excel - /data/projects.xlsx",
     corrections: "Registre revu le {date}. Corrections : {email}.",
   },
   problemSolution: {
@@ -1345,6 +1348,7 @@ const fr: typeof en = {
       "Aucune fiche ne correspond à ces filtres. Effacez un filtre et réessayez.",
     alsoAvailable: "Aussi disponible en",
     jsonApi: "JSON",
+    excel: "Excel",
     sourcesAndMethods: "Sources et méthodes",
   },
   projectDetail: {

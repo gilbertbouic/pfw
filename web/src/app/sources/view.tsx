@@ -156,6 +156,11 @@ export function SourcesView() {
                 {copy.csvLink}
               </a>
             </li>
+            <li>
+              <a href="/data/projects.xlsx" className="font-semibold text-primary">
+                {copy.excelLink}
+              </a>
+            </li>
           </ul>
 
           <p className="mt-8 text-sm text-muted">

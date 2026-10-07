@@ -138,6 +138,10 @@ function ProjectsBody({
             {copy.alsoAvailable}{" "}
             <a href="/data/projects.json" className="font-semibold text-primary">
               {copy.jsonApi}
+            </a>
+            {" · "}
+            <a href="/data/projects.xlsx" className="font-semibold text-primary">
+              {copy.excel}
             </a>{" "}
             ·{" "}
             <Link href="/sources" className="font-semibold text-primary">

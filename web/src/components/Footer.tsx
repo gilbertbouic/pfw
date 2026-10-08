@@ -55,6 +55,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/figures" className="hover:text-primary">
+                {dict.footer.figures}
+              </Link>
+            </li>
+            <li>
               <Link href="/map" className="hover:text-primary">
                 {dict.footer.places}
               </Link>

@@ -37,6 +37,16 @@ export function LandscapeView() {
 
       <section className="py-12 sm:py-14">
         <Container className="space-y-10">
+          <div className="rounded-2xl border border-border bg-primary-soft/40 p-5">
+            <h2 className="font-display text-xl font-semibold text-foreground">
+              {copy.figuresTitle}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm text-muted">{copy.figuresBody}</p>
+            <Link href="/figures" className="mt-3 inline-flex text-sm font-semibold text-primary">
+              {copy.figuresLink} →
+            </Link>
+          </div>
+
           <div>
             <h2 className="font-display text-2xl font-semibold text-foreground">
               {copy.needTitle}

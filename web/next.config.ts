@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { NextConfig } from "next";
+import { figuresToCsv, publicFigures } from "./src/data/figures";
 import { headlines } from "./src/data/headlines";
 import { publicLedger, publicLinesToCsv } from "./src/data/csv";
 import { publicLinesToXlsx } from "./src/data/xlsx";
@@ -16,6 +17,11 @@ writeFileSync(
   path.join(dataDir, "ledger.json"),
   JSON.stringify({ headlines, reviewChanges }, null, 2),
 );
+writeFileSync(
+  path.join(dataDir, "figures.json"),
+  JSON.stringify(publicFigures(), null, 2),
+);
+writeFileSync(path.join(dataDir, "figures.csv"), figuresToCsv());
 
 const nextConfig: NextConfig = {
   output: "export",

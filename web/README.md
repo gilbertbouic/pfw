@@ -20,7 +20,7 @@ npm run build
 ## Pages
 
 - `/` — Landing
-- `/projects` — Demo registry
+- `/projects` — Sourced registry
 - `/projects/[id]` — Detail
 - `/map` — MapLibre map
 - `/methodology` — Data disclaimer

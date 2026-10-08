@@ -611,7 +611,7 @@ const en = {
     nowTitle: "What you can use now",
     nowItems: {
       narrative: "Public narrative site (mission, problem, solution)",
-      registry: "Demo project registry",
+      registry: "Sourced project registry",
       map: "map",
       openData: ", and open CSV/JSON",
       plan: "Product build plan and Mauritius research pack in the repo",
@@ -1317,7 +1317,7 @@ const fr: typeof en = {
     nowTitle: "Ce que vous pouvez utiliser maintenant",
     nowItems: {
       narrative: "Site narratif public (mission, problème, solution)",
-      registry: "Registre de projets de démonstration",
+      registry: "Registre de projets sourcé",
       map: "carte",
       openData: ", et CSV/JSON ouverts",
       plan: "Plan de construction du produit et dossier de recherche Maurice dans le dépôt",

@@ -388,9 +388,9 @@ const en = {
     integrityTitle: "Tracking and integrity - published findings",
     integrityLead:
       "These are survey and research claims, cited as such.",
-    figuresTitle: "GDP vintages and the coffers debate",
+    figuresTitle: "GDP vintages and fiscal stocks",
     figuresBody:
-      "A rebasing changes a ratio without changing a rupee stock. Appendix H prints the Rs 6.7 billion climate tag as about 2.8% of appropriated expenditure, not as a share of GDP. Published GDP vintages, the fiscal stock, and lines left Not published are on the figures page.",
+      "Published GDP series, the debt stock, and the lines named at the 8 October 2026 press conference.",
     figuresLink: "Open figures",
     footerNote:
       "Project-level records live in the {registry}. Citation rules are on {sources}.",
@@ -485,7 +485,7 @@ const en = {
       "Donor reports are APRs, PPRs and evaluations linked from GCF or Adaptation Fund pages. GCF public reporting for these projects is annual.",
       "A currency other than USD is tested with the European Central Bank reference rate for the document date, pinned via Frankfurter. The original currency stays the cited amount.",
       "A main-list row is a donor-funded project with a published Mauritius amount of at least USD 100,000. Red Cross projects and Mauritian NGO grants use that same rule when a public source states a Mauritius figure. A project that started before 5 October 2016 stays off the main list, unless it is still open and that amount is over USD 5 million. A row with no published Mauritius amount is named on this page and has no project page. An existing climate record with no published start date stays when its published amount is at least USD 100,000.",
-      "GDP vintages, fiscal stocks, and coffers-debate lines live on the figures page. They do not enter the registry total. A calculated ratio is labelled as calculated. An addition that a speech does not print stays Not published.",
+      "GDP vintages and fiscal stocks are on the figures page.",
     ],
     headlineFigures: "Headline figures",
     registryRecords: "Registry records",
@@ -1101,9 +1101,9 @@ const fr: typeof en = {
     integrityTitle: "Suivi et intégrité - constats publiés",
     integrityLead:
       "Ce sont des constats d'enquête et de recherche, cités comme tels.",
-    figuresTitle: "Millésimes du PIB et débat sur les caisses",
+    figuresTitle: "Millésimes du PIB et stocks budgétaires",
     figuresBody:
-      "Un rebasement change un ratio sans changer un stock en roupies. L'annexe H imprime l'étiquette climat de 6,7 milliards Rs à environ 2,8 % des dépenses appropriées, pas en part du PIB. Les millésimes de PIB, le stock budgétaire et les lignes laissées Non publiées sont sur la page des chiffres.",
+      "Séries de PIB publiées, stock de dette, et lignes nommées à la conférence de presse du 8 octobre 2026.",
     figuresLink: "Ouvrir les chiffres",
     footerNote:
       "Les fiches au niveau projet sont dans le {registry}. Les règles de citation sont sur {sources}.",
@@ -1198,7 +1198,7 @@ const fr: typeof en = {
       "Les rapports des bailleurs sont des APR, PPR et évaluations liés depuis les pages GCF ou Adaptation Fund. Le reporting public GCF pour ces projets est annuel.",
       "Une devise autre que le USD est testée avec le taux de référence de la Banque centrale européenne à la date du document, figé via Frankfurter. La devise d'origine reste le montant cité.",
       "Une fiche de la liste principale est un projet financé par un bailleur avec un montant Maurice publié d'au moins 100 000 USD. Les projets de la Croix-Rouge et les dons d'ONG mauriciennes suivent la même règle lorsqu'une source publique énonce un chiffre pour Maurice. Un projet commencé avant le 5 octobre 2016 reste hors de la liste principale, sauf s'il est encore ouvert et que ce montant dépasse 5 millions USD. Une fiche sans montant Maurice publié est nommée sur cette page et n'a pas de page projet. Une fiche climat déjà présente sans date de début publiée reste si son montant publié est d'au moins 100 000 USD.",
-      "Les millésimes de PIB, les stocks budgétaires et les lignes du débat sur les caisses sont sur la page des chiffres. Ils n'entrent pas dans le total du registre. Un ratio calculé est marqué comme calculé. Une addition qu'un discours n'imprime pas reste Non publiée.",
+      "Les millésimes de PIB et les stocks budgétaires sont sur la page des chiffres.",
     ],
     headlineFigures: "Chiffres d'accroche",
     registryRecords: "Fiches du registre",

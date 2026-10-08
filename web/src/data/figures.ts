@@ -115,24 +115,24 @@ export const stocks: {
     id: "measurement",
     title: gapLabels.measurement,
     body: {
-      en: "How Global Business output, merchanting, and the production-versus-expenditure GDP gap are measured. A level change here is not cash in the Treasury.",
-      fr: "Comment sont mesurés la production des Global Business, le négoce international, et l'écart entre le PIB par la production et le PIB par la dépense. Un changement de niveau n'est pas de la trésorerie.",
+      en: "Global Business output, merchanting, and the production-versus-expenditure GDP gap.",
+      fr: "Production des Global Business, négoce international, et écart entre le PIB par la production et le PIB par la dépense.",
     },
   },
   {
     id: "restatement",
     title: gapLabels.restatement,
     body: {
-      en: "A later official document replaces an earlier printed growth, deficit, or debt ratio. Both vintages stay. This page does not pick a winner.",
-      fr: "Un document officiel plus récent remplace un taux de croissance, un déficit ou un ratio de dette déjà imprimé. Les deux millésimes restent. Cette page ne choisit pas un vainqueur.",
+      en: "A later official document replaces an earlier printed growth, deficit, or debt ratio. Both vintages are listed.",
+      fr: "Un document officiel plus récent remplace un taux de croissance, un déficit ou un ratio de dette déjà imprimé. Les deux millésimes sont listés.",
     },
   },
   {
     id: "cash",
     title: gapLabels.cash,
     body: {
-      en: "Revenue, expenditure, net borrowing, and the debt stock. Only this stock is a hole in the coffers. A higher GDP does not fill it.",
-      fr: "Recettes, dépenses, emprunt net et stock de dette. Seul ce stock est un trou de caisse. Un PIB plus élevé ne le comble pas.",
+      en: "Revenue, expenditure, net borrowing, and the debt stock.",
+      fr: "Recettes, dépenses, emprunt net et stock de dette.",
     },
   },
 ];
@@ -145,8 +145,8 @@ export const vintages: CitedRow[] = [
     period: "2022",
     display: "Rs 623 billion",
     note: {
-      en: "Figure stated at the 8 October 2026 MSM press conference, as reported. Not a Statistics Mauritius release.",
-      fr: "Chiffre énoncé à la conférence de presse du MSM du 8 octobre 2026, tel que rapporté. Ce n'est pas une publication de Statistics Mauritius.",
+      en: "MSM press conference, 8 October 2026, as reported by Le Défi.",
+      fr: "Conférence de presse du MSM, 8 octobre 2026, telle que rapportée par Le Défi.",
     },
     source: defi,
   },
@@ -157,8 +157,8 @@ export const vintages: CitedRow[] = [
     period: "2023",
     display: "Rs 641 billion",
     note: {
-      en: "Earlier vintage named at the same press conference. The addition to Rs 164.9 billion is not printed.",
-      fr: "Millésime antérieur nommé à la même conférence. L'addition jusqu'à 164,9 milliards Rs n'est pas imprimée.",
+      en: "Earlier vintage named at the same press conference.",
+      fr: "Millésime antérieur nommé à la même conférence.",
     },
     source: defi,
   },
@@ -169,8 +169,8 @@ export const vintages: CitedRow[] = [
     period: "2023",
     display: "Rs 695 billion",
     note: {
-      en: "Later vintage named at the same press conference. Matches the rebased level reported from Statistics Mauritius.",
-      fr: "Millésime postérieur nommé à la même conférence. Correspond au niveau rebasé rapporté depuis Statistics Mauritius.",
+      en: "Later vintage named at the same press conference. Same level as the rebased Statistics Mauritius series.",
+      fr: "Millésime postérieur nommé à la même conférence. Même niveau que la série rebasée de Statistics Mauritius.",
     },
     source: defi,
   },
@@ -181,8 +181,8 @@ export const vintages: CitedRow[] = [
     period: "2024",
     display: "Rs 698 billion",
     note: {
-      en: "Earlier vintage named at the press conference. L'Express reports the pre-rebase 2024 level as Rs 693.3 billion.",
-      fr: "Millésime antérieur nommé à la conférence. L'Express rapporte le niveau 2024 avant rebasement à 693,3 milliards Rs.",
+      en: "Earlier vintage named at the press conference. L'Express prints Rs 693.3 billion for the previous 2024 series.",
+      fr: "Millésime antérieur nommé à la conférence. L'Express imprime 693,3 milliards Rs pour la série 2024 précédente.",
     },
     source: defi,
   },
@@ -193,8 +193,8 @@ export const vintages: CitedRow[] = [
     period: "2024",
     display: "Rs 756 billion",
     note: {
-      en: "Later vintage named at the press conference. L'Express reports the rebased 2024 level as Rs 756.7 billion.",
-      fr: "Millésime postérieur nommé à la conférence. L'Express rapporte le niveau 2024 rebasé à 756,7 milliards Rs.",
+      en: "Later vintage named at the press conference. L'Express prints Rs 756.7 billion for the rebased 2024 series.",
+      fr: "Millésime postérieur nommé à la conférence. L'Express imprime 756,7 milliards Rs pour la série 2024 rebasée.",
     },
     source: defi,
   },
@@ -208,8 +208,8 @@ export const vintages: CitedRow[] = [
     period: "Not printed",
     display: "Rs 164.9 billion",
     note: {
-      en: "Named at the press conference. The article does not print the addition. The two revisions it states (Rs 641 to 695 billion, and Rs 698 to 756 billion) sum to about Rs 112 billion. This page does not reconstruct the rest.",
-      fr: "Nommé à la conférence de presse. L'article n'imprime pas l'addition. Les deux révisions qu'il énonce (641 à 695 milliards Rs, et 698 à 756 milliards Rs) font environ 112 milliards Rs. Cette page ne reconstruit pas le reste.",
+      en: "Named at the press conference. The article prints the total and not the addition. The two revisions it states sum to about Rs 112 billion.",
+      fr: "Nommé à la conférence de presse. L'article imprime le total et pas l'addition. Les deux révisions qu'il énonce font environ 112 milliards Rs.",
     },
     source: defi,
   },
@@ -232,8 +232,8 @@ export const vintages: CitedRow[] = [
     period: "2023",
     display: "Rs 695 billion",
     note: {
-      en: "New series. About Rs 58 billion, or 9.1%, above the previous series. Not new cash.",
-      fr: "Nouvelle série. Environ 58 milliards Rs, soit 9,1 %, au-dessus de la série précédente. Pas de trésorerie nouvelle.",
+      en: "New series. About Rs 58 billion, or 9.1%, above the previous series.",
+      fr: "Nouvelle série. Environ 58 milliards Rs, soit 9,1 %, au-dessus de la série précédente.",
     },
     source: lexpressRebase,
   },
@@ -271,8 +271,8 @@ export const vintages: CitedRow[] = [
     period: "2024",
     display: "Rs 756.7 billion",
     note: {
-      en: "Rebased series. A higher level changes a debt ratio. It does not change the rupee stock.",
-      fr: "Série rebasée. Un niveau plus élevé change un ratio de dette. Il ne change pas le stock en roupies.",
+      en: "Rebased series.",
+      fr: "Série rebasée.",
     },
     source: lexpressRebase,
   },
@@ -307,8 +307,8 @@ export const vintages: CitedRow[] = [
     period: "2023",
     display: "5.6%, not 7.0%",
     note: {
-      en: "State of the Economy, as reported by Reuters on 10 December 2024. The document said the previous government had overstated GDP, the deficit, and debt.",
-      fr: "State of the Economy, tel que rapporté par Reuters le 10 décembre 2024. Le document disait que le gouvernement précédent avait surestimé le PIB, le déficit et la dette.",
+      en: "State of the Economy, reported by Reuters on 10 December 2024.",
+      fr: "State of the Economy, rapporté par Reuters le 10 décembre 2024.",
     },
     source: reutersSote,
   },
@@ -331,8 +331,8 @@ export const vintages: CitedRow[] = [
     period: "June 2024",
     display: "Above 83% of GDP, not over 77%",
     note: {
-      en: "State of the Economy, as reported by Reuters. A ratio, not a rupee stock.",
-      fr: "State of the Economy, tel que rapporté par Reuters. Un ratio, pas un stock en roupies.",
+      en: "State of the Economy, reported by Reuters. Printed as a ratio.",
+      fr: "State of the Economy, rapporté par Reuters. Imprimé en ratio.",
     },
     source: reutersSote,
   },
@@ -356,10 +356,10 @@ export const vintages: CitedRow[] = [
       fr: "Réserve du FMI sur la publication de décembre 2024",
     },
     period: "Mission 24–28 March 2025",
-    display: "Not a rupee figure",
+    display: "Paragraphs 10 and 13",
     note: {
-      en: "Paragraph 10: the IMF African Department raised concern about the drivers of GBC output and the statistical discrepancies in the December 2024 release. Paragraph 13 attributes a large share of the production-versus-expenditure gap to a miscalculation of GBC output, survey errors and misclassified costs, and the estimation method. The mission was not a cash audit.",
-      fr: "Paragraphe 10 : le département Afrique du FMI s'est inquiété des moteurs de la production des GBC et des écarts statistiques de la publication de décembre 2024. Le paragraphe 13 attribue une large part de l'écart production/dépense à un mauvais calcul de la production des GBC, à des erreurs d'enquête et de classement des coûts, et à la méthode d'estimation. La mission n'était pas un audit de caisse.",
+      en: "Paragraph 10: concern about the drivers of GBC output and the statistical discrepancies in the December 2024 release. Paragraph 13: miscalculation of GBC output, survey errors, misclassified costs, and the estimation method.",
+      fr: "Paragraphe 10 : préoccupation sur les moteurs de la production des GBC et les écarts statistiques de la publication de décembre 2024. Paragraphe 13 : mauvais calcul de la production des GBC, erreurs d'enquête, coûts mal classés, et méthode d'estimation.",
     },
     source: imfTa,
   },
@@ -394,8 +394,8 @@ export const vintages: CitedRow[] = [
     period: "July 2024 – June 2025",
     display: "Rs 76.1 billion",
     note: {
-      en: "Deficit, from Rs 56.2 billion. Reported at 10.6% of GDP, from 8.5%. This is the cash-relevant hole in that release.",
-      fr: "Déficit, depuis 56,2 milliards Rs. Rapporté à 10,6 % du PIB, contre 8,5 %. C'est le trou de caisse de cette publication.",
+      en: "Deficit, from Rs 56.2 billion. 10.6% of GDP, from 8.5%.",
+      fr: "Déficit, depuis 56,2 milliards Rs. 10,6 % du PIB, contre 8,5 %.",
     },
     source: pfs,
   },
@@ -406,8 +406,8 @@ export const vintages: CitedRow[] = [
     period: "End June 2025",
     display: "Rs 570.5 billion",
     note: {
-      en: "Up 16.0% from Rs 491.9 billion at end 2023/24. A rupee stock. The ratio depends on which GDP vintage is used.",
-      fr: "En hausse de 16,0 % depuis 491,9 milliards Rs à la fin de 2023/24. Un stock en roupies. Le ratio dépend du millésime de PIB utilisé.",
+      en: "Up 16.0% from Rs 491.9 billion at end 2023/24.",
+      fr: "En hausse de 16,0 % depuis 491,9 milliards Rs à la fin de 2023/24.",
     },
     source: pfs,
   },
@@ -418,8 +418,8 @@ export const vintages: CitedRow[] = [
     period: "End June 2025",
     display: "Around 88% of GDP",
     note: {
-      en: "2025 Article IV press release. A projection in that release, not the later Statistics Mauritius stock.",
-      fr: "Communiqué de la consultation au titre de l'article IV de 2025. Une projection de ce communiqué, pas le stock ultérieur de Statistics Mauritius.",
+      en: "2025 Article IV press release.",
+      fr: "Communiqué de la consultation au titre de l'article IV de 2025.",
     },
     source: imfAiv2025,
   },
@@ -430,8 +430,8 @@ export const vintages: CitedRow[] = [
     period: "End June 2025",
     display: "86% of GDP",
     note: {
-      en: "2026 Article IV. Same date, different printed ratio from the June 2025 press release. Both stay.",
-      fr: "Article IV 2026. Même date, ratio imprimé différent du communiqué de juin 2025. Les deux restent.",
+      en: "2026 Article IV. Same date as the June 2025 press release, different printed ratio.",
+      fr: "Article IV 2026. Même date que le communiqué de juin 2025, ratio imprimé différent.",
     },
     source: imfAiv2026,
   },
@@ -465,8 +465,8 @@ export const illustrations = [
       },
     ],
     caveat: {
-      en: "Calculated on this page. Not a published ratio. The debt stock is end-June 2025. The GDP figures are calendar 2024. A rebasing moves the ratio without moving the rupees.",
-      fr: "Calculé sur cette page. Ce n'est pas un ratio publié. Le stock de dette est à fin juin 2025. Les PIB sont ceux de l'année civile 2024. Un rebasement déplace le ratio sans déplacer les roupies.",
+      en: "End-June 2025 debt stock over calendar 2024 GDP.",
+      fr: "Stock de dette à fin juin 2025 sur le PIB de l'année civile 2024.",
     },
   },
   {
@@ -490,8 +490,8 @@ export const illustrations = [
       },
     ],
     caveat: {
-      en: "Illustration only. Appendix H prints the Rs 6.7 billion tag as about 2.8% of appropriated expenditure, not as a share of GDP. The UNDRR pilot's 5.2% of GDP uses a wider definition.",
-      fr: "Illustration seulement. L'annexe H imprime l'étiquette de 6,7 milliards Rs à environ 2,8 % des dépenses appropriées, pas en part du PIB. Le pilote UNDRR à 5,2 % du PIB utilise une définition plus large.",
+      en: "Appendix H prints this tag as about 2.8% of appropriated expenditure. The UNDRR pilot prints 5.2% of GDP on a wider definition.",
+      fr: "L'annexe H imprime cette étiquette à environ 2,8 % des dépenses appropriées. Le pilote UNDRR imprime 5,2 % du PIB sur une définition plus large.",
     },
   },
 ];
@@ -511,8 +511,8 @@ export const symmetry: CitedRow[] = [
     period: "Not copied",
     display: "Not published",
     note: {
-      en: "The 8 October 2026 press conference said the government cites Moody's and not the IMF. This page does not copy a Moody's figure. No Moody's URL is attached.",
-      fr: "La conférence du 8 octobre 2026 a dit que le gouvernement cite Moody's et pas le FMI. Cette page ne copie pas de chiffre Moody's. Aucune URL Moody's n'est jointe.",
+      en: "Named at the 8 October 2026 press conference. No Moody's figure is printed in that report.",
+      fr: "Nommé à la conférence du 8 octobre 2026. Aucun chiffre Moody's dans ce reportage.",
     },
     source: defi,
   },
@@ -530,8 +530,8 @@ export const budgetLines: {
     line: { en: "Fuel price", fr: "Prix des carburants" },
     display: "Not published",
     note: {
-      en: "Named at the press conference as a rise. The Estimates line is not copied here.",
-      fr: "Nommé à la conférence comme une hausse. La ligne des Estimates n'est pas copiée ici.",
+      en: "Named as a rise at the 8 October 2026 press conference.",
+      fr: "Nommé comme une hausse à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -540,8 +540,8 @@ export const budgetLines: {
     line: { en: "Electricity price", fr: "Prix de l'électricité" },
     display: "Not published",
     note: {
-      en: "Named as a rise. The tariff or subsidy line is not copied here.",
-      fr: "Nommé comme une hausse. La ligne de tarif ou de subvention n'est pas copiée ici.",
+      en: "Named as a rise at the 8 October 2026 press conference.",
+      fr: "Nommé comme une hausse à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -550,8 +550,8 @@ export const budgetLines: {
     line: { en: "Bread price", fr: "Prix du pain" },
     display: "Not published",
     note: {
-      en: "Named as a rise. The subsidy line is not copied here.",
-      fr: "Nommé comme une hausse. La ligne de subvention n'est pas copiée ici.",
+      en: "Named as a rise at the 8 October 2026 press conference.",
+      fr: "Nommé comme une hausse à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -560,8 +560,8 @@ export const budgetLines: {
     line: { en: "Cooking gas price", fr: "Prix du gaz" },
     display: "Not published",
     note: {
-      en: "Named as a rise. The subsidy line is not copied here.",
-      fr: "Nommé comme une hausse. La ligne de subvention n'est pas copiée ici.",
+      en: "Named as a rise at the 8 October 2026 press conference.",
+      fr: "Nommé comme une hausse à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -570,8 +570,8 @@ export const budgetLines: {
     line: { en: "Pre-primary subsidy", fr: "Subvention du préscolaire" },
     display: "Not published",
     note: {
-      en: "Named as removed. The vote line is not copied here.",
-      fr: "Nommée comme supprimée. La ligne de vote n'est pas copiée ici.",
+      en: "Named as removed at the 8 October 2026 press conference.",
+      fr: "Nommée comme supprimée à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -580,8 +580,8 @@ export const budgetLines: {
     line: { en: "Tertiary subsidy", fr: "Subvention du tertiaire" },
     display: "Not published",
     note: {
-      en: "Named as removed. The vote line is not copied here.",
-      fr: "Nommée comme supprimée. La ligne de vote n'est pas copiée ici.",
+      en: "Named as removed at the 8 October 2026 press conference.",
+      fr: "Nommée comme supprimée à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -593,8 +593,8 @@ export const budgetLines: {
     },
     display: "Rs 50,000",
     note: {
-      en: "The press conference named a split at Rs 50,000. The Estimates line that would confirm two categories of workers is not copied here.",
-      fr: "La conférence a nommé un seuil à 50 000 Rs. La ligne des Estimates qui confirmerait deux catégories de travailleurs n'est pas copiée ici.",
+      en: "Threshold named at the 8 October 2026 press conference.",
+      fr: "Seuil nommé à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -603,8 +603,8 @@ export const budgetLines: {
     line: { en: "PRB application", fr: "Application du PRB" },
     display: "Not published",
     note: {
-      en: "The press conference said the PRB was given in 2026 with no retroactive payment, against a January 2025 commitment. No retroactive amount is copied here.",
-      fr: "La conférence a dit que le PRB a été accordé en 2026 sans paiement rétroactif, contre un engagement de janvier 2025. Aucun montant rétroactif n'est copié ici.",
+      en: "Press conference: applied in 2026, no retroactive payment, against a January 2025 commitment.",
+      fr: "Conférence de presse : appliqué en 2026, sans paiement rétroactif, contre un engagement de janvier 2025.",
     },
     source: defi,
   },
@@ -616,8 +616,8 @@ export const budgetLines: {
     },
     display: "Not published",
     note: {
-      en: "Named as reduced. The vote line is not copied here.",
-      fr: "Nommées comme réduites. La ligne de vote n'est pas copiée ici.",
+      en: "Named as reduced at the 8 October 2026 press conference.",
+      fr: "Nommées comme réduites à la conférence du 8 octobre 2026.",
     },
     source: defi,
   },
@@ -631,29 +631,25 @@ export const waterSites = [
 ];
 
 export const waterNote: Bilingual = {
-  en: "Named in the 8 October 2026 report of protests the day after demonstrations over potable water. The donor registry has no Central Water Authority project page. Site-level spend for these localities is Not published. Community evidence is not operating on this site.",
-  fr: "Nommés dans le reportage du 8 octobre 2026 sur des manifestations, au lendemain de défilés pour l'eau potable. Le registre des bailleurs n'a pas de fiche Central Water Authority. La dépense au site pour ces localités est Non publiée. Les signalements de terrain ne fonctionnent pas sur ce site.",
+  en: "Named in the 8 October 2026 report of protests over potable water. Site-level spend: Not published.",
+  fr: "Nommés dans le reportage du 8 octobre 2026 sur des manifestations pour l'eau potable. Dépense au site : Non publiée.",
 };
 
 export const methods: Bilingual[] = [
   {
-    en: "A Global Business Corporation is recorded in the national accounts and the balance of payments. The March 2025 IMF mission worked with Statistics Mauritius and the Bank of Mauritius on survey coverage and the method used for GBC output and investment income. Merchanting was brought into the 30 September 2026 estimates after that work. That raises the measured level of GDP. It does not put rupees in the Treasury.",
-    fr: "Une Global Business Corporation est enregistrée dans les comptes nationaux et la balance des paiements. La mission du FMI de mars 2025 a travaillé avec Statistics Mauritius et la Banque de Maurice sur la couverture des enquêtes et la méthode de production et de revenu d'investissement des GBC. Le négoce international est entré dans les estimations du 30 septembre 2026 après ce travail. Cela relève le niveau mesuré du PIB. Cela ne met pas de roupies au Trésor.",
+    en: "Global Business Corporations are in the national accounts and the balance of payments. The March 2025 IMF mission reviewed survey coverage and the method for GBC output and investment income with Statistics Mauritius and the Bank of Mauritius. Merchanting entered the 30 September 2026 estimates after that work.",
+    fr: "Les Global Business Corporations sont dans les comptes nationaux et la balance des paiements. La mission du FMI de mars 2025 a revu la couverture des enquêtes et la méthode de production et de revenu d'investissement des GBC avec Statistics Mauritius et la Banque de Maurice. Le négoce international est entré dans les estimations du 30 septembre 2026 après ce travail.",
   },
   {
-    en: "This page does not publish a single hole of Rs 164.9 billion. A document that prints that total and the addition can be added. Until then the cell stays a claim, and the addition stays Not published.",
-    fr: "Cette page ne publie pas un trou unique de 164,9 milliards Rs. Un document qui imprime ce total et l'addition peut être ajouté. D'ici là, la cellule reste une affirmation, et l'addition reste Non publiée.",
-  },
-  {
-    en: "Loans are not grants. A GDP vintage is not a donor project. Rows here do not enter the registry total.",
-    fr: "Les prêts ne sont pas des dons. Un millésime de PIB n'est pas un projet de bailleur. Les lignes d'ici n'entrent pas dans le total du registre.",
+    en: "The press conference names a hole of Rs 164.9 billion. The addition is Not published.",
+    fr: "La conférence de presse nomme un trou de 164,9 milliards Rs. L'addition est Non publiée.",
   },
 ];
 
 export function publicFigures() {
   return {
     reviewed: FIGURES_REVIEWED,
-    rule: "Copied from a cited page, or labelled Not published. Calculated ratios are marked as calculated.",
+    rule: "Copied from a cited page, or labelled Not published.",
     stocks,
     vintages,
     illustrations: illustrations.map((item) => ({

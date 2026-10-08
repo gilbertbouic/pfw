@@ -4,7 +4,7 @@ import { FiguresView } from "./view";
 export const metadata: Metadata = {
   title: "Figures",
   description:
-    "Published Mauritius GDP vintages, fiscal stocks, and the lines a coffers debate names but does not print. Each figure is cited or labelled Not published.",
+    "Published Mauritius GDP vintages, fiscal stocks, and the lines named at the 8 October 2026 press conference.",
   alternates: { canonical: "/figures" },
   openGraph: { url: "/figures" },
 };

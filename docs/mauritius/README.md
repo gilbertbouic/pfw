@@ -2,7 +2,7 @@
 
 Research and concept materials for the Mauritius ledger. The live site is **Public Funds Watch** at https://pfw.mkweli.tech.
 
-These documents support the reference pilot brand **ClimateFunds Watch Mauritius**. They are not the product boundary — the platform is multi-country (see root `PRODUCT_BUILD_PLAN.md` §27).
+Most of these documents were written for the earlier pilot brand **ClimateFunds Watch Mauritius**, so they use that name and a climate-only scope. Public Funds Watch covers all external public funding for Mauritius, with climate as one sector. The earlier multi-country plan is in the root `PRODUCT_BUILD_PLAN.md` §27.
 
 ## Contents
 

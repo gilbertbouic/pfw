@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 type Props = {
@@ -15,7 +16,7 @@ export function MkweliLockup({ className = "", size = "sm" }: Props) {
       href="https://mkweli.tech"
       className={`inline-flex items-center gap-2 font-medium text-primary-dark transition hover:text-primary ${className}`}
     >
-      <img
+      <Image
         src="/brand/mkweli-favicon.ico"
         alt=""
         width={px}

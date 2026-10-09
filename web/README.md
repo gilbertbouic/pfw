@@ -33,10 +33,12 @@ npm run lint
 - `/projects/[id]` — Record detail with citations
 - `/landscape` — Need vs tagged spend vs donor channels
 - `/map` — Island schematic (Mauritius, Rodrigues) of named works sites
+- `/figures` — GDP vintages, fiscal stocks and coffers-debate lines
 - `/reports` — Published donor reports and evaluations
 - `/sources` — Methods and sources (`/methodology` points here)
 - `/problem-solution` · `/get-involved`
 - `/data/projects.json` · `/data/projects.csv` · `/data/projects.xlsx`
+- `/data/figures.json` · `/data/figures.csv`
 
 ## Stack
 

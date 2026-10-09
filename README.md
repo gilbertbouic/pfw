@@ -22,8 +22,8 @@ Community evidence, the integrity vault, government consoles, and a weekly grant
 | [`web/`](./web) | Public website (Next.js) |
 | [`web/src/data/`](./web/src/data) | Sourced ledger and headline figures |
 | [`docs/mauritius/SOURCES.md`](./docs/mauritius/SOURCES.md) | Source list |
-| [`PRODUCT_BUILD_PLAN.md`](./PRODUCT_BUILD_PLAN.md) | Full product, architecture, security, and delivery plan |
-| [`docs/ROADMAP.md`](./docs/ROADMAP.md) | Thin-slice build sequence |
+| [`PRODUCT_BUILD_PLAN.md`](./PRODUCT_BUILD_PLAN.md) | Earlier Climate Fund Watch product plan (background only; it does not describe the live site) |
+| [`docs/ROADMAP.md`](./docs/ROADMAP.md) | Build phases: what is live and what comes next |
 | [`docs/mauritius/`](./docs/mauritius) | Mauritius research pack |
 
 ## Run locally
@@ -52,6 +52,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/sources` | Methods, older-than-10-years note, and records reviewed and not added |
 | `/data/projects.json` | JSON (includes source URLs) |
 | `/data/projects.csv` | CSV download |
+| `/data/projects.xlsx` | Excel download (same lines as the CSV) |
 | `/data/figures.json` | Cited vintages and calculated ratios |
 | `/data/figures.csv` | Same rows as CSV |
 | `/about` · `/problem-solution` · `/get-involved` | Product narrative + contact |
@@ -66,7 +67,7 @@ The custom domain is **https://pfw.mkweli.tech**. DNS is a CNAME from `pfw` to `
 
 - [x] Product build plan (multi-country, two-zone security)
 - [x] Mauritius research / concept materials
-- [x] Sourced public ledger (replaces demo registry)
+- [x] Sourced public ledger with CSV, Excel and JSON downloads
 - [x] Get involved form → support@mkweli.tech
 - [ ] Phase D community evidence reporting
 - [ ] Integrity vault + government consoles (after legal/security gates)

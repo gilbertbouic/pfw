@@ -65,7 +65,6 @@ export function publicLines(): PublicLine[] {
   for (const project of getReviewedProjects()) {
     const onMainList = isOnMainList(project.id);
     const summed = onMainList ? portfolioUsd(project) : null;
-    const primary = sourceFor(project);
 
     function money(
       line: string,

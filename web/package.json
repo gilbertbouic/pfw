@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:data": "tsc -p scripts/tsconfig.data-check.json && node node_modules/.cache/data-check/scripts/check-data.js"
   },
   "dependencies": {
     "next": "16.4.0",

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ledger",
     "/get-involved",
     "/landscape",
+    "/figures",
     "/map",
     "/problem-solution",
     "/projects",

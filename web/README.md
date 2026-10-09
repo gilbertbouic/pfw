@@ -26,6 +26,7 @@ npm run build
 - `/methodology` — Data disclaimer
 - `/about` · `/problem-solution` · `/get-involved`
 - `/data/projects.json` · `/data/projects.csv`
+- `/data/figures.json` · `/data/figures.csv`
 
 ## Stack
 

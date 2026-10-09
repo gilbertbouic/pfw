@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useRouter } from "next/navigation";
 import { useI18n } from "@/i18n/LanguageProvider";
 
 const COUNT_MS = 2600;
@@ -52,6 +53,7 @@ function serverFalse() {
 export function FrontDoor({ children }: { children: React.ReactNode }) {
   const { dict } = useI18n();
   const titleId = useId();
+  const router = useRouter();
   const ledgerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const alreadyEntered = useSyncExternalStore(subscribeEntered, readEntered, serverFalse);
@@ -70,8 +72,8 @@ export function FrontDoor({ children }: { children: React.ReactNode }) {
     const root = document.documentElement;
     root.dataset.pfwEntered = "1";
     delete root.dataset.pfwGate;
-    window.location.assign("/about/");
-  }, []);
+    router.push("/about/");
+  }, [router]);
 
   useLayoutEffect(() => {
     const path = window.location.pathname;

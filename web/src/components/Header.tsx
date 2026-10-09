@@ -12,6 +12,7 @@ const NAV_HREFS = [
   { href: "/ledger", key: "home" },
   { href: "/projects", key: "registry" },
   { href: "/landscape", key: "landscape" },
+  { href: "/figures", key: "figures" },
   { href: "/map", key: "places" },
   { href: "/reports", key: "reports" },
   { href: "/sources", key: "sources" },

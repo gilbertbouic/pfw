@@ -46,11 +46,14 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/projects` | Sourced registry |
 | `/projects/[id]` | Record detail with citations |
 | `/landscape` | Need vs tagged spend vs donor channels |
+| `/figures` | GDP vintages, fiscal stocks, and coffers-debate lines. Not in the registry total. |
 | `/map` | Island schematic of named works sites; site-level spend or not reported |
 | `/reports` | Published donor APRs, PPRs and evaluations |
 | `/sources` | Methods, older-than-10-years note, and records reviewed and not added |
 | `/data/projects.json` | JSON (includes source URLs) |
 | `/data/projects.csv` | CSV download |
+| `/data/figures.json` | Cited vintages and calculated ratios |
+| `/data/figures.csv` | Same rows as CSV |
 | `/about` · `/problem-solution` · `/get-involved` | Product narrative + contact |
 
 ## Deploy (GitHub Pages)
